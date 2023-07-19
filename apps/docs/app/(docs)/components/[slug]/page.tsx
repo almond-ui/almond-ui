@@ -71,7 +71,7 @@ const ComponentLayout = async ({ params }: ComponentProps) => {
               {component.title}
             </h2>
             {component.polymorphic && (
-              <div className='ml-3 rounded bg-gradient-to-r from-purple-500 to-fuchsia-900 px-2 py-1 text-xs text-white shadow shadow-fuchsia-200'>
+              <div className='ml-3 rounded bg-gradient-to-r from-blue-500 to-green-900 px-2 py-1 text-xs text-white shadow shadow-fuchsia-200'>
                 polymorphic
               </div>
             )}

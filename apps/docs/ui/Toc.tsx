@@ -6,8 +6,8 @@ import { useMounted } from '@/hooks/use-mounted';
 import { TableOfContents } from '@/utils/toc.util';
 import { Text } from '@almond-ui/core';
 import { cva } from 'class-variance-authority';
-import { useEffect, useMemo, useState } from 'react';
 import * as React from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 interface TocProps {
   toc: TableOfContents;
@@ -33,7 +33,7 @@ export function Toc({ toc }: TocProps) {
   }
 
   return (
-    <div className='fixed h-[calc(100%-14rem)] space-y-2 w-[16rem] overflow-auto'>
+    <div className='fixed h-[calc(100%-14rem)] w-[16rem] space-y-2 overflow-auto'>
       <Text weight='medium' color='dark' size='base'>
         Quick navigation
       </Text>
@@ -96,7 +96,7 @@ const tocAnchorStyles = cva(['inline-block', 'no-underline'], {
   variants: {
     active: {
       false: 'text-gray-600 hover:text-gray-900',
-      true: 'font-medium text-purple-500',
+      true: 'font-medium text-blue-500',
     },
   },
 });

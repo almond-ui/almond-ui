@@ -35,7 +35,7 @@ export const MenuItem = (props: {
     {
       variants: {
         active: {
-          true: ['text-purple-600', 'font-medium'],
+          true: ['text-blue-600', 'font-medium'],
           false: ['text-gray-600'],
         },
         hasIcon: {
@@ -51,12 +51,12 @@ export const MenuItem = (props: {
         {
           active: true,
           hasIcon: false,
-          className: ['border-l-purple-500', 'bg-purple-50'],
+          className: ['border-l-blue-500', 'bg-blue-50'],
         },
         {
           active: false,
           hasIcon: false,
-          className: ['hover:border-l-purple-300', 'hover:bg-purple-50/25'],
+          className: ['hover:border-l-blue-300', 'hover:bg-blue-50/25'],
         },
       ],
     }
@@ -66,18 +66,18 @@ export const MenuItem = (props: {
     variants: {
       active: {
         true: [
-          'border-purple-500',
-          'text-purple-500',
-          'bg-purple-50',
+          'border-blue-500',
+          'text-blue-500',
+          'bg-blue-50',
           'shadow-sm',
-          'shadow-purple-500/50',
+          'shadow-blue-500/50',
         ],
         false: [
           'border-gray-300',
           'text-gray-400',
-          'group-hover:text-purple-300',
-          'group-hover:border-purple-300',
-          'group-hover:bg-purple-50',
+          'group-hover:text-blue-300',
+          'group-hover:border-blue-300',
+          'group-hover:bg-blue-50',
         ],
       },
     },
@@ -90,17 +90,17 @@ export const MenuItem = (props: {
       {icon && <span className={iconStyles({ active })}>{icon}</span>}
       <span>{title}</span>
       {wip && (
-        <span className='text-xs bg-yellow-50 border border-dashed border-yellow-100 rounded py-[0.15rem] px-[0.3rem] text-yellow-500'>
+        <span className='rounded border border-dashed border-yellow-100 bg-yellow-50 px-[0.3rem] py-[0.15rem] text-xs text-yellow-500'>
           WIP
         </span>
       )}
       {newItem && (
-        <span className='text-xs bg-purple-50/75 border border-dashed border-purple-100 rounded py-[0.15rem] px-[0.3rem] text-purple-600'>
+        <span className='rounded border border-dashed border-blue-100 bg-blue-50/75 px-[0.3rem] py-[0.15rem] text-xs text-blue-600'>
           NEW
         </span>
       )}
       {updated && (
-        <span className='text-xs bg-green-50/75 border border-dashed border-green-100 rounded py-[0.15rem] px-[0.3rem] text-green-600'>
+        <span className='rounded border border-dashed border-green-100 bg-green-50/75 px-[0.3rem] py-[0.15rem] text-xs text-green-600'>
           UPDATED
         </span>
       )}

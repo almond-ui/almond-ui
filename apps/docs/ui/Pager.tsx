@@ -47,7 +47,7 @@ const PagerItem = ({
     <Link
       href={item.url}
       className={clsx(
-        'flex justify-between items-center rounded border border-gray-200 hover:border-purple-500 hover:text-purple-500 hover:bg-purple-50 hover:shadow-sm p-4 w-1/2',
+        'flex justify-between items-center rounded border border-gray-200 hover:border-blue-500 hover:text-blue-500 hover:bg-blue-50 hover:shadow-sm p-4 w-1/2',
         side === 'right' && 'ml-auto'
       )}
     >
@@ -229,7 +229,7 @@ export const Pager = (props: PagerProps) => {
   const { prev, next } = getPrevAndNext(collection, index);
 
   return (
-    <div className='flex gap-4 w-full pt-10'>
+    <div className='flex w-full gap-4 pt-10'>
       {prev && <PagerItem item={prev} side='left' />}
       {next && <PagerItem item={next} side='right' />}
     </div>

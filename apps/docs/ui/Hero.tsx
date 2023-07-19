@@ -1,7 +1,5 @@
 'use client';
 
-import { Configurator } from '@/ui/Configurator';
-import { Image, Tabs } from '@almond-ui/core';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -15,7 +13,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className='space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 h-full'>
+    <section className='h-full space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32'>
       <div className='container flex flex-col items-center gap-4 text-center'>
         <Link
           href='/'
@@ -24,20 +22,20 @@ export const Hero = () => {
         >
           Follow along on Twitter
         </Link>
-        <h1 className='text-3xl md:text-4xl lg:text-6xl text-slate-800 font-semibold flex flex-col items-center'>
+        <h1 className='flex flex-col items-center text-3xl font-semibold text-slate-800 md:text-4xl lg:text-6xl'>
           <span>Yet another boring</span>
           <span>component library</span>
         </h1>
 
-        <h2 className='text-lg md:text-xl text-slate-600 text-center'>
+        <h2 className='text-center text-lg text-slate-600 md:text-xl'>
           It can be expressive with variant driven styling and configuration
         </h2>
 
         <div className='flex flex-col items-center gap-3'>
-          <div className='flex flex-wrap md:flex-row justify-center items-center mx-auto gap-4'>
+          <div className='mx-auto flex flex-wrap items-center justify-center gap-4 md:flex-row'>
             <Link
               href='/introduction'
-              className='flex items-center font-medium text-sm space-x-2 bg-gradient-to-r from-purple-600 hover:from-purple-700 to-purple-500 hover:to-purple-600 text-white border border-purple-600 text-purple-600 py-3 px-5 rounded-lg shadow-lg shadow-purple-200/75'
+              className='flex items-center space-x-2 rounded-lg border border-blue-600 bg-gradient-to-r from-blue-600 to-blue-500 px-5 py-3 text-sm font-medium text-white shadow-lg shadow-blue-200/75 hover:from-blue-700 hover:to-blue-600'
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -57,11 +55,11 @@ export const Hero = () => {
 
           <div
             onClick={handleCopy}
-            className='flex group items-center cursor-copy relative'
+            className='group relative flex cursor-copy items-center'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='fill-slate-600 mr-2'
+              className='mr-2 fill-slate-600'
               height='0.75em'
               viewBox='0 0 576 512'
             >
@@ -71,10 +69,10 @@ export const Hero = () => {
                 d='M224 448c0-17.7 14.3-32 32-32H544c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32z'
               />
             </svg>
-            <span className='text-slate-500 group-hover:text-slate-600 transition-colors'>
+            <span className='text-slate-500 transition-colors group-hover:text-slate-600'>
               npm install @almond-ui/core
             </span>
-            <span className='invisible group-hover:visible ml-2 absolute -right-6'>
+            <span className='invisible absolute -right-6 ml-2 group-hover:visible'>
               {copying ? (
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

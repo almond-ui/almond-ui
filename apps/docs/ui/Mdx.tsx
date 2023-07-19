@@ -83,12 +83,12 @@ import { View } from './View';
 const components = {
   h1: ({ ...props }) => (
     <h1
-      className='group mt-8 text-3xl text-gray-800 font-semibold scroll-mt-[7rem]'
+      className='group mt-8 scroll-mt-[7rem] text-3xl font-semibold text-gray-800'
       {...props}
     >
       <a
         href={`#${props.id}`}
-        className="group-hover:before:visible before:invisible before:content-['#'] before:text-purple-200 before:mr-1 before:-ml-6"
+        className="before:invisible before:-ml-6 before:mr-1 before:text-blue-200 before:content-['#'] group-hover:before:visible"
       >
         {props.children}
       </a>
@@ -96,38 +96,38 @@ const components = {
   ),
   h2: ({ ...props }) => (
     <h2
-      className='group mt-8 text-2xl text-gray-700 font-semibold scroll-mt-[7rem]'
+      className='group mt-8 scroll-mt-[7rem] text-2xl font-semibold text-gray-700'
       {...props}
     >
       <a
         href={`#${props.id}`}
-        className="group-hover:before:visible before:invisible before:content-['#'] before:text-purple-200 before:mr-1 before:-ml-5"
+        className="before:invisible before:-ml-5 before:mr-1 before:text-blue-200 before:content-['#'] group-hover:before:visible"
       >
         {props.children}
       </a>
     </h2>
   ),
   h3: ({ ...props }) => (
-    <p className='mt-8 text-xl text-gray-700 font-semibold' {...props} />
+    <p className='mt-8 text-xl font-semibold text-gray-700' {...props} />
   ),
   h4: ({ ...props }) => (
-    <p className='mt-8 text-lg text-gray-700 font-medium' {...props} />
+    <p className='mt-8 text-lg font-medium text-gray-700' {...props} />
   ),
   p: ({ ...props }) => (
     <p
-      className='mt-4 text-base text-gray-700 leading-normal md:leading-relaxed'
+      className='mt-4 text-base leading-normal text-gray-700 md:leading-relaxed'
       {...props}
     />
   ),
   a: ({ ...props }) => (
     <a
-      className='text-purple-600 underline decoration-2 decoration-solid decoration-purple-500'
+      className='text-blue-600 underline decoration-blue-500 decoration-solid decoration-2'
       target='_blank'
       {...props}
     />
   ),
   ul: ({ ...props }) => (
-    <ul className='mt-3 mb-6 ml-6 list-disc text-gray-700' {...props} />
+    <ul className='mb-6 ml-6 mt-3 list-disc text-gray-700' {...props} />
   ),
   pre: ({ ...props }) => (
     <div className='mt-4 overflow-auto'>
@@ -136,12 +136,12 @@ const components = {
   ),
   code: ({ ...props }) => (
     <code
-      className='py-[0.15rem] px-[0.3rem] bg-purple-50/75 border border-purple-100 text-purple-600 rounded font-mono text-sm font-medium'
+      className='rounded border border-blue-100 bg-blue-50/75 px-[0.3rem] py-[0.15rem] font-mono text-sm font-medium text-blue-600'
       {...props}
     />
   ),
   hr: ({ ...props }) => (
-    <hr className='my-2 border-gray-200 border-dashed' {...props} />
+    <hr className='my-2 border-dashed border-gray-200' {...props} />
   ),
   table: ({ ...props }) => (
     <Table
@@ -159,7 +159,7 @@ const components = {
   td: ({ ...props }) => <Table.Td {...props} />,
   option: ({ ...props }) => <option {...props} />,
   Callout: ({ ...props }) => (
-    <Alert {...props} size='sm' color='purple' tone='light' className='mt-6' />
+    <Alert {...props} size='sm' color='blue' tone='light' className='mt-6' />
   ),
   Alert: ({ ...props }) => <Alert {...props} />,
   Avatar: ({ ...props }) => <Avatar {...props} />,
