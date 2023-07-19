@@ -1,1 +1,0 @@
-"use strict";var o=require("../../hooks/use-element-context.hook.cjs");const[e,t]=o.createElementContext("Accordion compound components cannot be rendered outside the Accordion component");exports.AccordionContextProvider=e,exports.useAccordionContext=t;

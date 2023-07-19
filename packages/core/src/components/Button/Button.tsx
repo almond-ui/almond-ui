@@ -25,6 +25,7 @@ const defaultProps: Partial<ButtonProps> = {
   withRing: true,
 };
 
+// @ts-expect-error
 const Button: ButtonComponent = forwardRef(
   <C extends ElementType = 'button'>(
     props: PolymorphicComponentProp<C, ButtonProps>,

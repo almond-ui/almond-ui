@@ -15,6 +15,7 @@ const defaultProps: DropdownLabelProps = {
   weight: 'normal',
 };
 
+// @ts-expect-error
 const DropdownLabel: DropdownLabelComponent = forwardRef(
   <C extends ElementType = 'div'>(
     props: PolymorphicComponentProp<C, DropdownLabelProps>,

@@ -14,6 +14,7 @@ const defaultProps: Partial<TextProps> = {
   weight: 'normal',
 };
 
+// @ts-expect-error
 const Text: TextComponent = forwardRef(
   <C extends ElementType = 'span'>(
     props: PolymorphicComponentProp<C, TextProps>,

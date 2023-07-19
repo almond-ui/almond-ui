@@ -1,1 +1,0 @@
-import{createElementContext as o}from"../../../hooks/use-element-context.hook.js";const[e,n]=o("Accordion Item compound components cannot be rendered outside the Accordion Item component");export{e as AccordionItemContextProvider,n as useAccordionItemContext};

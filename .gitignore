@@ -35,3 +35,13 @@ yarn-error.log*
 # vercel
 .vercel
 .idea
+
+*.log
+.next
+dist
+dist-ssr
+*.local
+.cache
+server/dist
+public/dist
+storybook-static/

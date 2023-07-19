@@ -1,1 +1,0 @@
-"use strict";var e=require("../../hooks/use-element-context.hook.cjs");const[o,t]=e.createElementContext("Popover compound components cannot be rendered outside the Popover component");exports.PopoverContextProvider=o,exports.usePopoverContext=t;
