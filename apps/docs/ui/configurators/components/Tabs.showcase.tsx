@@ -1,7 +1,7 @@
 import { Button, Card, Radio, Tabs } from '@almond-ui/core';
 import { HandWaving, Lifebuoy } from '@phosphor-icons/react';
-import { useRef } from 'react';
 import * as React from 'react';
+import { useRef } from 'react';
 
 export type TabsShowcaseProps = {
   showcase:
@@ -41,14 +41,14 @@ const extendedTabs = [
     label: 'Introduction',
     icon: <HandWaving weight='duotone' className='text-purple-500' />,
     content:
-      'Almond UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
+      'Rewind UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
   },
   {
     anchor: 'tab-2',
     label: 'Contribute',
     icon: <Lifebuoy weight='duotone' className='text-purple-500' />,
     content:
-      "We're always looking for new contributors to help us improve Almond UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
+      "We're always looking for new contributors to help us improve Rewind UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
   },
 ];
 
@@ -655,12 +655,12 @@ const ExamplesTabsInCard = () => {
       <Card shadow='base'>
         <Card.Body className='p-0'>
           <Tabs tone='line' fullWidth={true} defaultTab='tab-1'>
-            <Tabs.List className='m-0 p-0 bg-gray-100/50'>
+            <Tabs.List className='m-0 bg-gray-100/50 p-0'>
               {extendedTabs.map((tab) => (
                 <Tabs.Tab
                   key={`tab-${tab.anchor}`}
                   anchor={tab.anchor}
-                  className='py-3.5 flex items-center gap-x-2'
+                  className='flex items-center gap-x-2 py-3.5'
                 >
                   {tab.icon} {tab.label}
                 </Tabs.Tab>

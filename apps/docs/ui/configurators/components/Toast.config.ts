@@ -1,36 +1,40 @@
 import {
-  AlertCode,
-  AlertExample,
-} from '@/ui/configurators/components/Alert.example';
+  ToastCode,
+  ToastExample,
+} from '@/ui/configurators/components/Toast.example';
 
-export const AlertConfig = {
-  example: AlertExample,
-  default: AlertCode,
+export const ToastConfig = {
+  example: ToastExample,
+  default: ToastCode,
   state: {
-    accent: 'none',
+    closeOnClick: true,
     color: 'purple',
-    dismissable: false,
-    dismissableAnimation: true,
-    iconType: 'info',
+    description: 'Do you really want to delete the selected items?',
+    duration: 3000,
+    iconType: 'question',
+    max: 5,
+    pauseOnHover: true,
+    position: 'top-right',
     radius: 'md',
     shadow: 'none',
     shadowColor: 'none',
-    size: 'sm',
-    tone: 'light',
-    title: 'Critical information!',
+    showProgress: true,
+    title: 'Are you sure?',
+    tone: 'solid',
+    withActions: true,
   },
   options: [
+    {
+      label: 'Position',
+      name: 'position',
+      type: 'select',
+      options: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
+    },
     {
       label: 'Tone',
       name: 'tone',
       type: 'select',
-      options: ['solid', 'light', 'outline'],
-    },
-    {
-      label: 'Accent',
-      name: 'accent',
-      type: 'select',
-      options: ['none', 'top', 'bottom', 'left', 'right'],
+      options: ['solid', 'light'],
     },
     {
       label: 'Color',
@@ -47,12 +51,6 @@ export const AlertConfig = {
         'dark',
         'black',
       ],
-    },
-    {
-      label: 'Size',
-      name: 'size',
-      type: 'selector',
-      options: ['xs', 'sm', 'md', 'lg'],
     },
     {
       label: 'Shadow',
@@ -80,7 +78,7 @@ export const AlertConfig = {
       label: 'Radius',
       name: 'radius',
       type: 'select',
-      options: ['none', 'sm', 'base', 'md', 'lg', 'full'],
+      options: ['none', 'sm', 'base', 'md', 'lg'],
     },
     {
       label: 'Icon type',
@@ -89,18 +87,38 @@ export const AlertConfig = {
       options: ['', 'info', 'success', 'warning', 'error', 'question'],
     },
     {
-      label: 'Dismissable',
-      name: 'dismissable',
+      label: 'Duration',
+      name: 'duration',
+      type: 'number',
+    },
+    {
+      label: 'Close on click',
+      name: 'closeOnClick',
       type: 'switch',
     },
     {
-      label: 'Dismissable animation',
-      name: 'dismissableAnimation',
+      label: 'Pause on hover',
+      name: 'pauseOnHover',
+      type: 'switch',
+    },
+    {
+      label: 'Show progress',
+      name: 'showProgress',
+      type: 'switch',
+    },
+    {
+      label: 'Show actions',
+      name: 'withActions',
       type: 'switch',
     },
     {
       label: 'Title',
       name: 'title',
+      type: 'input',
+    },
+    {
+      label: 'Description',
+      name: 'description',
       type: 'input',
     },
   ],

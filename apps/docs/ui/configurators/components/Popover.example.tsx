@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Popover, PopoverProps } from '@almond-ui/core';
+import { Button, Popover, PopoverProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const PopoverCode = (props: any) => {

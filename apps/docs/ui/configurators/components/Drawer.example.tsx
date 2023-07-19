@@ -6,8 +6,8 @@ import {
   FormControl,
 } from '@almond-ui/core';
 import { X } from '@phosphor-icons/react';
-import { useState } from 'react';
 import * as React from 'react';
+import { useState } from 'react';
 
 export const DrawerCode = (props: any) => {
   const {
@@ -115,7 +115,7 @@ export const DrawerExample = (props: DrawerProps) => {
       <Drawer {...props} open={open} onClose={() => setOpen(false)}>
         <Card className='w-full' bordered={false}>
           <Card.Header className='bg-slate-50'>
-            <h3 className='text-lg text-slate-800 font-medium'>Login</h3>
+            <h3 className='text-lg font-medium text-slate-800'>Login</h3>
 
             <Button
               variant='secondary'
@@ -128,7 +128,7 @@ export const DrawerExample = (props: DrawerProps) => {
           </Card.Header>
 
           <Card.Body>
-            <div className='flex flex-col space-y-4 md:w-[30rem] mx-auto'>
+            <div className='mx-auto flex flex-col space-y-4 md:w-[30rem]'>
               <FormControl>
                 <FormControl.Label className='text-sm' required>
                   Email

@@ -7,8 +7,8 @@ import {
   Text,
 } from '@almond-ui/core';
 import { X } from '@phosphor-icons/react';
-import { useState } from 'react';
 import * as React from 'react';
+import { useState } from 'react';
 
 export type ModalShowcaseProps = {
   showcase:
@@ -48,7 +48,7 @@ export const ModalShowcase = (props: ModalShowcaseProps) => {
 const ModalTemplate = (props: ModalProps) => {
   return (
     <Modal {...props}>
-      <div className='flex flex-col p-10 space-y-2'>
+      <div className='flex flex-col space-y-2 p-10'>
         <p>I am a modal!</p>
 
         <Button variant='secondary' onClick={props.onClose}>
@@ -345,7 +345,7 @@ const MultiModal = () => {
               <h1>This is a parent modal</h1>
             </Card.Body>
 
-            <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+            <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
               <Button variant='secondary' onClick={() => setParentOpen(false)}>
                 Cancel
               </Button>
@@ -360,7 +360,7 @@ const MultiModal = () => {
               <h1>This is a child modal</h1>
             </Card.Body>
 
-            <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+            <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
               <Button
                 variant='secondary'
                 onClick={() => setFirstChildOpen(false)}
@@ -378,7 +378,7 @@ const MultiModal = () => {
               <h1>This is a second child modal</h1>
             </Card.Body>
 
-            <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+            <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
               <Button
                 variant='secondary'
                 onClick={() => setSecondChildOpen(false)}
@@ -417,7 +417,7 @@ const ExamplesCard = () => {
           >
             Privacy Policy
           </Card.Header>
-          <Card.Body className='max-h-[300px] overflow-auto space-y-3'>
+          <Card.Body className='max-h-[300px] space-y-3 overflow-auto'>
             <Text className='block'>
               At [Company], we are committed to protecting your privacy and
               personal information. We collect information about you when you
@@ -445,7 +445,7 @@ const ExamplesCard = () => {
               practices.
             </Text>
           </Card.Body>
-          <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+          <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
             <Button onClick={() => setOpen(false)} size='md' color='white'>
               Cancel
             </Button>
@@ -506,7 +506,7 @@ const ExamplesForm = () => {
               />
             </FormControl>
           </Card.Body>
-          <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+          <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
             <Button onClick={() => setOpen(false)} size='sm' color='white'>
               Close
             </Button>

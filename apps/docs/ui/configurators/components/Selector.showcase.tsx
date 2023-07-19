@@ -1,7 +1,7 @@
-import { Button, Selector, Tabs, Tooltip } from '@almond-ui/core';
+import { Button, Selector, Tooltip } from '@almond-ui/core';
 import { MoonStars, SunDim } from '@phosphor-icons/react';
-import { useRef } from 'react';
 import * as React from 'react';
+import { useRef } from 'react';
 
 export type SelectorShowcaseProps = {
   showcase:
@@ -302,7 +302,7 @@ const SeparatorCustom = () => {
     <>
       <Selector
         separator={
-          <span className='last-of-type:hidden self-center mx-1 w-1 h-1 bg-gray-200 rounded-full' />
+          <span className='mx-1 h-1 w-1 self-center rounded-full bg-gray-200 last-of-type:hidden' />
         }
         orientation='horizontal'
         value='1'
@@ -312,7 +312,7 @@ const SeparatorCustom = () => {
       </Selector>
       <Selector
         separator={
-          <span className='last-of-type:hidden self-center mx-1 w-1 h-6 bg-gray-200 rounded-full' />
+          <span className='mx-1 h-6 w-1 self-center rounded-full bg-gray-200 last-of-type:hidden' />
         }
         orientation='horizontal'
         value='1'
@@ -322,7 +322,7 @@ const SeparatorCustom = () => {
       </Selector>
       <Selector
         separator={
-          <span className='last-of-type:hidden self-center mx-1 w-8 h-1 bg-gray-200 rounded-full' />
+          <span className='mx-1 h-1 w-8 self-center rounded-full bg-gray-200 last-of-type:hidden' />
         }
         orientation='vertical'
         value='1'
@@ -364,7 +364,7 @@ const ExtendedComposition = () => {
               offset={15}
               shadow='base'
             >
-              <span className='whitespace-nowrap underline underline-offset-2 decoration-2 decoration-pink-500'>
+              <span className='whitespace-nowrap underline decoration-pink-500 decoration-2 underline-offset-2'>
                 React Node
               </span>
             </Tooltip>
@@ -381,10 +381,10 @@ const Icons = () => {
     <>
       <Selector
         radius='full'
-        className='bg-gray-50 border border-gray-100'
+        className='border border-gray-100 bg-gray-50'
         shadow='none'
         separator={
-          <span className='last-of-type:hidden self-center w-1 h-1 bg-transparent' />
+          <span className='h-1 w-1 self-center bg-transparent last-of-type:hidden' />
         }
         value='1'
       >

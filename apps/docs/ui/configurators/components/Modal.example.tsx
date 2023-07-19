@@ -1,7 +1,7 @@
 import { Button, Card, FormControl, Modal, ModalProps } from '@almond-ui/core';
 import { X } from '@phosphor-icons/react';
-import { useState } from 'react';
 import * as React from 'react';
+import { useState } from 'react';
 
 export const ModalCode = (props: any) => {
   const {
@@ -87,7 +87,7 @@ export const ModalExample = (props: ModalProps) => {
         <Card className='w-full'>
           <Card.Header className='flex justify-between'>
             <div className='flex flex-col'>
-              <h3 className='text-xl text-gray-800 font-bold'>Sign in</h3>
+              <h3 className='text-xl font-bold text-gray-800'>Sign in</h3>
               <span className='text-gray-500'>Enter your credentials</span>
             </div>
 
@@ -97,7 +97,7 @@ export const ModalExample = (props: ModalProps) => {
           </Card.Header>
 
           <Card.Body>
-            <div className='flex flex-col space-y-4 mx-auto'>
+            <div className='mx-auto flex flex-col space-y-4'>
               <FormControl>
                 <FormControl.Label className='text-sm' required>
                   Email
@@ -131,7 +131,7 @@ export const ModalExample = (props: ModalProps) => {
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
-                  className='fill-gray-100 mr-1.5'
+                  className='mr-1.5 fill-gray-100'
                   height='1em'
                   viewBox='0 0 512 512'
                 >

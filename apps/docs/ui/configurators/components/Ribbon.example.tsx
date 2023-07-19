@@ -66,11 +66,11 @@ export const RibbonExample = (props: RibbonProps) => {
         <Ribbon {...props}>Free trial</Ribbon>
         <div className={`${className} flex flex-col`}>
           <span
-            className={`${className} text-lg leading-8 text-gray-700 font-semibold`}
+            className={`${className} text-lg font-semibold leading-8 text-gray-700`}
           >
             Create new account
           </span>
-          <span className='text-gray-500 font-normal'>
+          <span className='font-normal text-gray-500'>
             Start your 7-days trial period
           </span>
         </div>

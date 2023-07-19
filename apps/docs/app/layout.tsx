@@ -1,10 +1,8 @@
 import '@/styles/globals.css';
-import * as process from 'process';
 import { config } from '@/lib/config';
 import { fontMono, fontSans } from '@/lib/fonts';
 import { Header } from '@/ui/Header';
 import { cn } from '@/utils/misc';
-import Script from 'next/script';
 import { ReactNode } from 'react';
 
 export const metadata = {
@@ -57,7 +55,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html
       lang='en'
       className={cn(
-        'bg-background min-h-screen font-sans text-black',
+        'min-h-screen bg-white font-sans text-black',
         fontSans.variable,
         fontMono.variable
       )}

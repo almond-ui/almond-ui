@@ -1,4 +1,4 @@
-import { Avatar, AvatarProps, Badge, BadgeProps } from '@almond-ui/core';
+import { Avatar, AvatarProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const AvatarCode = (props: any) => {
@@ -63,7 +63,9 @@ function App() {
 export const AvatarExample = ({
   withImage,
   ...props
-}: AvatarProps & { withImage?: boolean }) => {
+}: AvatarProps & {
+  withImage?: boolean;
+}) => {
   if (withImage) {
     return (
       <Avatar

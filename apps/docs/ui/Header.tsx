@@ -1,16 +1,12 @@
 'use client';
 
-import { Menu } from '@/ui/Menu';
 import MobileMenu from '@/ui/MobileMenu';
 import { cn } from '@/utils/misc';
-import { Drawer } from '@almond-ui/core';
-import { List, ScribbleLoop, X } from '@phosphor-icons/react';
+import { ScribbleLoop } from '@phosphor-icons/react';
 import { useAnimation } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import logo from '../public/images/logo.svg';
+import { useCallback, useRef } from 'react';
 
 const LINKS = [
   { name: 'User guide', href: '/ask' },
@@ -29,7 +25,7 @@ function NavItem({ href, text }: { href: string; text: string }) {
           isActive
             ? 'font-semibold text-gray-800 dark:text-gray-100'
             : 'font-normal text-gray-600 dark:text-gray-300',
-          'underlined mx-3 hidden px-1 transition-all md:inline-block text-sm'
+          'underlined mx-3 hidden px-1 text-sm transition-all md:inline-block'
         )}
       >
         {text}
@@ -58,19 +54,19 @@ export const Header = () => {
   }, [control]);
 
   return (
-    <header className='sticky top-0 z-40 bg-background'>
+    <header className='sticky top-0 z-40 bg-white'>
       <div className='flex h-12 items-center justify-between gap-6 border-b py-4 md:gap-10'>
         <nav
           ref={navRef}
           className='inset-x-0 top-0 z-10 w-full p-4 lg:fixed lg:p-2 lg:px-0'
         >
-          <div className='mx-auto flex max-w-7xl justify-between'>
+          <div className='container mx-auto flex justify-between'>
             <div className='hidden items-center justify-center gap-2 align-middle lg:flex'>
-              <ScribbleLoop size={32} color='#141414' weight='duotone' />
+              <ScribbleLoop size={32} color='#1976d2' weight='duotone' />
               <Link
                 href='/'
                 aria-label='musings'
-                className='text-primary underlined block whitespace-nowrap font-heading text-xl font-medium transition focus:outline-none'
+                className='text-primary underlined font-heading block whitespace-nowrap text-xl font-medium transition focus:outline-none'
               >
                 almond-ui
               </Link>

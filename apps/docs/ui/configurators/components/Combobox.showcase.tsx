@@ -18,8 +18,8 @@ import {
   InputGroup,
 } from '@almond-ui/core';
 import { MagnifyingGlass } from '@phosphor-icons/react';
-import { useState } from 'react';
 import * as React from 'react';
+import { useState } from 'react';
 
 export type ComboboxShowcaseProps = {
   showcase:
@@ -135,7 +135,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Germany'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/germany-circular.png'
           />
         ),
@@ -147,7 +147,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Great Britain'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/great-britain-circular.png'
           />
         ),
@@ -159,7 +159,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Greece'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/greece-circular.png'
           />
         ),
@@ -171,7 +171,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Greece'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/sweden-circular.png'
           />
         ),
@@ -188,7 +188,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Japan'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/japan-circular.png'
           />
         ),
@@ -201,7 +201,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='China'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/china-circular.png'
           />
         ),
@@ -213,7 +213,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='India'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/india-circular.png'
           />
         ),
@@ -230,7 +230,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='USA'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/usa-circular.png'
           />
         ),
@@ -242,7 +242,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Canada'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/canada-circular.png'
           />
         ),
@@ -254,7 +254,7 @@ const groupedOptions: ComboboxGroupType[] = [
         media: (
           <Image
             alt='Mexico'
-            className='w-10 h-10'
+            className='h-10 w-10'
             src='https://img.icons8.com/color/64/mexico-circular.png'
           />
         ),

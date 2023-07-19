@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Tooltip, TooltipProps } from '@almond-ui/core';
+import { Button, Tooltip, TooltipProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const TooltipCode = (props: any) => {

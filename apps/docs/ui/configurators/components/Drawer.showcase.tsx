@@ -7,8 +7,8 @@ import {
   Text,
 } from '@almond-ui/core';
 import { X } from '@phosphor-icons/react';
-import { useState } from 'react';
 import * as React from 'react';
+import { useState } from 'react';
 
 export type DrawerShowcaseProps = {
   showcase:
@@ -38,7 +38,7 @@ export const DrawerShowcase = (props: DrawerShowcaseProps) => {
 const DrawerTemplate = (props: DrawerProps) => {
   return (
     <Drawer {...props}>
-      <div className='flex flex-col p-16 space-y-2'>
+      <div className='flex flex-col space-y-2 p-16'>
         <p>I am a drawer!</p>
 
         <Button variant='secondary' onClick={props.onClose}>
@@ -211,7 +211,7 @@ const ExamplesCard = () => {
           >
             Privacy Policy
           </Card.Header>
-          <Card.Body className='max-h-[300px] overflow-auto space-y-3'>
+          <Card.Body className='max-h-[300px] space-y-3 overflow-auto'>
             <Text className='block'>
               At [Company], we are committed to protecting your privacy and
               personal information. We collect information about you when you
@@ -239,7 +239,7 @@ const ExamplesCard = () => {
               practices.
             </Text>
           </Card.Body>
-          <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+          <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
             <Button onClick={() => setOpen(false)} size='md' color='white'>
               Cancel
             </Button>
@@ -300,7 +300,7 @@ const ExamplesForm = () => {
               />
             </FormControl>
           </Card.Body>
-          <Card.Footer className='bg-gray-50/50 justify-end space-x-2'>
+          <Card.Footer className='justify-end space-x-2 bg-gray-50/50'>
             <Button onClick={() => setOpen(false)} size='sm' color='white'>
               Close
             </Button>

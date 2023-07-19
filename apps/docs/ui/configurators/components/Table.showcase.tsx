@@ -332,7 +332,7 @@ const UsersTable = () => (
         </Table.Td>
         <Table.Td>
           <Badge color='green' tone='outline'>
-            <div className='w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5' />
+            <div className='mr-1.5 h-1.5 w-1.5 animate-pulse rounded-full bg-green-500' />
             Active
           </Badge>
         </Table.Td>
@@ -374,7 +374,7 @@ const UsersTable = () => (
         </Table.Td>
         <Table.Td>
           <Badge color='green' tone='outline'>
-            <div className='w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5' />
+            <div className='mr-1.5 h-1.5 w-1.5 animate-pulse rounded-full bg-green-500' />
             Active
           </Badge>
         </Table.Td>
@@ -416,7 +416,7 @@ const UsersTable = () => (
         </Table.Td>
         <Table.Td>
           <Badge color='red' tone='outline'>
-            <div className='w-1.5 h-1.5 bg-red-500 rounded-full mr-1.5' />
+            <div className='mr-1.5 h-1.5 w-1.5 rounded-full bg-red-500' />
             Inactive
           </Badge>
         </Table.Td>
@@ -458,7 +458,7 @@ const UsersTable = () => (
         </Table.Td>
         <Table.Td>
           <Badge color='green' tone='outline'>
-            <div className='w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5' />
+            <div className='mr-1.5 h-1.5 w-1.5 animate-pulse rounded-full bg-green-500' />
             Active
           </Badge>
         </Table.Td>

@@ -47,7 +47,7 @@ export const CardExample = (props: CardProps) => {
     <Card {...props}>
       <Card.Header>Header</Card.Header>
       <Card.Body>
-        Almond UI is a React component library that provides a set of
+        Rewind UI is a React component library that provides a set of
         accessible, reusable and customizable components to help you build your
         next project. We have designed our components to be flexible and easy to
         use, so you can focus on what matters most: building great user
