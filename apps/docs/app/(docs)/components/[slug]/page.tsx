@@ -67,7 +67,7 @@ const ComponentLayout = async ({ params }: ComponentProps) => {
           <div className="flex items-center">
             <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800">{component.title}</h2>
             {component.polymorphic && (
-              <div className="px-2 py-1 ml-3 text-xs rounded shadow text-white bg-gradient-to-r from-purple-500 to-fuchsia-900 shadow shadow-fuchsia-200">
+              <div className="px-2 py-1 ml-3 text-xs rounded text-white bg-gradient-to-r from-purple-500 to-fuchsia-900 shadow shadow-fuchsia-200">
                 polymorphic
               </div>
             )}

@@ -12,9 +12,9 @@ export const Footer = () => {
           Copyright © 2023
         </Text>
         <Text size="sm" color="gray">
-          Rewind-UI is free and open-source, licensed under MIT.
+          Almond-UI is free and open-source, licensed under MIT.
         </Text>
-        <Link href="https://vercel.com?utm_source=[RewindUI]&utm_campaign=oss." target="_blank">
+        <Link href="https://vercel.com?utm_source=[AlmondUI]&utm_campaign=oss." target="_blank">
           <Image
             src="/images/powered-by-vercel.svg"
             width={169}

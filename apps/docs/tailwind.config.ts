@@ -1,12 +1,14 @@
-const colors = require('tailwindcss/colors');
+import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const tailwindConfig = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './content/**/*.mdx',
     './ui/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@rewind-ui/core/src/theme/styles/*.ts',
+    './node_modules/@almond-ui/core/src/theme/styles/*.ts',
   ],
   theme: {
     extend: {
@@ -16,17 +18,17 @@ module.exports = {
         slate: colors.slate,
         neutral: colors.neutral,
         blue: {
-          50: '#E5F6FF',
-          100: '#CCECFF',
-          200: '#94D8FF',
-          300: '#61C5FF',
-          400: '#2EB2FF',
-          500: '#009EF7',
-          600: '#007EC7',
-          700: '#005E94',
-          800: '#003D61',
-          900: '#002033',
-          950: '#001019',
+          50: '#e3f2fd',
+          100: '#bbdefb',
+          200: '#90caf9',
+          300: '#64b5f6',
+          400: '#42a5f5',
+          500: '#2095f3',
+          600: '#1e87e5',
+          700: '#1976d2',
+          800: '#1564c0',
+          900: '#0d46a1',
+          950: '#0d46a1',
         },
         red: {
           50: '#FEECF0',
@@ -42,17 +44,17 @@ module.exports = {
           950: '#1D0209',
         },
         green: {
-          50: '#EFFAF4',
-          100: '#DBF5E7',
-          200: '#B8EBCF',
-          300: '#98E2B9',
-          400: '#74D7A1',
-          500: '#50CD89',
-          600: '#33B36C',
-          700: '#268752',
-          800: '#195735',
-          900: '#0C2C1A',
-          950: '#07180E',
+          50: '#f2f8e5',
+          100: '#deedbe',
+          200: '#c7e194',
+          300: '#afd666',
+          400: '#9ccd40',
+          500: '#8ac402',
+          600: '#7ab400',
+          700: '#63a000',
+          800: '#4d8d00',
+          900: '#1e6c00',
+          950: '#1e6c00',
         },
         yellow: {
           50: '#FFF9E5',
@@ -81,18 +83,22 @@ module.exports = {
           950: '#0B031C',
         },
         pink: {
-          50: '#FBEAF2',
-          100: '#F6D5E6',
-          200: '#EFAECF',
-          300: '#E684B5',
-          400: '#DF5E9E',
-          500: '#D63384',
-          600: '#B2246B',
-          700: '#841A4F',
-          800: '#591236',
-          900: '#2A091A',
-          950: '#15040D',
+          50: '#fde5f1',
+          100: '#fabfdb',
+          200: '#fa94c4',
+          300: '#fa68ab',
+          400: '#fa4496',
+          500: '#fc1b80',
+          600: '#e91a7c',
+          700: '#d21976',
+          800: '#bc1771',
+          900: '#951367',
+          950: '#951367',
         },
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", ...fontFamily.sans],
+        mono: ["var(--font-mono)", ...fontFamily.mono]
       },
     },
   },
@@ -103,4 +109,6 @@ module.exports = {
       strategy: 'class', // only generate classes
     }),
   ],
-};
+} satisfies Config
+
+export default tailwindConfig;

@@ -1,25 +1,26 @@
-import './globals.css';
-import { Lato } from 'next/font/google';
+import '@/styles/globals.css';
 import { Header } from '@/ui/Header';
 import { config } from '@/lib/config';
 import Script from 'next/script';
 import * as process from 'process';
 import { ReactNode } from 'react';
+import { cn } from '@/utils/misc';
+import { fontMono, fontSans } from '@/lib/fonts';
 
 export const metadata = {
   title: {
     default: config.metadata.title,
-    template: 'Rewind-UI - %s',
+    template: 'Almond-UI - %s',
   },
   description: config.metadata.description,
   generator: 'Next.js',
-  applicationName: 'Rewind-UI - Documentation',
+  applicationName: 'Almond-UI - Documentation',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'React', 'Tailwind CSS', 'UI', 'React component library'],
-  authors: [{ name: 'Nick Dunas' }],
+  authors: [{ name: 'Francis Masha' }],
   colorScheme: 'light',
-  creator: 'Nick Dunas',
-  publisher: 'Nick Dunas',
+  creator: 'Francis Masha',
+  publisher: 'Francis Masha',
   formatDetection: {
     email: false,
     address: false,
@@ -28,7 +29,7 @@ export const metadata = {
   openGraph: {
     title: {
       default: config.metadata.title,
-      template: 'Rewind-UI - %s',
+      template: 'Almond-UI - %s',
     },
   },
   icons: {
@@ -41,21 +42,19 @@ export const metadata = {
     title: config.metadata.title,
     description: config.metadata.description,
     images: [config.metadata.ogImage],
-    creator: '@NickDunas',
+    creator: '@mashafrancis',
   },
 };
 
-const lato = Lato({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: ['100', '300', '400', '700', '900'],
-});
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={lato.className}>
-      <body>
-        <main className="min-h-screen">
+    <html lang="en" className={cn(
+      "bg-background min-h-screen font-sans text-black",
+      fontSans.variable,
+      fontMono.variable,
+    )}>
+      <body className="antialiased">
+        <main>
           <Header />
           {children}
         </main>

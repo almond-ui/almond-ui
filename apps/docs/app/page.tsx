@@ -6,7 +6,7 @@ import { Support } from '@/ui/Support';
 import * as React from 'react';
 
 export const generateMetadata = ({ params }) => {
-  const title = 'Almond-UI - A fully customizable React-TailwindCSS component library';
+  const title = 'Almond-UI - Yet another react-tailwindcss component library';
   const description =
     'Almond-UI offers a range of accessible, highly customizable components that can be easily integrated into any react project.';
 
@@ -15,7 +15,7 @@ export const generateMetadata = ({ params }) => {
     description,
     openGraph: {
       locale: 'en_US',
-      url: 'https://rewind-ui.dev',
+      url: 'https://almond-ui.francismasha.com',
       title,
       description,
       siteName: config.metadata.title,
@@ -33,29 +33,11 @@ export const generateMetadata = ({ params }) => {
 
 const LandingLayout = async ({ params }) => {
   return (
-    <div className="flex flex-col divide-y divide-slate-100">
-      <div className="bg-grid">
-        <div className="flex space-x-10 px-4 2xl:px-10 bg-gradient-to-tr to-slate-100 from-transparent">
+    <div className="flex flex-col min-h-screen">
+      <div className="bg-gradient-to-tr to-slate-100 from-transparent">
           <div className="container max-w-8xl mx-auto">
             <Hero />
           </div>
-        </div>
-      </div>
-
-      <div className="flex bg-white py-20 px-4 2xl:px-10">
-        <div className="container max-w-8xl mx-auto">
-          <Features />
-        </div>
-      </div>
-
-      <div className="flex bg-slate-50 py-20 px-4 2xl:px-10">
-        <div className="container max-w-5xl mx-auto">
-          <Support />
-        </div>
-      </div>
-
-      <div className="flex bg-white py-10">
-        <Footer />
       </div>
     </div>
   );

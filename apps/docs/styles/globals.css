@@ -12,7 +12,7 @@
     z-index: -10;
     content: "";
     position: absolute;
-    inset: 0px;
+    inset: 0;
     transform: scale(1);
     pointer-events: none;
   }

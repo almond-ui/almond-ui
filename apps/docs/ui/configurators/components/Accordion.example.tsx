@@ -4,7 +4,7 @@ import * as React from 'react';
 const accordionItems = [
   {
     anchor: 'item-1',
-    header: 'What is Rewind-UI?',
+    header: 'What is Almond-UI?',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
         <path d="M256 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM192 248c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h24V272H216c-13.3 0-24-10.7-24-24z" />
@@ -14,7 +14,7 @@ const accordionItems = [
         />
       </svg>
     ),
-    body: "Rewind-UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project. We've designed our components to be flexible and easy to use, so you can focus on what matters most: building great user experiences.",
+    body: "Almond-UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project. We've designed our components to be flexible and easy to use, so you can focus on what matters most: building great user experiences.",
   },
   {
     anchor: 'item-2',
@@ -28,7 +28,7 @@ const accordionItems = [
         />
       </svg>
     ),
-    body: "Getting started with Rewind-UI is easy! Simply install the package using your package manager of choice, and you're ready to go. We've also included a set of Storybook stories to help you get familiar with our components and how to use them.",
+    body: "Getting started with Almond-UI is easy! Simply install the package using your package manager of choice, and you're ready to go. We've also included a set of Storybook stories to help you get familiar with our components and how to use them.",
   },
   {
     anchor: 'item-3',
@@ -42,7 +42,7 @@ const accordionItems = [
         />
       </svg>
     ),
-    body: "We're always looking for new contributors to help us improve Rewind-UI! If you'd like to contribute, please check out our contribution guidelines to get started. We're looking forward to working with you!",
+    body: "We're always looking for new contributors to help us improve Almond-UI! If you'd like to contribute, please check out our contribution guidelines to get started. We're looking forward to working with you!",
   },
   {
     anchor: 'item-4',
@@ -56,7 +56,7 @@ const accordionItems = [
         />
       </svg>
     ),
-    body: "If you'd like to learn more about Rewind-UI, please visit our website. You can also follow us on Twitter to stay up to date with the latest news and updates.",
+    body: "If you'd like to learn more about Almond-UI, please visit our website. You can also follow us on Twitter to stay up to date with the latest news and updates.",
   },
 ];
 

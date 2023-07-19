@@ -1,4 +1,4 @@
-import './../globals.css';
+import '@/styles/globals.css';
 import { Aside } from '@/ui/Aside';
 import { Footer } from '@/ui/Footer';
 import { config } from '@/lib/config';
@@ -7,17 +7,17 @@ import { ReactNode } from 'react';
 export const metadata = {
   title: {
     default: config.metadata.title,
-    template: 'Rewind-UI - %s',
+    template: 'Almond-UI - %s',
   },
   description: config.metadata.description,
   generator: 'Next.js',
-  applicationName: 'Rewind-UI - Documentation',
+  applicationName: 'Almond-UI - Documentation',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'React', 'Tailwind CSS', 'UI', 'React component library'],
-  authors: [{ name: 'Nick Dunas' }],
+  authors: [{ name: 'Francis Masha' }],
   colorScheme: 'light',
-  creator: 'Nick Dunas',
-  publisher: 'Nick Dunas',
+  creator: 'Francis Masha',
+  publisher: 'Francis Masha',
   formatDetection: {
     email: false,
     address: false,
@@ -26,7 +26,7 @@ export const metadata = {
   openGraph: {
     title: {
       default: config.metadata.title,
-      template: 'Rewind-UI - %s',
+      template: 'Almond-UI - %s',
     },
   },
   icons: {
@@ -39,7 +39,7 @@ export const metadata = {
     title: config.metadata.title,
     description: config.metadata.description,
     images: [config.metadata.ogImage],
-    creator: '@NickDunas',
+    creator: '@mashafrancis',
   },
 };
 

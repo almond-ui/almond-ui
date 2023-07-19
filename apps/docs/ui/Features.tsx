@@ -15,7 +15,7 @@ export const Features = () => {
         <FeatureCard
           title="Pre-styled components"
           description="We all love headless UI libraries, but sometimes we just want to get started quickly.
-            Rewind-UI comes with pre-styled components that you can use out of the box."
+            Almond-UI comes with pre-styled components that you can use out of the box."
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export const Features = () => {
 
         <FeatureCard
           title="Themeable"
-          description="Using the CVA library, Rewind-UI provides a themeable styling system that allows you to
+          description="Using the CVA library, Almond-UI provides a themeable styling system that allows you to
             easily customize the look and feel of your components."
           icon={
             <svg
@@ -55,7 +55,7 @@ export const Features = () => {
 
         <FeatureCard
           title="Accessible"
-          description="Rewind-UI is built with accessibility in mind. All components are WAI-ARIA compliant and
+          description="Almond-UI is built with accessibility in mind. All components are WAI-ARIA compliant and
             follow the best practices for accessibility, including keyboard interactions."
           icon={
             <svg
@@ -74,7 +74,7 @@ export const Features = () => {
 
         <FeatureCard
           title="Interactive documentation"
-          description="Rewind-UI comes with a detailed documentation that includes interactive examples and
+          description="Almond-UI comes with a detailed documentation that includes interactive examples and
             code snippets for each component."
           icon={
             <svg

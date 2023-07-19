@@ -2,113 +2,89 @@
 import { Menu } from '@/ui/Menu';
 import Link from 'next/link';
 import Image from 'next/image';
-import * as React from 'react';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { List, X } from '@phosphor-icons/react';
 import { usePathname } from 'next/navigation';
 import { Drawer } from '@almond-ui/core';
+import logo from "../public/images/logo.svg";
+import { cn } from '@/utils/misc';
+import { useAnimation } from "framer-motion";
+import MobileMenu from '@/ui/MobileMenu';
+import { ScribbleLoop } from "@phosphor-icons/react";
 
-const headerButtonClasses =
-  'flex items-center justify-center w-8 h-8 md:w-10 bg-white md:h-10 rounded-lg border border-gray-100 p-2';
+const LINKS = [
+  { name: "User guide", href: "/ask" },
+  { name: "Changelog", href: "/write" },
+];
 
-const SocialLink = ({ href, children }: { href: string; children: ReactNode }) => {
+function NavItem({ href, text }: { href: string; text: string }) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
   return (
-    <Link href={href} target="_blank" className={headerButtonClasses}>
-      {children}
-    </Link>
+    <li>
+      <Link
+        href={href}
+        className={cn(
+          isActive
+            ? "font-semibold text-gray-800 dark:text-gray-100"
+            : "font-normal text-gray-600 dark:text-gray-300",
+          "underlined mx-3 hidden px-1 transition-all md:inline-block text-sm",
+        )}
+      >
+        {text}
+      </Link>
+    </li>
   );
-};
+}
 
 export const Header = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const pathname = usePathname();
-  const menuButtonClasses = pathname === '/' ? '' : '2xl:hidden';
+  const navRef = useRef<HTMLDivElement>(null);
+  const control = useAnimation();
 
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  const addShadowToNavbar = useCallback(async () => {
+    if (window.pageYOffset > 10) {
+      navRef.current?.classList.add(
+        ...["shadow", "backdrop-blur-xl", "bg-white/70", "dark:bg-gray-900"],
+      );
+
+      await control.start("visible");
+    } else {
+      navRef.current?.classList.remove(
+        ...["shadow", "backdrop-blur-xl", "bg-white/70", "dark:bg-gray-900"],
+      );
+      await control.start("hidden");
+    }
+  }, [control]);
 
   return (
-    <>
-      <div className="sticky top-0 flex items-center w-full h-20 bg-white 2xl:bg-transparent 2xl:backdrop-blur-md border-b border-b-gray-100 z-50">
-        <div className="container max-w-8xl h-full flex items-center justify-between mx-auto px-4 2xl:px-0">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/almond.svg"
-              width={48}
-              height={48}
-              alt="Rewind-UI"
-              className="mr-0.5 sm:mr-2 h-7 w-7 sm:w-10 sm:h-10 md:w-12 md:h-12"
-            />
-            <div className="flex flex-col space-y-0">
-              <span className="flex items-center font-semibold text-gray-800 text-xl sm:text-2xl md:text-3xl">
-                <span>almond-ui</span>
-                <span className="ml-2 text-xs text-red-50 py-0.5 px-1 bg-gradient-to-r from-red-500 to-red-700 shadow shadow-red-200 rounded">
-                  beta
-                </span>
-              </span>
-              <span className="hidden md:block text-gray-500">Effortless user interfaces</span>
-            </div>
-          </Link>
-
-          <div className="flex space-x-2">
-            <SocialLink href="https://github.com/almondui/almondui">
-              <Image
-                priority
-                src="/images/github.svg"
-                height={18}
-                width={18}
-                alt="Check our source code!"
-              />
-            </SocialLink>
-
-            <SocialLink href="https://twitter.com/almondui">
-              <Image
-                priority
-                src="/images/twitter.svg"
-                height={18}
-                width={18}
-                alt="Follow us on Twitter!"
-              />
-            </SocialLink>
-
-            <SocialLink href="https://storybook.almond-ui.dev/">
-              <Image
-                priority
-                src="/images/storybook.svg"
-                height={18}
-                width={18}
-                alt="Check our storybook!"
-              />
-            </SocialLink>
-
-            <div className={menuButtonClasses}>
-              <button onClick={() => setOpen(true)} className={headerButtonClasses}>
-                <List size={32} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Drawer
-        className="w-full sm:w-fit min-w-[350px] z-[70]"
-        position="right"
-        open={open}
-        onClose={() => setOpen(false)}
+    <div className="flex flex-col justify-between">
+      <nav
+        ref={navRef}
+        className="inset-x-0 top-0 z-10 w-full p-4 lg:fixed lg:p-2 lg:px-0"
       >
-        <div className="overflow-auto w-full h-full bg-white">
-          <div className="flex h-20 justify-between items-center px-4 py-2 bg-gray-50 border-b border-b-gray-100">
-            <span className="text-xl font-semibold">Menu</span>
-            <button onClick={() => setOpen(false)} className={headerButtonClasses}>
-              <X size={16} />
-            </button>
+        <div className="mx-auto flex max-w-7xl justify-between">
+          <div className="hidden items-center justify-center gap-2 align-middle lg:flex">
+            <ScribbleLoop size={32} color="#141414" weight="duotone" />
+            <Link
+              href="/"
+              aria-label="musings"
+              className="text-primary underlined block whitespace-nowrap font-heading text-xl font-medium transition focus:outline-none"
+            >
+              almond-ui
+            </Link>
           </div>
-          <div className="h-full p-4 mb-4">
-            <Menu />
+
+          <div className="ml-[-0.60rem] lg:flex lg:items-center lg:justify-center">
+            <ul className="hidden lg:flex">
+              {LINKS.map((link) => (
+                <NavItem key={link.href} href={link.href} text={link.name} />
+              ))}
+            </ul>
+            <MobileMenu />
           </div>
         </div>
-      </Drawer>
-    </>
+      </nav>
+    </div>
   );
 };
