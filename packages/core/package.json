@@ -1,0 +1,87 @@
+{
+  "name": "@almond-ui/core",
+  "description": "A React component library for building modern web applications using Tailwind CSS.",
+  "version": "0.10.1",
+  "license": "MIT",
+  "author": {
+    "name": "Francis Masha",
+    "email": "francismasha96@gmail.com"
+  },
+  "homepage": "https://almond-ui.dev/",
+  "repository": {
+    "url": "https://github.com/mashafrancis/almond-ui.git",
+    "type": "git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/mashafrancis/almond-ui/issues"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "tailwind",
+    "tailwindcss",
+    "nextjs",
+    "components",
+    "ui-kit"
+  ],
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**",
+    "README.md"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c rollup.config.mjs",
+    "dev": "pnpm run build --watch",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.35.0",
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-turbo": "latest",
+    "eslint-plugin-react": "7.29.4",
+    "happy-dom": "^8.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.21.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-preserve-directives": "^0.2.0",
+    "rollup-plugin-typescript-paths": "^1.4.0",
+    "tsc-alias": "^1.8.6",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.3",
+    "vite-tsconfig-paths": "^4.0.5",
+    "vitest": "^0.28.5"
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0.24.3",
+    "@floating-ui/react-dom": "^2.0.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "class-variance-authority": "^0.4.0",
+    "framer-motion": "^10.12.17",
+    "tailwind-merge": "^1.10.0",
+    "tailwind-scrollbar": "^2.0.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

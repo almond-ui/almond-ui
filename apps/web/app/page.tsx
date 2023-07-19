@@ -1,4 +1,4 @@
-import { Button, Header } from "ui";
+import { Button, Header } from "../../../packages/core";
 
 export default function Page() {
   return (
