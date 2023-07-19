@@ -1,10 +1,12 @@
-import { Button, Header } from "../../../packages/core";
+import { Button } from '@almond-ui/core/dist';
 
 export default function Page() {
   return (
     <>
-      <Header text="Docs" />
-      <Button />
+      <h1>Docs</h1>
+      <Button shadow="base">
+        Click me!
+      </Button>
     </>
   );
 }
