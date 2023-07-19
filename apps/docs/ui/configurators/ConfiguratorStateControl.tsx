@@ -27,7 +27,7 @@ export const ConfiguratorStateControl = ({
       size: 'sm',
       value: state,
       shadow: 'sm',
-      color: 'purple',
+      color: 'blue',
       onChange: (value: any) => onChange(option.name, value),
     };
     return (
@@ -41,7 +41,7 @@ export const ConfiguratorStateControl = ({
 
   if (option.type === 'select') {
     const props: Partial<SelectProps> = {
-      color: 'purple',
+      color: 'blue',
       tone: 'solid',
       size: 'sm',
       value: state,
@@ -61,7 +61,7 @@ export const ConfiguratorStateControl = ({
 
   if (option.type === 'input') {
     const props: Partial<InputProps> = {
-      color: 'purple',
+      color: 'blue',
       tone: 'solid',
       size: 'sm',
       value: state,
@@ -74,7 +74,7 @@ export const ConfiguratorStateControl = ({
 
   if (option.type === 'number') {
     const props: Partial<InputProps> = {
-      color: 'purple',
+      color: 'blue',
       tone: 'solid',
       size: 'sm',
       value: state,
@@ -93,7 +93,7 @@ export const ConfiguratorStateControl = ({
         size='sm'
         checked={state}
         label={option.label}
-        color='purple'
+        color='blue'
       />
     );
   }

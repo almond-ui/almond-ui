@@ -12,7 +12,7 @@ storybook: checkbox--default
 Import the `Checkbox` component using the following import statement.
 
 ```tsx
-import { Checkbox } from '@rewind-ui/core';
+import { Checkbox } from '@almond-ui/core';
 ```
 
 # Tones & Colors
@@ -152,7 +152,8 @@ The `description` prop can be used to display a description below the checkbox.
 Furthermore, a `ReactNode` can be passed to the `description` prop to display a more complex description that may contain multiple jsx elements.
 
 <View>
-  <Checkbox label="Click me!" description={<span className="text-purple-500 bg-purple-50 p-1 rounded">This is a purple description</span>} />
+  <Checkbox label="Click me!" description={<span
+    className="text-purple-500 bg-purple-50 p-1 rounded">This is a purple description</span>} />
 </View>
 
 ```tsx
@@ -167,7 +168,9 @@ Furthermore, a `ReactNode` can be passed to the `description` prop to display a 
 Similar styling can be achieved by using the `descriptionClassName` prop.
 
 <View>
-  <Checkbox label="Click me!" descriptionClassName="text-pink-500 bg-pink-50 p-1 rounded" description="This is a pink description" />
+  <Checkbox label="Click me!"
+            descriptionClassName="text-pink-500 bg-pink-50 p-1 rounded"
+            description="This is a pink description" />
 </View>
 
 ```tsx

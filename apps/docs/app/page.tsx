@@ -33,9 +33,9 @@ export const generateMetadata = ({ params }) => {
 
 const LandingLayout = async ({ params }) => {
   return (
-    <div className='flex flex-col min-h-screen'>
-      <div className='bg-gradient-to-tr to-slate-100 from-transparent'>
-        <div className='container max-w-8xl mx-auto'>
+    <div className='flex min-h-screen flex-col'>
+      <div className='bg-gradient-to-tr from-transparent to-slate-100'>
+        <div className='max-w-8xl container mx-auto'>
           <Hero />
         </div>
       </div>

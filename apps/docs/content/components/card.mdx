@@ -12,7 +12,7 @@ storybook: card--default
 Import the `Card` component using the following import statement.
 
 ```tsx
-import { Card } from '@rewind-ui/core';
+import { Card } from '@almond-ui/core';
 ```
 
 # Colors
@@ -341,7 +341,8 @@ An action button can be added to the `Card.Header` component by using the `actio
 
 <View>
   <Card className="min-w-[350px]">
-    <CardHeader actions={<Button size="xs" color="gray">Action</Button>}>Header</CardHeader>
+    <CardHeader actions={<Button size="xs"
+                                 color="gray">Action</Button>}>Header</CardHeader>
     <CardBody>Some text...</CardBody>
     <CardFooter>Footer</CardFooter>
   </Card>
@@ -366,7 +367,10 @@ This is a basic example of a `Card` component.
     <CardHeader className="font-medium">
       <span>Terms of service</span>
     </CardHeader>
-    <CardBody className="text-gray-600">Welcome to our website. By accessing or using our services, you agree to be bound by the following terms and conditions. If you do not agree to these terms, please do not use our services.</CardBody>
+    <CardBody className="text-gray-600">Welcome to our website. By accessing or
+      using our services, you agree to be bound by the following terms and
+      conditions. If you do not agree to these terms, please do not use our
+      services.</CardBody>
     <CardFooter className="flex justify-end space-x-2">
       <Button variant="tertiary">Leave</Button>
       <Button variant="primary">Accept</Button>
@@ -396,8 +400,10 @@ This is an example of a `Card` component showcasing how to use the `Card.Image` 
 
 <View>
   <Card className="max-w-[450px] relative">
-    <Ribbon size="lg" shadow="base" color="purple" shadowColor="purple" className="z-20">City tour</Ribbon>
-    <CardImage caption="USA" mode="dark" src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&h=250&q=80" />
+    <Ribbon size="lg" shadow="base" color="purple" shadowColor="purple"
+            className="z-20">City tour</Ribbon>
+    <CardImage caption="USA" mode="dark"
+               src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&h=250&q=80" />
     <CardBody>
       <div className="flex flex-col space-y-2">
         <div className="flex justify-between items-center">
@@ -413,12 +419,15 @@ This is an example of a `Card` component showcasing how to use the `Card.Image` 
   </Card>
 
   <Card className="max-w-[450px] relative">
-    <Ribbon size="lg" shadow="base" color="green" shadowColor="green" className="z-20">Boat tour</Ribbon>
-    <CardImage caption="Greece" mode="dark" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&h=250&q=80" />
+    <Ribbon size="lg" shadow="base" color="green" shadowColor="green"
+            className="z-20">Boat tour</Ribbon>
+    <CardImage caption="Greece" mode="dark"
+               src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=450&h=250&q=80" />
     <CardBody>
       <div className="flex flex-col space-y-2">
         <div className="flex justify-between items-center">
-          <span className="text-xl text-gray-800 font-semibold">Milos island</span>
+          <span
+            className="text-xl text-gray-800 font-semibold">Milos island</span>
           <Badge size="sm" color="green" tone="outline">$2,500.00</Badge>
         </div>
         <span className="text-gray-600">Discover the stunning beauty of Milos Island on our unforgettable boat tour. Let our experienced captain take you on a journey to explore the crystal-clear waters of this idyllic Greek island.</span>

@@ -12,7 +12,7 @@ storybook: input--default
 Import the `Input` component using the following import statement.
 
 ```tsx
-import { Input } from '@rewind-ui/core';
+import { Input } from '@almond-ui/core';
 ```
 
 # Tones
@@ -212,9 +212,13 @@ You can add a ring to the `Input` by setting the `withRing` prop to `true`.
 You can add an icon to the `Input` by setting the `leftIcon` or `rightIcon` prop to a valid React element.
 
 <View>
-  <Input leftIcon={<MagnifyingGlass weight="duotone" />} placeholder="Left icon..." />
-  <Input rightIcon={<RocketLaunch weight="duotone" />} placeholder="Right icon..." />
-  <Input leftIcon={<MagnifyingGlass weight="duotone" />} rightIcon={<Rocket weight="duotone" />} placeholder="Left and right icon..." />
+  <Input leftIcon={<MagnifyingGlass weight="duotone" />}
+         placeholder="Left icon..." />
+  <Input rightIcon={<RocketLaunch weight="duotone" />}
+         placeholder="Right icon..." />
+  <Input leftIcon={<MagnifyingGlass weight="duotone" />}
+         rightIcon={<Rocket weight="duotone" />}
+         placeholder="Left and right icon..." />
 </View>
 
 ```tsx
@@ -231,7 +235,7 @@ The `Input` component supports the `ref` prop, which allows for obtaining a refe
 
 ```tsx
 import { useRef } from 'react';
-import { Input } from '@rewind-ui/core';
+import { Input } from '@almond-ui/core';
 
 function App() {
   const ref = useRef<HTMLInputElement>(null);

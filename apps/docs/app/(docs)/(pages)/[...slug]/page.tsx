@@ -32,7 +32,7 @@ export const generateMetadata = ({ params }: PageProps) => {
     description: page?.description,
     openGraph: {
       locale: 'en_US',
-      url: `https://rewind-ui.dev/${params.slug}`,
+      url: `https://almond-ui.francismasha.com/${params.slug}`,
       title: page?.title,
       description: page?.description,
       siteName: config.metadata.title,
@@ -61,13 +61,13 @@ const PageLayout = async ({ params }: PageProps) => {
   const toc = await getTableOfContents(page.body.raw);
 
   return (
-    <div className='flex space-x-10 p-4 2xl:py-8 2xl:px-10'>
+    <div className='flex space-x-10 p-4 2xl:px-10 2xl:py-8'>
       <article className='w-full 2xl:w-5/6'>
         <div className='mb-8 space-y-4'>
-          <h2 className='text-3xl md:text-5xl font-extrabold text-gray-800'>
+          <h2 className='text-3xl font-extrabold text-gray-800 md:text-5xl'>
             {page.title}
           </h2>
-          <p className='text-lg md:text-xl leading-7 text-gray-600'>
+          <p className='text-lg leading-7 text-gray-600 md:text-xl'>
             {page.description}
           </p>
         </div>

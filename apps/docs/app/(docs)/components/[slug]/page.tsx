@@ -63,20 +63,20 @@ const ComponentLayout = async ({ params }: ComponentProps) => {
   const toc = await getTableOfContents(component.body.raw);
 
   return (
-    <div className='flex space-x-10 p-4 2xl:py-8 2xl:px-10'>
+    <div className='flex space-x-10 p-4 2xl:px-10 2xl:py-8'>
       <article className='w-full 2xl:w-5/6'>
         <div className='mb-8 space-y-4'>
           <div className='flex items-center'>
-            <h2 className='text-3xl md:text-5xl font-extrabold text-gray-800'>
+            <h2 className='text-3xl font-extrabold text-gray-800 md:text-5xl'>
               {component.title}
             </h2>
             {component.polymorphic && (
-              <div className='px-2 py-1 ml-3 text-xs rounded text-white bg-gradient-to-r from-purple-500 to-fuchsia-900 shadow shadow-fuchsia-200'>
+              <div className='ml-3 rounded bg-gradient-to-r from-purple-500 to-fuchsia-900 px-2 py-1 text-xs text-white shadow shadow-fuchsia-200'>
                 polymorphic
               </div>
             )}
           </div>
-          <p className='text-lg md:text-xl leading-7 text-gray-600'>
+          <p className='text-lg leading-7 text-gray-600 md:text-xl'>
             {component.description}
           </p>
           <p className='text-gray-800'>{component.intro}</p>

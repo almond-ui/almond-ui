@@ -13,12 +13,12 @@ storybook: alert--default
 Import the `Alert` component using the following import statement.
 
 ```tsx
-import { Alert } from '@rewind-ui/core';
+import { Alert } from '@almond-ui/core';
 ```
 
 # Variants
 ---
-The `Alert` component comes with a number of pre-defined variants that can be used to change the appearance of the component. The variants can be used by passing the variant name as a prop to the component. A variant is basically a pre-set set of properties. Read more about variants [here](https://rewind-ui.dev/variants).
+The `Alert` component comes with a number of pre-defined variants that can be used to change the appearance of the component. The variants can be used by passing the variant name as a prop to the component. A variant is basically a pre-set set of properties. Read more about variants [here](https://almond-ui.dev/variants).
 
 Available variants are: `primary`, `secondary`, `tertiary`, `danger`, `success`, `warning` and `info`.
 
@@ -172,7 +172,8 @@ Available `accent` values are: `top`, `bottom`, `left` and `right`.
 ## Outline
 <View>
   <Alert color="dark" tone="outline" accent="top">Top accent alert</Alert>
-  <Alert color="dark" tone="outline" accent="bottom">Bottom accent alert</Alert>
+  <Alert color="dark" tone="outline" accent="bottom">Bottom accent
+    alert</Alert>
   <Alert color="dark" tone="outline" accent="left">Left accent alert</Alert>
   <Alert color="dark" tone="outline" accent="right">Right accent alert</Alert>
 </View>
@@ -284,7 +285,8 @@ Available `shadowColor` values are: `blue`, `red`, `green`, `yellow`, `purple`, 
 A title can be added to the alert by using the `title` prop.
 
 <View>
-  <Alert title="Informative Alert">This is a simple informative alert. It has a title, an icon, and some content.</Alert>
+  <Alert title="Informative Alert">This is a simple informative alert. It has a
+    title, an icon, and some content.</Alert>
 </View>
 
 ```tsx
@@ -299,11 +301,16 @@ The `Alert` component comes with a set of icons that can be used to represent th
 Available `iconType` values are: `info`, `success`, `warning`, `error` and `question`.
 
 <View>
-  <Alert iconType="info" color="purple" title="Alert">This is the info type</Alert>
-  <Alert iconType="success" color="green" title="Alert">This is the success type</Alert>
-  <Alert iconType="warning" color="yellow" title="Alert">This is the warning type</Alert>
-  <Alert iconType="error" color="red" title="Alert">This is the error type</Alert>
-  <Alert iconType="question" color="blue" title="Alert">This is the question type</Alert>
+  <Alert iconType="info" color="purple" title="Alert">This is the info
+    type</Alert>
+  <Alert iconType="success" color="green" title="Alert">This is the success
+    type</Alert>
+  <Alert iconType="warning" color="yellow" title="Alert">This is the warning
+    type</Alert>
+  <Alert iconType="error" color="red" title="Alert">This is the error
+    type</Alert>
+  <Alert iconType="question" color="blue" title="Alert">This is the question
+    type</Alert>
 </View>
 
 ```tsx
@@ -322,7 +329,9 @@ Available `iconType` values are: `info`, `success`, `warning`, `error` and `ques
 A custom icon can be added to the alert by using the `icon` prop.
 
 <View>
-  <Alert icon={<WarningCircle weight="duotone" className="w-8 h-8 mt-1" />} color="purple" title="Informative Alert">This is a simple informative alert. It has a title, an icon and some content.</Alert>
+  <Alert icon={<WarningCircle weight="duotone" className="w-8 h-8 mt-1" />}
+         color="purple" title="Informative Alert">This is a simple informative
+    alert. It has a title, an icon and some content.</Alert>
 </View>
 
 ```tsx
@@ -336,7 +345,10 @@ A custom icon can be added to the alert by using the `icon` prop.
 A dismiss button can be added to the alert by using the `dismissable` prop. By default, a fading animation is applied to the alert when it is dismissed. This can be disabled by using the `dismissableAnimation` prop.
 
 <View>
-  <Alert variant="info" icon={<WarningCircle weight="duotone" className="w-8 h-8 mt-1" />} title="Informative Alert" dismissable>This is a simple informative alert. It has a title, an icon, and some content.</Alert>
+  <Alert variant="info"
+         icon={<WarningCircle weight="duotone" className="w-8 h-8 mt-1" />}
+         title="Informative Alert" dismissable>This is a simple informative
+    alert. It has a title, an icon, and some content.</Alert>
 </View>
 
 ```tsx
@@ -373,7 +385,7 @@ A dismiss button can be added to the alert by using the `dismissable` prop. By d
 
 ## Classname overrides
 
-To avoid completely [overwriting the default styles](https://rewind-ui.dev/theming), the `className` prop can be used to override the default classes. Almond-UI is using [tailwind-merge](https://github.com/dcastil/tailwind-merge) to merge the default classes with the classes you provide in the `className` prop and resolve any possible conflicts.
+To avoid completely [overwriting the default styles](https://almond-ui.dev/theming), the `className` prop can be used to override the default classes. Almond-UI is using [tailwind-merge](https://github.com/dcastil/tailwind-merge) to merge the default classes with the classes you provide in the `className` prop and resolve any possible conflicts.
 
 <View>
   <Alert
@@ -382,7 +394,8 @@ To avoid completely [overwriting the default styles](https://rewind-ui.dev/themi
     tone="light"
     color="purple"
     className="border border-2 border-dashed border-purple-700"
-  >This is a simple informative alert. It has a title, an icon and some content.</Alert>
+  >This is a simple informative alert. It has a title, an icon and some
+    content.</Alert>
 </View>
 
 ```tsx
@@ -402,8 +415,12 @@ To avoid completely [overwriting the default styles](https://rewind-ui.dev/themi
     <div className="grid gap-y-3 justify-items-center text-red-600 w-full">
       <WarningCircle weight="duotone" className="w-16 h-16" />
       <Text variant="h3" className="text-red-600">Watch out!</Text>
-      <div className="border-b border-b-2 border-dashed border-red-200 w-full" />
-      <Text size="base" className="text-center text-red-600">Here is some custom JSX content. You can use any component you want here, including Buttons, Text, etc. Furthermore you can use any Tailwind CSS classes you want.</Text>
+      <div
+        className="border-b border-b-2 border-dashed border-red-200 w-full" />
+      <Text size="base" className="text-center text-red-600">Here is some
+        custom JSX content. You can use any component you want here, including
+        Buttons, Text, etc. Furthermore you can use any Tailwind CSS classes
+        you want.</Text>
 
       <div className="flex gap-x-2">
         <Button tone="outline" color="red">Cancel</Button>

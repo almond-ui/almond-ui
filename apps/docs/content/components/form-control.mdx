@@ -12,7 +12,7 @@ storybook: formcontrol--default
 Import the `FormControl` component using the following import statement.
 
 ```tsx
-import { FormControl } from '@rewind-ui/core';
+import { FormControl } from '@almond-ui/core';
 ```
 
 # Sizes
@@ -108,7 +108,8 @@ All `FormControl.Text` elements will inherit the validation state of the `FormCo
 <View>
   <FormControl className="min-w-[300px]" validation="invalid">
     <FormControlLabel>Email address</FormControlLabel>
-    <FormControlText validation="none">Description with no validation</FormControlText>
+    <FormControlText validation="none">Description with no
+      validation</FormControlText>
     <FormControlInput placeholder={'Enter an email address...'} />
     <FormControlText>* Hint with validation</FormControlText>
   </FormControl>
@@ -164,7 +165,8 @@ The `FormControl` component can be combined with `InputGroup` component.
       <InputGroupText>Max:</InputGroupText>
       <InputGroupInput type="number" />
     </InputGroup>
-    <FormControlText className="text-gray-400">* Enter a price range</FormControlText>
+    <FormControlText className="text-gray-400">* Enter a price
+      range</FormControlText>
   </FormControl>
 </View>
 

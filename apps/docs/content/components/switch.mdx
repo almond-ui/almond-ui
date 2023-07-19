@@ -12,7 +12,7 @@ storybook: switch--default
 Import the `Switch` component using the following import statement.
 
 ```tsx
-import { Switch } from '@rewind-ui/core';
+import { Switch } from '@almond-ui/core';
 ```
 
 # Colors
@@ -118,7 +118,8 @@ The `description` prop can be used to display a description below the checkbox.
 Furthermore, a `ReactNode` can be passed to the `description` prop to display a more complex description that may contain multiple jsx elements.
 
 <View>
-  <Switch label="Click me!" description={<span className="text-purple-500 bg-purple-50 p-1 rounded">This is a purple description</span>} />
+  <Switch label="Click me!" description={<span
+    className="text-purple-500 bg-purple-50 p-1 rounded">This is a purple description</span>} />
 </View>
 
 ```tsx
@@ -133,7 +134,9 @@ Furthermore, a `ReactNode` can be passed to the `description` prop to display a 
 Similar styling can be achieved by using the `descriptionClassName` prop.
 
 <View>
-  <Switch label="Click me!" descriptionClassName="text-pink-500 bg-pink-50 p-1 rounded" description="This is a pink description" />
+  <Switch label="Click me!"
+          descriptionClassName="text-pink-500 bg-pink-50 p-1 rounded"
+          description="This is a pink description" />
 </View>
 
 ```tsx
@@ -211,4 +214,3 @@ type SwitchSize = 'sm' | 'md' | 'lg' | 'xl';
 # Accessibility
 ---
 The `Switch` component adheres to the [WAI-ARIA Switch Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/switch/).
-

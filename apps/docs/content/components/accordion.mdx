@@ -13,7 +13,7 @@ storybook: accordion--default
 Import the `Accordion` component using the following import statement.
 
 ```tsx
-import { Accordion } from '@rewind-ui/core';
+import { Accordion } from '@almond-ui/core';
 ```
 
 # Colors
@@ -833,7 +833,7 @@ You can add a ring to the accordion by setting the `withRing` prop to `true`.
 
 ```tsx
 import { useRef } from 'react';
-import { Accordion } from '@rewind-ui/core';
+import { Accordion } from '@almond-ui/core';
 
 function App() {
   const accordionRef = useRef<HTMLDivElement>(null);
@@ -892,13 +892,16 @@ To avoid overwriting the default styles, the `className` prop can be used to ove
 <View>
   <Accordion activeColor="black" bordered={false} defaultItem="item-2">
     <AccordionItem anchor="item-1">
-      <AccordionHeader className="font-semibold">Semi-bold header</AccordionHeader>
-      <AccordionBody className="text-pink-700 bg-pink-50">Some pink text on a pink background...</AccordionBody>
+      <AccordionHeader className="font-semibold">Semi-bold
+        header</AccordionHeader>
+      <AccordionBody className="text-pink-700 bg-pink-50">Some pink text on a
+        pink background...</AccordionBody>
     </AccordionItem>
 
     <AccordionItem anchor="item-2">
       <AccordionHeader className="font-semibold">Header</AccordionHeader>
-      <AccordionBody className="text-green-700 bg-green-50">Some green text on a green background...</AccordionBody>
+      <AccordionBody className="text-green-700 bg-green-50">Some green text on
+        a green background...</AccordionBody>
     </AccordionItem>
   </Accordion>
 </View>

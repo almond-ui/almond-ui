@@ -13,7 +13,7 @@ storybook: toast--default
 Import the `ToastContainer` component using the following import statement and the `useToast` hook.
 
 ```tsx
-import { ToastContainer, useToast } from '@rewind-ui/core';
+import { ToastContainer, useToast } from '@almond-ui/core';
 ```
 
 To trigger a new toast, use the `toast.add()` method.
@@ -60,7 +60,7 @@ The maximum number of toasts can be set by using the `max` prop.
 
 # Variants
 ---
-The `Toast` component comes with a number of pre-defined variants that can be used to change the appearance of the component. The variants can be used by passing the variant name as a prop to the component. A variant is basically a pre-set set of properties. Read more about variants [here](https://rewind-ui.dev/variants).
+The `Toast` component comes with a number of pre-defined variants that can be used to change the appearance of the component. The variants can be used by passing the variant name as a prop to the component. A variant is basically a pre-set set of properties. Read more about variants [here](https://almond-ui.dev/variants).
 
 Available variants are: `primary`, `secondary`, `danger`, `success`, `warning` and `info`.
 
@@ -485,7 +485,8 @@ function App() {
 ---
 A description can be added to the toast notification by using the `title` prop.
 
-<Callout>The font size of the description is adjusted if there is no title included.</Callout>
+<Callout>The font size of the description is adjusted if there is no title
+  included.</Callout>
 
 <View>
   <ToastShowcase showcase="description" />
@@ -517,7 +518,8 @@ Actions can be added to the toast notification by using the `actions` prop.
   <ToastShowcase showcase="actions" />
 </View>
 
-<Callout>It is highly suggested to use the primary prop to highlight the primary action.</Callout>
+<Callout>It is highly suggested to use the primary prop to highlight the
+  primary action.</Callout>
 
 ```tsx
 function App() {

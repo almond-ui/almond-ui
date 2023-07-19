@@ -18,9 +18,10 @@ theme
 │   ├── Button.styles.ts
 ```
 
-Then, you can copy all or some of the default styles from the [@rewind-ui/core](https://github.com/rewindui/rewindui/tree/main/packages/core/src/theme/styles) package and customize them as you wish. Finally you can import them into your `App.tsx` file and pass them to the `ThemeProvider` component.
+Then, you can copy all or some of the default styles from the [@almond-ui/core](https://github.com/almondui/almondui/tree/main/packages/core/src/theme/styles) package and customize them as you wish. Finally you can import them into your `App.tsx` file and pass them to the `ThemeProvider` component.
 
-<Callout>Don't forget to adjust your tailwind.config.ts file to include the new theme/styles files!</Callout>
+<Callout>Don't forget to adjust your tailwind.config.ts file to include the new
+  theme/styles files!</Callout>
 
 ```tsx
 import {
@@ -28,7 +29,7 @@ import {
   ThemeContextType,
   useTheme,
   ThemeProvider,
-} from '@rewind-ui/core';
+} from '@almond-ui/core';
 import './App.css'
 import { buttonStyles } from './theme/styles/Button.styles';
 

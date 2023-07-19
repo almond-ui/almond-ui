@@ -50,21 +50,21 @@ After cloning the repository, you can run the following commands:
 
 Having installed the dependencies, you need to start the dev servers for each package/app:
 
-### @rewind-ui/core
-Open the `rewindui/packages/core` directory and run `pnpm dev` to start the development server on the core package.
+### @almond-ui/core
+Open the `almondui/packages/core` directory and run `pnpm dev` to start the development server on the core package.
 
 ### Storybook
-Open the `rewindui/apps/storybook` directory and run `pnpm dev` to start the Storybook server.
+Open the `almondui/apps/storybook` directory and run `pnpm dev` to start the Storybook server.
 Storybook is used to develop and test components in isolation.
 
 ### Documentation
-Open the `rewindui/apps/docs` directory and run `pnpm dev` to start the documentation server.
+Open the `almondui/apps/docs` directory and run `pnpm dev` to start the documentation server.
 
 ## Project structure
 The structure of each component should be as follows:
 
-### @rewind-ui/core
-Each component should be in its own directory inside `rewindui/packages/core/src/components`. The [Button](https://github.com/rewindui/rewindui/tree/main/packages/core/src/components/Button) component can be used as an example.
+### @almond-ui/core
+Each component should be in its own directory inside `almondui/packages/core/src/components`. The [Button](https://github.com/almondui/almondui/tree/main/packages/core/src/components/Button) component can be used as an example.
 
 The component directory should contain the following files:
 - `index.ts` - exports the component and its types
@@ -72,12 +72,12 @@ The component directory should contain the following files:
 - `Component.types.ts` - contains the component types
 - `Component.tests.tsx` - contains the component tests
 
-The CVA file of each component should be placed in `rewindui/packages/core/src/theme/styles/Component.styles.ts` and should also be exported from `rewindui/packages/core/src/theme/styles/index.ts`. The `theme.context.tsx` file will need to be adjusted to include the new component.
+The CVA file of each component should be placed in `almondui/packages/core/src/theme/styles/Component.styles.ts` and should also be exported from `almondui/packages/core/src/theme/styles/index.ts`. The `theme.context.tsx` file will need to be adjusted to include the new component.
 
-Each component should be exported from `rewindui/packages/core/src/index.ts` as well.
+Each component should be exported from `almondui/packages/core/src/index.ts` as well.
 
 ### Storybook
-To add a new component to Storybook, add a new story file in `rewindui/apps/storybook/stories` and import the component from `@rewind-ui/core`.
+To add a new component to Storybook, add a new story file in `almondui/apps/storybook/stories` and import the component from `@almond-ui/core`.
 
 ### Documentation
 It is recommended to submit your pull request without documentation changes. If the new component is accepted, the documentation will be updated by the maintainers.
