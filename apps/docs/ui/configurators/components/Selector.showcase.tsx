@@ -1,7 +1,7 @@
 import { Button, Selector, Tabs, Tooltip } from '@almond-ui/core';
+import { MoonStars, SunDim } from '@phosphor-icons/react';
 import { useRef } from 'react';
 import * as React from 'react';
-import { SunDim, MoonStars } from '@phosphor-icons/react';
 
 export type SelectorShowcaseProps = {
   showcase:
@@ -48,41 +48,41 @@ export const SelectorShowcase = (props: SelectorShowcaseProps) => {
 const TonesSolid = () => {
   return (
     <>
-      <Selector color="white" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='white' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="blue" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='blue' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="red" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='red' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="green" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='green' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="yellow" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='yellow' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="purple" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='purple' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="gray" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='gray' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="dark" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='dark' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="black" tone="solid" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='black' tone='solid' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -91,41 +91,41 @@ const TonesSolid = () => {
 const TonesLight = () => {
   return (
     <>
-      <Selector color="white" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='white' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="blue" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='blue' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="red" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='red' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="green" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='green' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="yellow" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='yellow' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="purple" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='purple' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="gray" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='gray' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="dark" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='dark' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector color="black" tone="light" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='black' tone='light' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -134,11 +134,11 @@ const TonesLight = () => {
 const ColorsMultiple = () => {
   return (
     <>
-      <Selector value="1">
-        <Selector.Tab label="White" color="white" anchor="1" />
-        <Selector.Tab label="Default" anchor="2" />
-        <Selector.Tab label="Red" color="red" anchor="3" />
-        <Selector.Tab label="Green" color="green" anchor="4" />
+      <Selector value='1'>
+        <Selector.Tab label='White' color='white' anchor='1' />
+        <Selector.Tab label='Default' anchor='2' />
+        <Selector.Tab label='Red' color='red' anchor='3' />
+        <Selector.Tab label='Green' color='green' anchor='4' />
       </Selector>
     </>
   );
@@ -147,21 +147,21 @@ const ColorsMultiple = () => {
 const Sizes = () => {
   return (
     <>
-      <Selector size="xs" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector size='xs' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector size="sm" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector size='sm' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector size="md" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector size='md' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector size="lg" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector size='lg' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -170,29 +170,29 @@ const Sizes = () => {
 const Radiuses = () => {
   return (
     <>
-      <Selector radius="none" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector radius='none' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector radius="sm" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector radius='sm' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector radius="base" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector radius='base' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector radius="md" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector radius='md' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector radius="lg" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector radius='lg' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector radius="full" value="1" withSeparator={false}>
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector radius='full' value='1' withSeparator={false}>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -201,29 +201,29 @@ const Radiuses = () => {
 const Shadows = () => {
   return (
     <>
-      <Selector shadow="none" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector shadow='none' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector shadow="sm" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector shadow='sm' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector shadow="base" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector shadow='base' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector shadow="md" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector shadow='md' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector shadow="lg" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector shadow='lg' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector shadow="xl" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector shadow='xl' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -232,13 +232,13 @@ const Shadows = () => {
 const Orientation = () => {
   return (
     <>
-      <Selector orientation="horizontal" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector orientation='horizontal' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector orientation="vertical" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector orientation='vertical' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -247,21 +247,21 @@ const Orientation = () => {
 const FullWidth = () => {
   return (
     <>
-      <Selector orientation="horizontal" fullWidth={true} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector orientation='horizontal' fullWidth={true} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector orientation="horizontal" fullWidth={false} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector orientation='horizontal' fullWidth={false} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector orientation="vertical" fullWidth={true} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector orientation='vertical' fullWidth={true} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector orientation="vertical" fullWidth={false} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector orientation='vertical' fullWidth={false} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -270,13 +270,13 @@ const FullWidth = () => {
 const Animation = () => {
   return (
     <>
-      <Selector withAnimation={true} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector withAnimation={true} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector withAnimation={false} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector withAnimation={false} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -285,13 +285,13 @@ const Animation = () => {
 const Separator = () => {
   return (
     <>
-      <Selector withSeparator={true} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector withSeparator={true} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
-      <Selector withSeparator={false} value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector withSeparator={false} value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -302,33 +302,33 @@ const SeparatorCustom = () => {
     <>
       <Selector
         separator={
-          <span className="last-of-type:hidden self-center mx-1 w-1 h-1 bg-gray-200 rounded-full" />
+          <span className='last-of-type:hidden self-center mx-1 w-1 h-1 bg-gray-200 rounded-full' />
         }
-        orientation="horizontal"
-        value="1"
+        orientation='horizontal'
+        value='1'
       >
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
       <Selector
         separator={
-          <span className="last-of-type:hidden self-center mx-1 w-1 h-6 bg-gray-200 rounded-full" />
+          <span className='last-of-type:hidden self-center mx-1 w-1 h-6 bg-gray-200 rounded-full' />
         }
-        orientation="horizontal"
-        value="1"
+        orientation='horizontal'
+        value='1'
       >
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
       <Selector
         separator={
-          <span className="last-of-type:hidden self-center mx-1 w-8 h-1 bg-gray-200 rounded-full" />
+          <span className='last-of-type:hidden self-center mx-1 w-8 h-1 bg-gray-200 rounded-full' />
         }
-        orientation="vertical"
-        value="1"
+        orientation='vertical'
+        value='1'
       >
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -337,9 +337,13 @@ const SeparatorCustom = () => {
 const BorderBackground = () => {
   return (
     <>
-      <Selector className="border border-gray-100 bg-white" shadow="none" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector
+        className='border border-gray-100 bg-white'
+        shadow='none'
+        value='1'
+      >
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
       </Selector>
     </>
   );
@@ -348,24 +352,24 @@ const BorderBackground = () => {
 const ExtendedComposition = () => {
   return (
     <>
-      <Selector color="white" value="1">
-        <Selector.Tab label="Apple" anchor="1" />
-        <Selector.Tab label="Banana" anchor="2" />
+      <Selector color='white' value='1'>
+        <Selector.Tab label='Apple' anchor='1' />
+        <Selector.Tab label='Banana' anchor='2' />
         <Selector.Tab
           label={
             <Tooltip
-              label="This is a react node with a tooltip"
-              tone="solid"
-              color="dark"
+              label='This is a react node with a tooltip'
+              tone='solid'
+              color='dark'
               offset={15}
-              shadow="base"
+              shadow='base'
             >
-              <span className="whitespace-nowrap underline underline-offset-2 decoration-2 decoration-pink-500">
+              <span className='whitespace-nowrap underline underline-offset-2 decoration-2 decoration-pink-500'>
                 React Node
               </span>
             </Tooltip>
           }
-          anchor="3"
+          anchor='3'
         />
       </Selector>
     </>
@@ -376,14 +380,24 @@ const Icons = () => {
   return (
     <>
       <Selector
-        radius="full"
-        className="bg-gray-50 border border-gray-100"
-        shadow="none"
-        separator={<span className="last-of-type:hidden self-center w-1 h-1 bg-transparent" />}
-        value="1"
+        radius='full'
+        className='bg-gray-50 border border-gray-100'
+        shadow='none'
+        separator={
+          <span className='last-of-type:hidden self-center w-1 h-1 bg-transparent' />
+        }
+        value='1'
       >
-        <Selector.Tab color="yellow" label={<SunDim size={16} weight="duotone" />} anchor="1" />
-        <Selector.Tab color="dark" label={<MoonStars size={16} weight="duotone" />} anchor="2" />
+        <Selector.Tab
+          color='yellow'
+          label={<SunDim size={16} weight='duotone' />}
+          anchor='1'
+        />
+        <Selector.Tab
+          color='dark'
+          label={<MoonStars size={16} weight='duotone' />}
+          anchor='2'
+        />
       </Selector>
     </>
   );
@@ -394,8 +408,8 @@ const Ref = () => {
   const ref2 = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex gap-2">
+    <div className='flex flex-col gap-2'>
+      <div className='flex gap-2'>
         <Button
           onClick={() => {
             ref1.current?.click();
@@ -412,9 +426,9 @@ const Ref = () => {
         </Button>
       </div>
 
-      <Selector value="tab-1">
-        <Selector.Tab ref={ref1} label="Tab 1" anchor="tab-1" />
-        <Selector.Tab ref={ref2} label="Tab 2" anchor="tab-2" />
+      <Selector value='tab-1'>
+        <Selector.Tab ref={ref1} label='Tab 1' anchor='tab-1' />
+        <Selector.Tab ref={ref2} label='Tab 2' anchor='tab-2' />
       </Selector>
     </div>
   );

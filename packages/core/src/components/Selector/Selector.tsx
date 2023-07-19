@@ -1,4 +1,5 @@
 'use client';
+
 import {
   SelectorComponent,
   SelectorContext,
@@ -12,7 +13,15 @@ import { useMergeRefs } from '@floating-ui/react';
 import { useHorizontalArrows } from '@hooks/use-horizontal-arrows.hook';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
-import React, { Children, forwardRef, Ref, useEffect, useMemo, useRef, useState } from 'react';
+import React, {
+  Children,
+  forwardRef,
+  Ref,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { twMerge } from 'tailwind-merge';
 import { SelectorContextProvider } from './Selector.context';
 
@@ -130,20 +139,22 @@ const _Selector: SelectorComponent = forwardRef(
 
       mounted.current = false;
 
-      observer.current = new ResizeObserver((entries: ResizeObserverEntry[]) => {
-        if (!selectorRef.current) {
-          return;
-        }
+      observer.current = new ResizeObserver(
+        (entries: ResizeObserverEntry[]) => {
+          if (!selectorRef.current) {
+            return;
+          }
 
-        positionSelector(
-          activeTab,
-          selectorRef.current,
-          activeTabAnchor,
-          size,
-          orientation,
-          mounted.current
-        );
-      });
+          positionSelector(
+            activeTab,
+            selectorRef.current,
+            activeTabAnchor,
+            size,
+            orientation,
+            mounted.current
+          );
+        }
+      );
       observer.current.observe(selectorRef.current);
 
       return () => {

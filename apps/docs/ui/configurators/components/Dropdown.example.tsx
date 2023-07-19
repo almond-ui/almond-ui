@@ -1,6 +1,6 @@
 import { Button, Dropdown, DropdownProps } from '@almond-ui/core';
-import * as React from 'react';
 import { ChatCircleText, Gear, SignOut, Trash } from '@phosphor-icons/react';
+import * as React from 'react';
 
 export const DropdownCode = (props: any) => {
   const {
@@ -38,7 +38,9 @@ export const DropdownCode = (props: any) => {
       ? `chevronRotation={${chevronRotation}}`
       : null,
     color !== defaultProps.color ? `color="${color}"` : null,
-    initiallyOpen !== defaultProps.initiallyOpen ? `initiallyOpen={${initiallyOpen}}` : null,
+    initiallyOpen !== defaultProps.initiallyOpen
+      ? `initiallyOpen={${initiallyOpen}}`
+      : null,
     itemColor !== defaultProps.itemColor ? `itemColor="${itemColor}"` : null,
     mode !== defaultProps.mode ? `mode="${mode}"` : null,
     placement !== defaultProps.placement ? `placement="${placement}"` : null,
@@ -47,7 +49,9 @@ export const DropdownCode = (props: any) => {
     size !== defaultProps.size ? `size="${size}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
     trigger !== defaultProps.trigger ? `trigger="${trigger}"` : null,
-    withChevron !== defaultProps.withChevron ? `withChevron={${withChevron}}` : null,
+    withChevron !== defaultProps.withChevron
+      ? `withChevron={${withChevron}}`
+      : null,
   ].filter(Boolean);
 
   if (attributes.length) {
@@ -98,21 +102,21 @@ export const DropdownExample = (props: DropdownProps) => {
         <Dropdown.Label>Application</Dropdown.Label>
         <Dropdown.Divider />
         <Dropdown.Item>
-          <Gear size={20} weight="duotone" className="mr-1.5" />
+          <Gear size={20} weight='duotone' className='mr-1.5' />
           Settings
         </Dropdown.Item>
         <Dropdown.Item>
-          <ChatCircleText size={20} weight="duotone" className="mr-1.5" />
+          <ChatCircleText size={20} weight='duotone' className='mr-1.5' />
           Messages
         </Dropdown.Item>
         <Dropdown.Label>Danger Zone</Dropdown.Label>
         <Dropdown.Divider />
         <Dropdown.Item disabled>
-          <Trash size={20} weight="duotone" className="mr-1.5" />
+          <Trash size={20} weight='duotone' className='mr-1.5' />
           Delete my account
         </Dropdown.Item>
         <Dropdown.Item>
-          <SignOut size={20} weight="duotone" className="mr-1.5" />
+          <SignOut size={20} weight='duotone' className='mr-1.5' />
           Logout
         </Dropdown.Item>
       </Dropdown.Content>

@@ -1,8 +1,9 @@
 'use client';
+
 import { CustomSandpack } from '@/ui/configurators/CustomSandpack';
+import { Alert, AlertVariant } from '@almond-ui/core';
 import { useEffect, useState } from 'react';
 import * as React from 'react';
-import { Alert, AlertVariant } from '@almond-ui/core';
 
 export const ConfigurationVariants = () => {
   const [alertCode, setAlertCode] = React.useState(
@@ -61,19 +62,19 @@ export const ConfigurationVariants = () => {
   }, [activeStep]);
 
   return (
-    <div className="flex flex-col">
-      <div className="flex ml-auto items-center text-purple-600 text-2xl font-black justify-center border-4 border-purple-50 shadow shadow-purple-200 rounded-full bg-gradient-to-bl from-purple-100 to-purple-200 p-2 w-16 h-16 mb-4">
+    <div className='flex flex-col'>
+      <div className='flex ml-auto items-center text-purple-600 text-2xl font-black justify-center border-4 border-purple-50 shadow shadow-purple-200 rounded-full bg-gradient-to-bl from-purple-100 to-purple-200 p-2 w-16 h-16 mb-4'>
         2.
       </div>
 
-      <div className="flex gap-6">
-        <div className="w-1/3">
-          <div className="flex flex-col gap-6">
+      <div className='flex gap-6'>
+        <div className='w-1/3'>
+          <div className='flex flex-col gap-6'>
             <Alert
-              className="transition-colors"
+              className='transition-colors'
               variant={activeStep.variant}
               title={activeStep.title}
-              size="md"
+              size='md'
             >
               {activeStep.description}
             </Alert>
@@ -82,12 +83,15 @@ export const ConfigurationVariants = () => {
           </div>
         </div>
 
-        <div className="w-2/3">
-          <h4 className="font-semibold text-xl text-slate-700 mb-2">Customize through Variants</h4>
+        <div className='w-2/3'>
+          <h4 className='font-semibold text-xl text-slate-700 mb-2'>
+            Customize through Variants
+          </h4>
 
-          <p className="text-lg text-slate-600">
-            All components are highly customizable through parameters. The end styles of each
-            component are a result of the given parameters or their combinations.
+          <p className='text-lg text-slate-600'>
+            All components are highly customizable through parameters. The end
+            styles of each component are a result of the given parameters or
+            their combinations.
           </p>
         </div>
       </div>

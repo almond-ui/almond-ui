@@ -1,4 +1,5 @@
 'use client';
+
 import { AvatarComponent, AvatarProps } from '@components/Avatar/Avatar.types';
 import AvatarGroup from '@components/Avatar/AvatarGroup/AvatarGroup';
 import { useComponentTheme } from '@theme/theme.context';
@@ -18,64 +19,83 @@ const defaultProps: Partial<AvatarProps> = {
   tone: 'solid',
 };
 
-const _Avatar: AvatarComponent = forwardRef((props: AvatarProps, ref?: Ref<HTMLDivElement>) => {
-  const theme = useComponentTheme('Avatar');
-  const {
-    alt,
-    children,
-    className = '',
-    color,
-    initials = '',
-    outlined,
-    radius,
-    shadow,
-    shadowColor,
-    size,
-    src,
-    status,
-    statusPosition,
-    tone,
-    ...additionalProps
-  } = {
-    ...defaultProps,
-    ...props,
-  };
-  const [errored, setErrored] = useState(false);
+const _Avatar: AvatarComponent = forwardRef(
+  (props: AvatarProps, ref?: Ref<HTMLDivElement>) => {
+    const theme = useComponentTheme('Avatar');
+    const {
+      alt,
+      children,
+      className = '',
+      color,
+      initials = '',
+      outlined,
+      radius,
+      shadow,
+      shadowColor,
+      size,
+      src,
+      status,
+      statusPosition,
+      tone,
+      ...additionalProps
+    } = {
+      ...defaultProps,
+      ...props,
+    };
+    const [errored, setErrored] = useState(false);
 
-  const classes = useMemo(() => {
-    return twMerge(
-      theme.base({
-        className,
-        color,
-        radius,
-        shadow,
-        shadowColor,
-        size,
-        tone,
-        outlined,
-      })
+    const classes = useMemo(() => {
+      return twMerge(
+        theme.base({
+          className,
+          color,
+          radius,
+          shadow,
+          shadowColor,
+          size,
+          tone,
+          outlined,
+        })
+      );
+    }, [
+      theme,
+      className,
+      color,
+      radius,
+      shadow,
+      shadowColor,
+      size,
+      tone,
+      outlined,
+    ]);
+
+    const id = usePropId(props.id);
+
+    return (
+      <div id={id} ref={ref} className={classes} {...additionalProps}>
+        {src && !errored && (
+          <img
+            onError={() => setErrored(true)}
+            className={theme.image({ radius })}
+            src={src}
+            alt={alt || initials}
+          />
+        )}
+        {(!src || (src && errored)) && initials}
+        {status !== 'none' && (
+          <span
+            className={theme.status({
+              radius,
+              status,
+              size,
+              position: statusPosition,
+            })}
+          ></span>
+        )}
+      </div>
     );
-  }, [theme, className, color, radius, shadow, shadowColor, size, tone, outlined]);
-
-  const id = usePropId(props.id);
-
-  return (
-    <div id={id} ref={ref} className={classes} {...additionalProps}>
-      {src && !errored && (
-        <img
-          onError={() => setErrored(true)}
-          className={theme.image({ radius })}
-          src={src}
-          alt={alt || initials}
-        />
-      )}
-      {(!src || (src && errored)) && initials}
-      {status !== 'none' && (
-        <span className={theme.status({ radius, status, size, position: statusPosition })}></span>
-      )}
-    </div>
-  );
-});
+  }
+);
 
 _Avatar.displayName = 'Avatar';
 

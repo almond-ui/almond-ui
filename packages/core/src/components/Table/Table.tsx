@@ -1,6 +1,11 @@
 'use client';
+
 import { TableContextProvider } from '@components/Table/Table.context';
-import { TableComponent, TableContext, TableProps } from '@components/Table/Table.types';
+import {
+  TableComponent,
+  TableContext,
+  TableProps,
+} from '@components/Table/Table.types';
 import { Tbody } from '@components/Table/Tbody/Tbody';
 import { Td } from '@components/Table/Td/Td';
 import { Tfoot } from '@components/Table/Tfoot/Tfoot';
@@ -70,7 +75,12 @@ const TableRoot: TableComponent = forwardRef<HTMLDivElement, TableProps>(
         <div
           id={id}
           ref={ref}
-          className={theme.wrapper({ borderStyle, className, outerBorders, radius })}
+          className={theme.wrapper({
+            borderStyle,
+            className,
+            outerBorders,
+            radius,
+          })}
           {...additionalProps}
         >
           <table className={theme.table({ radius, size })}>{children}</table>

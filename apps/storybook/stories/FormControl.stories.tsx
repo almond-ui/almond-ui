@@ -1,16 +1,21 @@
+import { At } from '@phosphor-icons/react';
 import {
   FormControl,
   FormControlProps,
   FormControlSize,
   FormControlTextValidation,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { At } from '@phosphor-icons/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const sizes: FormControlSize[] = ['xs', 'sm', 'md', 'lg'];
-const validations: FormControlTextValidation[] = ['none', 'invalid', 'valid', 'warning'];
+const validations: FormControlTextValidation[] = [
+  'none',
+  'invalid',
+  'valid',
+  'warning',
+];
 
 const meta: Meta = {
   title: 'Components/FormControl',
@@ -61,7 +66,9 @@ const SizeTemplate: Story<FormControlProps> = (args) => {
     <View key={size} prop="size" value={size}>
       <FormControl size={size} {...args}>
         <FormControl.Label required>Email address</FormControl.Label>
-        <FormControl.Text>Your email address should be a valid email</FormControl.Text>
+        <FormControl.Text>
+          Your email address should be a valid email
+        </FormControl.Text>
         <FormControl.Input
           shadow="sm"
           leftIcon={<At className="text-gray-500" />}

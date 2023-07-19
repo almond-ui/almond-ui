@@ -1,5 +1,8 @@
 import { useTableContext } from '@components/Table/Table.context';
-import { TfootComponent, TfootProps } from '@components/Table/Tfoot/Tfoot.types';
+import {
+  TfootComponent,
+  TfootProps,
+} from '@components/Table/Tfoot/Tfoot.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import { ForwardedRef, forwardRef } from 'react';

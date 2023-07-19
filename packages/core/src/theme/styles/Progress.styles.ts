@@ -11,32 +11,35 @@ const wrapper = cva(['flex', 'flex-col', 'w-full'], {
   },
 });
 
-const base = cva(['bg-gray-100', 'overflow-hidden', 'flex', 'items-center', 'shadow-gray-200'], {
-  variants: {
-    size: {
-      xs: ['h-1', 'text-xs'],
-      sm: ['h-2', 'text-xs'],
-      md: ['h-4', 'text-sm'],
-      lg: ['h-5', 'text-base'],
+const base = cva(
+  ['bg-gray-100', 'overflow-hidden', 'flex', 'items-center', 'shadow-gray-200'],
+  {
+    variants: {
+      size: {
+        xs: ['h-1', 'text-xs'],
+        sm: ['h-2', 'text-xs'],
+        md: ['h-4', 'text-sm'],
+        lg: ['h-5', 'text-base'],
+      },
+      radius: {
+        none: ['rounded-none'],
+        sm: ['rounded-sm'],
+        base: ['rounded'],
+        md: ['rounded-md'],
+        lg: ['rounded-lg'],
+        full: ['rounded-full'],
+      },
+      shadow: {
+        none: ['shadow-none'],
+        sm: ['shadow-sm'],
+        base: ['shadow'],
+        md: ['shadow-md'],
+        lg: ['shadow-lg'],
+        xl: ['shadow-xl'],
+      },
     },
-    radius: {
-      none: ['rounded-none'],
-      sm: ['rounded-sm'],
-      base: ['rounded'],
-      md: ['rounded-md'],
-      lg: ['rounded-lg'],
-      full: ['rounded-full'],
-    },
-    shadow: {
-      none: ['shadow-none'],
-      sm: ['shadow-sm'],
-      base: ['shadow'],
-      md: ['shadow-md'],
-      lg: ['shadow-lg'],
-      xl: ['shadow-xl'],
-    },
-  },
-});
+  }
+);
 
 const bar = cva(
   [
@@ -64,7 +67,16 @@ const bar = cva(
     },
     compoundVariants: [
       {
-        color: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+        color: [
+          'blue',
+          'red',
+          'green',
+          'yellow',
+          'purple',
+          'gray',
+          'dark',
+          'black',
+        ],
         className: ['text-white'],
       },
     ],

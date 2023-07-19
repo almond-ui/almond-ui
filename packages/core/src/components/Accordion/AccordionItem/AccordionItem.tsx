@@ -19,7 +19,11 @@ const AccordionItem: AccordionItemComponent = (props: AccordionItemProps) => {
     headerId,
   };
 
-  return <AccordionItemContextProvider value={value}>{children}</AccordionItemContextProvider>;
+  return (
+    <AccordionItemContextProvider value={value}>
+      {children}
+    </AccordionItemContextProvider>
+  );
 };
 
 AccordionItem.displayName = 'AccordionItem';

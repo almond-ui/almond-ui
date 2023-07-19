@@ -50,7 +50,9 @@ const DefaultTemplate: Story<OverlayProps> = (args) => {
   return (
     <View prop="Default">
       <Button onClick={() => setOpen(!open)}>Click me!</Button>
-      {open && <Overlay onClose={() => setOpen(false)} closeOnClick={true} {...args} />}
+      {open && (
+        <Overlay onClose={() => setOpen(false)} closeOnClick={true} {...args} />
+      )}
     </View>
   );
 };

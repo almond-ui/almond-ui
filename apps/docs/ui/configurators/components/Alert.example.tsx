@@ -1,4 +1,4 @@
-import { AlertProps, Alert } from '@almond-ui/core';
+import { Alert, AlertProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const AlertCode = (props: any) => {
@@ -31,13 +31,17 @@ export const AlertCode = (props: any) => {
   const attributes = [
     accent !== defaultProps.accent ? `accent="${accent}"` : null,
     color !== defaultProps.color ? `color="${color}"` : null,
-    dismissable !== defaultProps.dismissable ? `dismissable={${dismissable}}` : null,
+    dismissable !== defaultProps.dismissable
+      ? `dismissable={${dismissable}}`
+      : null,
     dismissableAnimation !== defaultProps.dismissableAnimation
       ? `dismissableAnimation={${dismissableAnimation}}`
       : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor ? `shadowColor="${shadowColor}"` : null,
+    shadowColor !== defaultProps.shadowColor
+      ? `shadowColor="${shadowColor}"`
+      : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     title !== defaultProps.title ? `title="${title}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
@@ -62,8 +66,8 @@ function App() {
 export const AlertExample = (props: AlertProps) => {
   return (
     <Alert {...props}>
-      Our website uses cookies to improve your experience. By continuing to use our website, you
-      agree to our use of cookies.
+      Our website uses cookies to improve your experience. By continuing to use
+      our website, you agree to our use of cookies.
     </Alert>
   );
 };

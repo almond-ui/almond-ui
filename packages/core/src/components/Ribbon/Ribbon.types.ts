@@ -26,7 +26,13 @@ export type RibbonShadowColor =
   | 'black';
 export type RibbonSize = 'sm' | 'md' | 'lg';
 export type RibbonTone = 'solid' | 'light' | 'glossy';
-export type RibbonVariant = 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info';
+export type RibbonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'danger'
+  | 'success'
+  | 'warning'
+  | 'info';
 
 export interface RibbonProps extends ComponentPropsWithRef<'div'> {
   color?: RibbonColor;

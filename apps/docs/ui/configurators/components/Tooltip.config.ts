@@ -1,4 +1,7 @@
-import { TooltipCode, TooltipExample } from '@/ui/configurators/components/Tooltip.example';
+import {
+  TooltipCode,
+  TooltipExample,
+} from '@/ui/configurators/components/Tooltip.example';
 
 export const TooltipConfig = {
   example: TooltipExample,
@@ -22,7 +25,17 @@ export const TooltipConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Placement',

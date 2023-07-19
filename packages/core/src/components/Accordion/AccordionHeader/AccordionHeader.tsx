@@ -52,7 +52,17 @@ const AccordionHeader: AccordionHeaderComponent = forwardRef<
         withRing,
       })
     );
-  }, [bordered, className, radius, activeColor, size, state, theme, tone, withRing]);
+  }, [
+    bordered,
+    className,
+    radius,
+    activeColor,
+    size,
+    state,
+    theme,
+    tone,
+    withRing,
+  ]);
 
   const iconClasses = theme.icon({ size, state });
 

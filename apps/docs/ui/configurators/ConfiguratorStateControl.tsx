@@ -1,13 +1,13 @@
 import { ColorPicker } from '@/ui/ColorPicker';
 import { ConfiguratorOption } from '@/ui/Configurator';
 import {
-  Selector,
-  SelectorProps,
-  Select,
-  SelectProps,
-  Switch,
   Input,
   InputProps,
+  Select,
+  Selector,
+  SelectorProps,
+  SelectProps,
+  Switch,
 } from '@almond-ui/core';
 import * as React from 'react';
 
@@ -17,7 +17,11 @@ type Props = {
   onChange: (key: string, value: any) => void;
 };
 
-export const ConfiguratorStateControl = ({ option, state, onChange }: Props) => {
+export const ConfiguratorStateControl = ({
+  option,
+  state,
+  onChange,
+}: Props) => {
   if (option.type === 'selector') {
     const props: Partial<SelectorProps> = {
       size: 'sm',
@@ -27,7 +31,7 @@ export const ConfiguratorStateControl = ({ option, state, onChange }: Props) => 
       onChange: (value: any) => onChange(option.name, value),
     };
     return (
-      <Selector {...props} className="border">
+      <Selector {...props} className='border'>
         {option.options?.map((option, index) => (
           <Selector.Tab key={index} anchor={option} label={option} />
         ))}
@@ -86,10 +90,10 @@ export const ConfiguratorStateControl = ({ option, state, onChange }: Props) => 
     return (
       <Switch
         onChange={(value: boolean) => onChange(option.name, value)}
-        size="sm"
+        size='sm'
         checked={state}
         label={option.label}
-        color="purple"
+        color='purple'
       />
     );
   }

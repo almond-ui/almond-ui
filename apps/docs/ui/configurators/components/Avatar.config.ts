@@ -1,4 +1,7 @@
-import { AvatarCode, AvatarExample } from '@/ui/configurators/components/Avatar.example';
+import {
+  AvatarCode,
+  AvatarExample,
+} from '@/ui/configurators/components/Avatar.example';
 
 export const AvatarConfig = {
   example: AvatarExample,
@@ -27,7 +30,17 @@ export const AvatarConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Outlined',
@@ -50,7 +63,17 @@ export const AvatarConfig = {
       label: 'Shadow Color',
       name: 'shadowColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Radius',

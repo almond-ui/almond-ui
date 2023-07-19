@@ -1,4 +1,7 @@
-import { TextCode, TextExample } from '@/ui/configurators/components/Text.example';
+import {
+  TextCode,
+  TextExample,
+} from '@/ui/configurators/components/Text.example';
 
 export const TextConfig = {
   example: TextExample,
@@ -15,7 +18,17 @@ export const TextConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

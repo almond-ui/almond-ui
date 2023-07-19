@@ -1,4 +1,8 @@
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactElement } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactElement,
+} from 'react';
 
 export type SelectColor = 'blue' | 'purple' | 'gray' | 'dark' | 'black';
 export type SelectRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
@@ -7,7 +11,8 @@ export type SelectSize = 'xs' | 'sm' | 'md' | 'lg';
 export type SelectTone = 'light' | 'solid' | 'transparent';
 export type SelectValidation = 'none' | 'invalid' | 'valid' | 'warning';
 
-export interface SelectProps extends Omit<ComponentPropsWithRef<'select'>, 'size'> {
+export interface SelectProps
+  extends Omit<ComponentPropsWithRef<'select'>, 'size'> {
   color?: SelectColor;
   disabled?: boolean;
   leftIcon?: ReactElement;

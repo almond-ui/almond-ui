@@ -2,8 +2,18 @@ import { Button, ButtonProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const ButtonCode = (props: any) => {
-  const { animation, size, color, disabled, tone, shadow, shadowColor, radius, loading, withRing } =
-    props;
+  const {
+    animation,
+    size,
+    color,
+    disabled,
+    tone,
+    shadow,
+    shadowColor,
+    radius,
+    loading,
+    withRing,
+  } = props;
 
   const defaultProps = {
     animation: 'none',
@@ -24,7 +34,9 @@ export const ButtonCode = (props: any) => {
     color !== defaultProps.color ? `color="${color}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor ? `shadowColor="${shadowColor}"` : null,
+    shadowColor !== defaultProps.shadowColor
+      ? `shadowColor="${shadowColor}"`
+      : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     disabled !== defaultProps.disabled ? `disabled={${disabled}}` : null,

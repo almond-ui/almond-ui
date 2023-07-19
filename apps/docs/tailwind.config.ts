@@ -2,7 +2,6 @@ import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
-
 const tailwindConfig = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -97,8 +96,8 @@ const tailwindConfig = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-        mono: ["var(--font-mono)", ...fontFamily.mono]
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        mono: ['var(--font-mono)', ...fontFamily.mono],
       },
     },
   },
@@ -109,6 +108,6 @@ const tailwindConfig = {
       strategy: 'class', // only generate classes
     }),
   ],
-} satisfies Config
+} satisfies Config;
 
 export default tailwindConfig;

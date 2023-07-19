@@ -24,7 +24,15 @@ const base = cva([], {
 });
 
 const caption = cva(
-  ['w-full', 'text-base', 'text-center', 'p-2', 'absolute', 'bottom-0', 'backdrop-blur-sm'],
+  [
+    'w-full',
+    'text-base',
+    'text-center',
+    'p-2',
+    'absolute',
+    'bottom-0',
+    'backdrop-blur-sm',
+  ],
   {
     variants: {
       mode: {

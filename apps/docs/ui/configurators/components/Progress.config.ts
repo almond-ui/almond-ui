@@ -1,4 +1,7 @@
-import { ProgressCode, ProgressExample } from '@/ui/configurators/components/Progress.example';
+import {
+  ProgressCode,
+  ProgressExample,
+} from '@/ui/configurators/components/Progress.example';
 
 export const ProgressConfig = {
   example: ProgressExample,
@@ -20,7 +23,17 @@ export const ProgressConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { Meta, Story } from '@storybook/react';
 import { MagnifyingGlass } from '@phosphor-icons/react';
-import { EnhancedView, View, ViewGroup } from '../components/View';
 import {
   Button,
-  ButtonVariant,
   ButtonColor,
+  ButtonProps,
   ButtonRadius,
   ButtonShadow,
   ButtonSize,
   ButtonTone,
-  ButtonProps,
+  ButtonVariant,
 } from '@rewind-ui/core';
+import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
+import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const variants: ButtonVariant[] = [
   'primary',
@@ -97,7 +97,12 @@ const VariantTemplate: Story<ButtonProps> = (args) => {
   const items = variants.map((variant) => (
     <React.Fragment key={variant}>
       <View prop="variant" value={variant}>
-        <Button {...args} key={variant} variant={variant} className="capitalize">
+        <Button
+          {...args}
+          key={variant}
+          variant={variant}
+          className="capitalize"
+        >
           {variant}
         </Button>
       </View>
@@ -114,7 +119,13 @@ const ColorTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="color" value={color}>
         {tones.map((tone) => (
-          <Button {...args} key={tone} color={color} tone={tone} className="capitalize">
+          <Button
+            {...args}
+            key={tone}
+            color={color}
+            tone={tone}
+            className="capitalize"
+          >
             {tone}
           </Button>
         ))}
@@ -132,7 +143,13 @@ const ToneTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {colors.map((color) => (
-          <Button {...args} key={color} color={color} tone={tone} className="capitalize">
+          <Button
+            {...args}
+            key={color}
+            color={color}
+            tone={tone}
+            className="capitalize"
+          >
             {color}
           </Button>
         ))}
@@ -150,7 +167,13 @@ const SizeTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={size}>
       <View prop="size" value={size}>
         {tones.map((tone) => (
-          <Button {...args} key={tone} size={size} tone={tone} className="capitalize">
+          <Button
+            {...args}
+            key={tone}
+            size={size}
+            tone={tone}
+            className="capitalize"
+          >
             Button
           </Button>
         ))}
@@ -168,7 +191,13 @@ const RadiusTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={radius}>
       <View prop="radius" value={radius}>
         {tones.map((tone) => (
-          <Button {...args} key={tone} radius={radius} tone={tone} className="capitalize">
+          <Button
+            {...args}
+            key={tone}
+            radius={radius}
+            tone={tone}
+            className="capitalize"
+          >
             Button
           </Button>
         ))}
@@ -186,7 +215,13 @@ const ShadowTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={shadow}>
       <View prop="shadow" value={shadow}>
         {tones.map((tone) => (
-          <Button {...args} key={tone} shadow={shadow} tone={tone} className="capitalize">
+          <Button
+            {...args}
+            key={tone}
+            shadow={shadow}
+            tone={tone}
+            className="capitalize"
+          >
             Button
           </Button>
         ))}
@@ -229,7 +264,14 @@ const StatesTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {colors.map((color) => (
-          <Button {...args} key={color} color={color} tone={tone} className="capitalize" disabled>
+          <Button
+            {...args}
+            key={color}
+            color={color}
+            tone={tone}
+            className="capitalize"
+            disabled
+          >
             {color}
           </Button>
         ))}
@@ -241,7 +283,14 @@ const StatesTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {colors.map((color) => (
-          <Button {...args} key={color} color={color} tone={tone} className="capitalize" loading>
+          <Button
+            {...args}
+            key={color}
+            color={color}
+            tone={tone}
+            className="capitalize"
+            loading
+          >
             {color}
           </Button>
         ))}
@@ -268,7 +317,14 @@ const IconTemplate: Story<ButtonProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="color" value={color}>
         {tones.map((tone) => (
-          <Button {...args} key={tone} color={color} tone={tone} className="capitalize" icon>
+          <Button
+            {...args}
+            key={tone}
+            color={color}
+            tone={tone}
+            className="capitalize"
+            icon
+          >
             <MagnifyingGlass className={'w-3.5 h-3.5'} />
           </Button>
         ))}

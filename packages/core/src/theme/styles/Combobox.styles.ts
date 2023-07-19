@@ -1,7 +1,14 @@
 import { cva } from 'class-variance-authority';
 
 const base = cva(
-  ['w-full', 'transition-colors', 'duration-100', 'ease-in-out', 'outline-none', 'z-10'],
+  [
+    'w-full',
+    'transition-colors',
+    'duration-100',
+    'ease-in-out',
+    'outline-none',
+    'z-10',
+  ],
   {
     variants: {
       color: {
@@ -18,8 +25,18 @@ const base = cva(
         lg: ['text-lg', 'h-12'],
       },
       tone: {
-        light: ['text-gray-800', 'border', 'focus:bg-gray-50', 'placeholder:text-gray-400'],
-        solid: ['text-gray-800', 'border', 'focus:bg-gray-100', 'placeholder:text-gray-400'],
+        light: [
+          'text-gray-800',
+          'border',
+          'focus:bg-gray-50',
+          'placeholder:text-gray-400',
+        ],
+        solid: [
+          'text-gray-800',
+          'border',
+          'focus:bg-gray-100',
+          'placeholder:text-gray-400',
+        ],
         transparent: ['text-gray-800', 'border', 'placeholder:text-gray-400'],
       },
       radius: {
@@ -612,7 +629,13 @@ const optionIcon = cva([], {
   },
 });
 
-const optionWrapper = cva(['grid', 'grid-flow-col', 'justify-items-start', 'gap-x-2', 'mr-5']);
+const optionWrapper = cva([
+  'grid',
+  'grid-flow-col',
+  'justify-items-start',
+  'gap-x-2',
+  'mr-5',
+]);
 
 const infoWrapper = cva(['flex', 'flex-col', 'text-left']);
 

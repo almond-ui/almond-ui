@@ -1,4 +1,4 @@
-import { Button, Popover, Card, Radio } from '@almond-ui/core';
+import { Button, Card, Popover, Radio } from '@almond-ui/core';
 import * as React from 'react';
 
 export type PopoverShowcaseProps = {
@@ -41,28 +41,28 @@ export const PopoverShowcase = (props: PopoverShowcaseProps) => {
 const Colors = () => {
   return (
     <>
-      <Popover color="white">
+      <Popover color='white'>
         <Popover.Trigger>
           <Button>White</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover color="gray">
+      <Popover color='gray'>
         <Popover.Trigger>
           <Button>Gray</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover color="slate">
+      <Popover color='slate'>
         <Popover.Trigger>
           <Button>Slate</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover color="zinc">
+      <Popover color='zinc'>
         <Popover.Trigger>
           <Button>Zinc</Button>
         </Popover.Trigger>
@@ -75,35 +75,35 @@ const Colors = () => {
 const Sizes = () => {
   return (
     <>
-      <Popover size="tight">
+      <Popover size='tight'>
         <Popover.Trigger>
           <Button>Tight</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover size="xs">
+      <Popover size='xs'>
         <Popover.Trigger>
           <Button>Extra small</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover size="sm">
+      <Popover size='sm'>
         <Popover.Trigger>
           <Button>Small</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover size="md">
+      <Popover size='md'>
         <Popover.Trigger>
           <Button>Medium</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover size="lg">
+      <Popover size='lg'>
         <Popover.Trigger>
           <Button>Large</Button>
         </Popover.Trigger>
@@ -116,42 +116,42 @@ const Sizes = () => {
 const Radiuses = () => {
   return (
     <>
-      <Popover radius="none">
+      <Popover radius='none'>
         <Popover.Trigger>
           <Button>None</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover radius="sm">
+      <Popover radius='sm'>
         <Popover.Trigger>
           <Button>Small</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover radius="base">
+      <Popover radius='base'>
         <Popover.Trigger>
           <Button>Base</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover radius="md">
+      <Popover radius='md'>
         <Popover.Trigger>
           <Button>Medium</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover radius="lg">
+      <Popover radius='lg'>
         <Popover.Trigger>
           <Button>Large</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover radius="full">
+      <Popover radius='full'>
         <Popover.Trigger>
           <Button>Full</Button>
         </Popover.Trigger>
@@ -164,28 +164,28 @@ const Radiuses = () => {
 const Shadows = () => {
   return (
     <>
-      <Popover shadow="none" color="white">
+      <Popover shadow='none' color='white'>
         <Popover.Trigger>
           <Button>None</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover shadow="sm" color="white">
+      <Popover shadow='sm' color='white'>
         <Popover.Trigger>
           <Button>Small</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover shadow="base" color="white">
+      <Popover shadow='base' color='white'>
         <Popover.Trigger>
           <Button>Base</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover shadow="md" color="white">
+      <Popover shadow='md' color='white'>
         <Popover.Trigger>
           <Button>Medium</Button>
         </Popover.Trigger>
@@ -198,28 +198,28 @@ const Shadows = () => {
 const Placements = () => {
   return (
     <>
-      <Popover placement="top">
+      <Popover placement='top'>
         <Popover.Trigger>
           <Button>Top</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="bottom">
+      <Popover placement='bottom'>
         <Popover.Trigger>
           <Button>Bottom</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="left">
+      <Popover placement='left'>
         <Popover.Trigger>
           <Button>Left</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="right">
+      <Popover placement='right'>
         <Popover.Trigger>
           <Button>Right</Button>
         </Popover.Trigger>
@@ -232,14 +232,14 @@ const Placements = () => {
 const PlacementsExtendedTop = () => {
   return (
     <>
-      <Popover placement="top-start">
+      <Popover placement='top-start'>
         <Popover.Trigger>
           <Button>Top start</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="top-end">
+      <Popover placement='top-end'>
         <Popover.Trigger>
           <Button>Top end</Button>
         </Popover.Trigger>
@@ -252,14 +252,14 @@ const PlacementsExtendedTop = () => {
 const PlacementsExtendedBottom = () => {
   return (
     <>
-      <Popover placement="bottom-start">
+      <Popover placement='bottom-start'>
         <Popover.Trigger>
           <Button>Bottom start</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="bottom-end">
+      <Popover placement='bottom-end'>
         <Popover.Trigger>
           <Button>Bottom end</Button>
         </Popover.Trigger>
@@ -272,14 +272,14 @@ const PlacementsExtendedBottom = () => {
 const PlacementsExtendedLeft = () => {
   return (
     <>
-      <Popover placement="left-start">
+      <Popover placement='left-start'>
         <Popover.Trigger>
           <Button>Left start</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="left-end">
+      <Popover placement='left-end'>
         <Popover.Trigger>
           <Button>Left end</Button>
         </Popover.Trigger>
@@ -292,14 +292,14 @@ const PlacementsExtendedLeft = () => {
 const PlacementsExtendedRight = () => {
   return (
     <>
-      <Popover placement="right-start">
+      <Popover placement='right-start'>
         <Popover.Trigger>
           <Button>Right start</Button>
         </Popover.Trigger>
         <Popover.Content>I am the popover content</Popover.Content>
       </Popover>
 
-      <Popover placement="right-end">
+      <Popover placement='right-end'>
         <Popover.Trigger>
           <Button>Right end</Button>
         </Popover.Trigger>
@@ -332,15 +332,24 @@ const InitiallyOpen = () => {
 const ExampleCard = () => {
   return (
     <>
-      <Popover size="tight" color="gray" placement="bottom-start" withinPortal={true}>
+      <Popover
+        size='tight'
+        color='gray'
+        placement='bottom-start'
+        withinPortal={true}
+      >
         <Popover.Trigger>
           <Button>I am the trigger</Button>
         </Popover.Trigger>
         <Popover.Content>
-          <Card shadow="none" size="sm" radius="md">
-            <Card.Header className="bg-gray-50">This is a Card Header</Card.Header>
+          <Card shadow='none' size='sm' radius='md'>
+            <Card.Header className='bg-gray-50'>
+              This is a Card Header
+            </Card.Header>
             <Card.Body>This is the body of the card</Card.Body>
-            <Card.Footer className="bg-gray-50">And here is the footer</Card.Footer>
+            <Card.Footer className='bg-gray-50'>
+              And here is the footer
+            </Card.Footer>
           </Card>
         </Popover.Content>
       </Popover>
@@ -351,39 +360,46 @@ const ExampleCard = () => {
 const ExampleRadio = () => {
   return (
     <>
-      <Popover size="tight" color="gray" placement="bottom-start" withinPortal={true}>
+      <Popover
+        size='tight'
+        color='gray'
+        placement='bottom-start'
+        withinPortal={true}
+      >
         <Popover.Trigger>
-          <Button color="black">Deploy</Button>
+          <Button color='black'>Deploy</Button>
         </Popover.Trigger>
         <Popover.Content>
-          <Card shadow="none" size="sm" radius="md">
-            <Card.Header className="bg-gray-50">Select deployment target</Card.Header>
-            <Card.Body className="flex flex-col space-y-2">
+          <Card shadow='none' size='sm' radius='md'>
+            <Card.Header className='bg-gray-50'>
+              Select deployment target
+            </Card.Header>
+            <Card.Body className='flex flex-col space-y-2'>
               <Radio
-                color="dark"
-                name="radio-example"
-                size="sm"
-                label="Testing"
-                description="testing.example.com"
+                color='dark'
+                name='radio-example'
+                size='sm'
+                label='Testing'
+                description='testing.example.com'
                 defaultChecked={true}
               />
               <Radio
-                color="dark"
-                name="radio-example"
-                size="sm"
-                label="Staging"
-                description="staging.example.com"
+                color='dark'
+                name='radio-example'
+                size='sm'
+                label='Staging'
+                description='staging.example.com'
               />
               <Radio
-                color="dark"
-                name="radio-example"
-                size="sm"
-                label="Production"
-                description="example.com"
+                color='dark'
+                name='radio-example'
+                size='sm'
+                label='Production'
+                description='example.com'
               />
             </Card.Body>
-            <Card.Footer className="bg-gray-50">
-              <Button color="black" size="sm" className="w-full">
+            <Card.Footer className='bg-gray-50'>
+              <Button color='black' size='sm' className='w-full'>
                 Run
               </Button>
             </Card.Footer>

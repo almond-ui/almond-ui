@@ -1,4 +1,7 @@
-import { SelectorCode, SelectorExample } from '@/ui/configurators/components/Selector.example';
+import {
+  SelectorCode,
+  SelectorExample,
+} from '@/ui/configurators/components/Selector.example';
 
 export const SelectorConfig = {
   example: SelectorExample,
@@ -25,7 +28,17 @@ export const SelectorConfig = {
       label: 'Tab Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Orientation',

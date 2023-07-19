@@ -71,6 +71,16 @@ export function useDropdown({
       x,
       y,
     }),
-    [context, refs, getFloatingProps, getReferenceProps, open, setOpen, strategy, x, y]
+    [
+      context,
+      refs,
+      getFloatingProps,
+      getReferenceProps,
+      open,
+      setOpen,
+      strategy,
+      x,
+      y,
+    ]
   );
 }

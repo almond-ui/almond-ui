@@ -39,8 +39,9 @@ function App() {
 export const TextExample = (props: TextProps) => {
   return (
     <Text {...props}>
-      If you can force your heart and nerve and sinew; To serve your turn long after they are gone,
-      And so hold on when there is nothing in you; Except the Will which says to them: ‘Hold on!’
+      If you can force your heart and nerve and sinew; To serve your turn long
+      after they are gone, And so hold on when there is nothing in you; Except
+      the Will which says to them: ‘Hold on!’
     </Text>
   );
 };

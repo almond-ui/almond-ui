@@ -1,4 +1,7 @@
-import { AlertCode, AlertExample } from '@/ui/configurators/components/Alert.example';
+import {
+  AlertCode,
+  AlertExample,
+} from '@/ui/configurators/components/Alert.example';
 
 export const AlertConfig = {
   example: AlertExample,
@@ -32,7 +35,17 @@ export const AlertConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',
@@ -50,7 +63,17 @@ export const AlertConfig = {
       label: 'Shadow Color',
       name: 'shadowColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Radius',

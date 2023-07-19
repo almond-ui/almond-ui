@@ -1,4 +1,8 @@
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+} from 'react';
 
 export type SwitchColor =
   | 'blue'
@@ -12,7 +16,8 @@ export type SwitchColor =
 export type SwitchRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
 export type SwitchSize = 'sm' | 'md' | 'lg' | 'xl';
 
-export interface SwitchProps extends Omit<ComponentPropsWithRef<'button'>, 'onChange'> {
+export interface SwitchProps
+  extends Omit<ComponentPropsWithRef<'button'>, 'onChange'> {
   color?: SwitchColor;
   checked?: boolean;
   onChange?(value: boolean | null | undefined): void;

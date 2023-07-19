@@ -1,4 +1,5 @@
 'use client';
+
 import {
   ProgressComponent,
   ProgressProps,
@@ -91,7 +92,12 @@ const Progress: ProgressComponent = forwardRef<HTMLDivElement, ProgressProps>(
       size && outerValueSizes.includes(size) ? 'outer' : 'inner';
 
     return (
-      <div id={id} ref={ref} className={theme.wrapper({ className, size })} {...additionalProps}>
+      <div
+        id={id}
+        ref={ref}
+        className={theme.wrapper({ className, size })}
+        {...additionalProps}
+      >
         {(label || (showValue && valuePosition === 'outer')) && (
           <div className={theme.label({ size })}>
             {label && (
@@ -120,7 +126,9 @@ const Progress: ProgressComponent = forwardRef<HTMLDivElement, ProgressProps>(
           </div>
         </div>
 
-        {description && <span className={theme.description({ size })}>{description}</span>}
+        {description && (
+          <span className={theme.description({ size })}>{description}</span>
+        )}
       </div>
     );
   }

@@ -1,4 +1,7 @@
-import { ButtonCode, ButtonExample } from '@/ui/configurators/components/Button.example';
+import {
+  ButtonCode,
+  ButtonExample,
+} from '@/ui/configurators/components/Button.example';
 
 export const ButtonConfig = {
   example: ButtonExample,
@@ -27,7 +30,17 @@ export const ButtonConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',
@@ -45,7 +58,17 @@ export const ButtonConfig = {
       label: 'Shadow Color',
       name: 'shadowColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Radius',

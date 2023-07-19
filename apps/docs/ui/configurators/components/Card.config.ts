@@ -1,4 +1,7 @@
-import { CardCode, CardExample } from '@/ui/configurators/components/Card.example';
+import {
+  CardCode,
+  CardExample,
+} from '@/ui/configurators/components/Card.example';
 
 export const CardConfig = {
   example: CardExample,

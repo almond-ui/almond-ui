@@ -1,13 +1,13 @@
 import {
   Checkbox,
-  CheckboxProps,
   CheckboxColor,
+  CheckboxProps,
   CheckboxRadius,
   CheckboxSize,
   CheckboxTone,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { View, ViewGroup } from '../components/View';
 
 const colors: CheckboxColor[] = [
@@ -64,7 +64,12 @@ export default meta;
 const DefaultTemplate: Story<CheckboxProps> = (args) => {
   return (
     <View prop="Default">
-      <Checkbox label={label} description={description} error={error} {...args} />
+      <Checkbox
+        label={label}
+        description={description}
+        error={error}
+        {...args}
+      />
     </View>
   );
 };

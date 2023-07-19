@@ -1,4 +1,8 @@
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+} from 'react';
 
 export interface ComboboxOptionProps extends ComponentPropsWithRef<'button'> {
   description?: string;
@@ -7,6 +11,7 @@ export interface ComboboxOptionProps extends ComponentPropsWithRef<'button'> {
   value: string;
 }
 
-export type ComboboxOptionComponent = ForwardRefExoticComponent<ComboboxOptionProps> & {
-  displayName?: string;
-};
+export type ComboboxOptionComponent =
+  ForwardRefExoticComponent<ComboboxOptionProps> & {
+    displayName?: string;
+  };

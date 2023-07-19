@@ -63,7 +63,13 @@ const ComboboxGroup: ComboboxGroupComponent = forwardRef(
 
     return (
       <>
-        <div id={id} ref={mergedRef} aria-hidden={hidden} className={classes} {...additionalProps}>
+        <div
+          id={id}
+          ref={mergedRef}
+          aria-hidden={hidden}
+          className={classes}
+          {...additionalProps}
+        >
           {heading}
         </div>
         {items}

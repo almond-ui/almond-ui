@@ -1,4 +1,7 @@
-import { ComboboxCode, ComboboxExample } from '@/ui/configurators/components/Combobox.example';
+import {
+  ComboboxCode,
+  ComboboxExample,
+} from '@/ui/configurators/components/Combobox.example';
 
 export const ComboboxConfig = {
   example: ComboboxExample,

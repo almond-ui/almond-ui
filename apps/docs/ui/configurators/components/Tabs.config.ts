@@ -1,4 +1,7 @@
-import { TabsCode, TabsExample } from '@/ui/configurators/components/Tabs.example';
+import {
+  TabsCode,
+  TabsExample,
+} from '@/ui/configurators/components/Tabs.example';
 
 export const TabsConfig = {
   example: TabsExample,
@@ -22,7 +25,16 @@ export const TabsConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

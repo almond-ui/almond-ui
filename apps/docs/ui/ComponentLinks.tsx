@@ -1,4 +1,5 @@
 'use client';
+
 import { Component } from '@/.contentlayer/generated/types';
 import { config } from '@/lib/config';
 import { Button } from '@almond-ui/core';
@@ -8,23 +9,23 @@ export const ComponentLinks = (props: { component: Component }) => {
   const { source, theme, variants, storybook } = props.component;
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className='flex flex-wrap gap-2'>
       {source && (
         <Button
-          as="a"
+          as='a'
           href={`${config.github.repo_url}/${config.github.component_dir}/${source}`}
-          target="_blank"
-          color="white"
-          size="sm"
-          shadow="sm"
+          target='_blank'
+          color='white'
+          size='sm'
+          shadow='sm'
         >
           <Image
             priority
-            src="/images/github.svg"
-            className="mr-1.5"
+            src='/images/github.svg'
+            className='mr-1.5'
             height={14}
             width={14}
-            alt="Open source code"
+            alt='Open source code'
           />
           <span>Source code</span>
         </Button>
@@ -32,20 +33,20 @@ export const ComponentLinks = (props: { component: Component }) => {
 
       {theme && (
         <Button
-          as="a"
+          as='a'
           href={`${config.github.repo_url}/${config.github.theme_dir}/${theme}`}
-          target="_blank"
-          color="white"
-          size="sm"
-          shadow="sm"
+          target='_blank'
+          color='white'
+          size='sm'
+          shadow='sm'
         >
           <Image
             priority
-            src="/images/github.svg"
-            className="mr-1.5"
+            src='/images/github.svg'
+            className='mr-1.5'
             height={14}
             width={14}
-            alt="Open source code"
+            alt='Open source code'
           />
           <span>Theme</span>
         </Button>
@@ -53,20 +54,20 @@ export const ComponentLinks = (props: { component: Component }) => {
 
       {variants && (
         <Button
-          as="a"
+          as='a'
           href={`${config.github.repo_url}/${config.github.variants_dir}/${variants}`}
-          target="_blank"
-          color="white"
-          size="sm"
-          shadow="sm"
+          target='_blank'
+          color='white'
+          size='sm'
+          shadow='sm'
         >
           <Image
             priority
-            src="/images/github.svg"
-            className="mr-1.5"
+            src='/images/github.svg'
+            className='mr-1.5'
             height={14}
             width={14}
-            alt="Open source code"
+            alt='Open source code'
           />
           <span>Variants</span>
         </Button>
@@ -74,20 +75,20 @@ export const ComponentLinks = (props: { component: Component }) => {
 
       {storybook && (
         <Button
-          as="a"
+          as='a'
           href={`${config.storybook.url}${storybook}`}
-          target="_blank"
-          size="sm"
-          color="white"
-          shadow="sm"
+          target='_blank'
+          size='sm'
+          color='white'
+          shadow='sm'
         >
           <Image
             priority
-            src="/images/storybook.svg"
-            className="mr-1.5"
+            src='/images/storybook.svg'
+            className='mr-1.5'
             height={14}
             width={14}
-            alt="View component stories"
+            alt='View component stories'
           />
           <span>Storybook</span>
         </Button>

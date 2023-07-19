@@ -1,6 +1,6 @@
 import { InputGroup, InputGroupProps } from '@almond-ui/core';
-import * as React from 'react';
 import { MagnifyingGlass } from '@phosphor-icons/react';
+import * as React from 'react';
 
 export const InputGroupCode = (props: any) => {
   const { size, tone, shadow, radius } = props;
@@ -42,9 +42,9 @@ export const InputGroupExample = (props: InputGroupProps) => {
   return (
     <InputGroup {...props}>
       <InputGroup.Text>
-        <MagnifyingGlass weight="duotone" />
+        <MagnifyingGlass weight='duotone' />
       </InputGroup.Text>
-      <InputGroup.Input placeholder={'Search...'} type="search" />
+      <InputGroup.Input placeholder={'Search...'} type='search' />
     </InputGroup>
   );
 };

@@ -1,4 +1,5 @@
 'use client';
+
 import { ImageComponent, ImageProps } from '@components/Image/Image.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
@@ -65,7 +66,9 @@ const Image: ImageComponent = forwardRef<HTMLDivElement, ImageProps>(
           ref={imageRef}
         />
 
-        {caption && <figcaption className={theme.caption({ mode })}>{caption}</figcaption>}
+        {caption && (
+          <figcaption className={theme.caption({ mode })}>{caption}</figcaption>
+        )}
       </div>
     );
   }

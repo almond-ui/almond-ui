@@ -1,4 +1,5 @@
 'use client';
+
 import {
   ComboboxComponent,
   ComboboxContext,
@@ -13,6 +14,7 @@ import { Spinner } from '@components/Spinner';
 import { FloatingPortal, useMergeRefs } from '@floating-ui/react';
 import { useKeypress } from '@hooks/use-keypress';
 import { useVerticalArrows } from '@hooks/use-vertical-arrows.hook';
+import { CaretUpDown } from '@icons/CaretUpDown';
 import { XMarkIcon } from '@icons/XMark';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
@@ -27,7 +29,6 @@ import React, {
   useState,
 } from 'react';
 import { ComboboxContextProvider } from './Combobox.context';
-import { CaretUpDown } from '@icons/CaretUpDown';
 
 const defaultProps: Partial<ComboboxProps> = {
   clearable: true,
@@ -92,8 +93,12 @@ const _Combobox: ComboboxComponent = forwardRef(
     const hasRightIcon = true;
     const [search, setSearch] = useState<string>('');
     const [searching, setSearching] = useState<boolean>(false);
-    const [selectedValue, setSelectedValue] = useState<string | null | undefined>(initialValue);
-    const [selectedLabel, setSelectedLabel] = useState<string | null | undefined>('');
+    const [selectedValue, setSelectedValue] = useState<
+      string | null | undefined
+    >(initialValue);
+    const [selectedLabel, setSelectedLabel] = useState<
+      string | null | undefined
+    >('');
     const [visibleRefs, setVisibleRefs] = useState<HTMLButtonElement[]>([]);
     const [listClasses, setListClasses] = useState<string>('');
     const [inputClasses, setInputClasses] = useState<string>('');
@@ -114,7 +119,16 @@ const _Combobox: ComboboxComponent = forwardRef(
       setSelectedValue,
       size,
     };
-    const { x, y, reference, floating, strategy, getFloatingProps, open, setOpen } = useCombobox({
+    const {
+      x,
+      y,
+      reference,
+      floating,
+      strategy,
+      getFloatingProps,
+      open,
+      setOpen,
+    } = useCombobox({
       offset,
     });
     const wrapperRef = useMergeRefs([reference, localWrapperRef, ref || null]);
@@ -194,7 +208,9 @@ const _Combobox: ComboboxComponent = forwardRef(
 
         setVisibleRefs(
           Array.from(
-            listRef.current.querySelectorAll('button[aria-hidden="false"][aria-disabled="false"]')
+            listRef.current.querySelectorAll(
+              'button[aria-hidden="false"][aria-disabled="false"]'
+            )
           )
         );
       }, 1);

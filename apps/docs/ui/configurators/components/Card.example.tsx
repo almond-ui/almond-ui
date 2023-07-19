@@ -19,7 +19,9 @@ export const CardCode = (props: any) => {
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
-    withDivider !== defaultProps.withDivider ? `withDivider={${withDivider}}` : null,
+    withDivider !== defaultProps.withDivider
+      ? `withDivider={${withDivider}}`
+      : null,
   ].filter(Boolean);
 
   if (attributes.length) {
@@ -45,9 +47,10 @@ export const CardExample = (props: CardProps) => {
     <Card {...props}>
       <Card.Header>Header</Card.Header>
       <Card.Body>
-        Almond UI is a React component library that provides a set of accessible, reusable and
-        customizable components to help you build your next project. We have designed our components
-        to be flexible and easy to use, so you can focus on what matters most: building great user
+        Almond UI is a React component library that provides a set of
+        accessible, reusable and customizable components to help you build your
+        next project. We have designed our components to be flexible and easy to
+        use, so you can focus on what matters most: building great user
         experiences.
       </Card.Body>
       <Card.Footer>Footer</Card.Footer>

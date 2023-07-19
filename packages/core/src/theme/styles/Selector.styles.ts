@@ -252,7 +252,11 @@ const tab = cva(
       },
       active: {
         true: [],
-        false: ['text-gray-800', 'disabled:text-gray-400', 'hover:disabled:cursor-not-allowed'],
+        false: [
+          'text-gray-800',
+          'disabled:text-gray-400',
+          'hover:disabled:cursor-not-allowed',
+        ],
       },
       orientation: {
         horizontal: ['flex-1', 'h-full'],
@@ -289,7 +293,16 @@ const tab = cva(
       {
         active: true,
         tone: 'solid',
-        color: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+        color: [
+          'blue',
+          'red',
+          'green',
+          'yellow',
+          'purple',
+          'gray',
+          'dark',
+          'black',
+        ],
         className: ['text-white'],
       },
       {
@@ -350,62 +363,65 @@ const tab = cva(
   }
 );
 
-const separator = cva(['last-of-type:hidden', 'text-gray-300', 'mx-0.5', 'self-center'], {
-  variants: {
-    orientation: {
-      horizontal: ['bg-gray-300'],
-      vertical: ['bg-gray-300'],
+const separator = cva(
+  ['last-of-type:hidden', 'text-gray-300', 'mx-0.5', 'self-center'],
+  {
+    variants: {
+      orientation: {
+        horizontal: ['bg-gray-300'],
+        vertical: ['bg-gray-300'],
+      },
+      size: {
+        xs: [],
+        sm: [],
+        md: [],
+        lg: [],
+      },
     },
-    size: {
-      xs: [],
-      sm: [],
-      md: [],
-      lg: [],
-    },
-  },
-  compoundVariants: [
-    {
-      orientation: 'horizontal',
-      size: 'xs',
-      className: ['w-px h-3'],
-    },
-    {
-      orientation: 'horizontal',
-      size: 'sm',
-      className: ['w-px h-4'],
-    },
-    {
-      orientation: 'horizontal',
-      size: 'md',
-      className: ['w-px h-5'],
-    },
-    {
-      orientation: 'horizontal',
-      size: 'lg',
-      className: ['w-px h-6'],
-    },
-    {
-      orientation: 'vertical',
-      size: 'xs',
-      className: ['w-3 h-px'],
-    },
-    {
-      orientation: 'vertical',
-      size: 'sm',
-      className: ['w-4 h-px'],
-    },
-    {
-      orientation: 'vertical',
-      size: 'md',
-      className: ['w-5 h-px'],
-    },
-    {
-      orientation: 'vertical',
-      size: 'lg',
-      className: ['w-6 h-px'],
-    },
-  ],
-});
+    compoundVariants: [
+      {
+        orientation: 'horizontal',
+        size: 'xs',
+        className: ['w-px h-3'],
+      },
+      {
+        orientation: 'horizontal',
+        size: 'sm',
+        className: ['w-px h-4'],
+      },
+      {
+        orientation: 'horizontal',
+        size: 'md',
+        className: ['w-px h-5'],
+      },
+      {
+        orientation: 'horizontal',
+        size: 'lg',
+        className: ['w-px h-6'],
+      },
+      {
+        orientation: 'vertical',
+        size: 'xs',
+        className: ['w-3 h-px'],
+      },
+      {
+        orientation: 'vertical',
+        size: 'sm',
+        className: ['w-4 h-px'],
+      },
+      {
+        orientation: 'vertical',
+        size: 'md',
+        className: ['w-5 h-px'],
+      },
+      {
+        orientation: 'vertical',
+        size: 'lg',
+        className: ['w-6 h-px'],
+      },
+    ],
+  }
+);
 
 const selectorStyles = {
   base,

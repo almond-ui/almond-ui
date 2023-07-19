@@ -1,19 +1,19 @@
 import { Tabs, TabsProps } from '@almond-ui/core';
-import * as React from 'react';
 import { HandWaving, Lifebuoy } from '@phosphor-icons/react';
+import * as React from 'react';
 
 const tabs = [
   {
     anchor: 'tab-1',
     label: 'Introduction',
-    icon: <HandWaving weight="duotone" className="text-blue-500" />,
+    icon: <HandWaving weight='duotone' className='text-blue-500' />,
     content:
       'Almond UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
   },
   {
     anchor: 'tab-2',
     label: 'Contribute',
-    icon: <Lifebuoy weight="duotone" className="text-blue-500" />,
+    icon: <Lifebuoy weight='duotone' className='text-blue-500' />,
     content:
       "We're always looking for new contributors to help us improve Almond UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
   },

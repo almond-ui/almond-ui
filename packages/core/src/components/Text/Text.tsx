@@ -1,4 +1,5 @@
 'use client';
+
 import { useComponentTheme } from '@theme/theme.context';
 import { useComponentVariant } from '@theme/variant.context';
 import { usePropId } from '@utils/usePropId';
@@ -20,7 +21,10 @@ const Text: TextComponent = forwardRef(
     props: PolymorphicComponentProp<C, TextProps>,
     ref?: PolymorphicRef<C>
   ) => {
-    const variantProps = useComponentVariant('Text', props.variant) as Partial<TextProps>;
+    const variantProps = useComponentVariant(
+      'Text',
+      props.variant
+    ) as Partial<TextProps>;
     const theme = useComponentTheme('Text');
     const {
       as,

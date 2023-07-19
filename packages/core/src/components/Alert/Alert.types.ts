@@ -1,4 +1,8 @@
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+} from 'react';
 
 export type AlertAccent = 'none' | 'top' | 'right' | 'bottom' | 'left';
 export type AlertColor =
@@ -11,7 +15,12 @@ export type AlertColor =
   | 'gray'
   | 'dark'
   | 'black';
-export type AlertIconType = 'info' | 'success' | 'warning' | 'error' | 'question';
+export type AlertIconType =
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'question';
 export type AlertRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
 export type AlertShadow = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'xl';
 export type AlertShadowColor =

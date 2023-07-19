@@ -1,7 +1,11 @@
 'use client';
+
 import { useFormControlContext } from '@components/FormControl/FormControl.context';
 import { useInputGroupContext } from '@components/InputGroup/InputGroup.context';
-import { TextareaComponent, TextareaProps } from '@components/Textarea/Textarea.types';
+import {
+  TextareaComponent,
+  TextareaProps,
+} from '@components/Textarea/Textarea.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import { forwardRef, Ref, useMemo } from 'react';
@@ -57,10 +61,27 @@ const Textarea: TextareaComponent = forwardRef(
           withRing,
         })
       );
-    }, [className, color, disabled, radius, shadow, size, theme, tone, validation, withRing]);
+    }, [
+      className,
+      color,
+      disabled,
+      radius,
+      shadow,
+      size,
+      theme,
+      tone,
+      validation,
+      withRing,
+    ]);
 
     return (
-      <textarea id={id} ref={ref} className={classes} {...additionalProps} disabled={disabled} />
+      <textarea
+        id={id}
+        ref={ref}
+        className={classes}
+        {...additionalProps}
+        disabled={disabled}
+      />
     );
   }
 );

@@ -1,4 +1,7 @@
-import { TableCode, TableExample } from '@/ui/configurators/components/Table.example';
+import {
+  TableCode,
+  TableExample,
+} from '@/ui/configurators/components/Table.example';
 
 export const TableConfig = {
   example: TableExample,

@@ -19,7 +19,8 @@ export type CheckboxRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'full';
 export type CheckboxSize = 'sm' | 'md' | 'lg' | 'xl';
 export type CheckboxTone = 'solid' | 'light';
 
-export interface CheckboxProps extends Omit<ComponentPropsWithRef<'input'>, 'size'> {
+export interface CheckboxProps
+  extends Omit<ComponentPropsWithRef<'input'>, 'size'> {
   color?: CheckboxColor;
   description?: string | ReactNode;
   descriptionClassName?: string;

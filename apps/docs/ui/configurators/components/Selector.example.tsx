@@ -29,13 +29,19 @@ export const SelectorCode = (props: any) => {
   const attributes = [
     color !== defaultProps.color ? `color="${color}"` : null,
     fullWidth !== defaultProps.fullWidth ? `fullWidth={${fullWidth}}` : null,
-    orientation !== defaultProps.orientation ? `orientation="${orientation}"` : null,
+    orientation !== defaultProps.orientation
+      ? `orientation="${orientation}"`
+      : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
-    withAnimation !== defaultProps.withAnimation ? `withAnimation={${withAnimation}}` : null,
-    withSeparator !== defaultProps.withSeparator ? `withSeparator={${withSeparator}}` : null,
+    withAnimation !== defaultProps.withAnimation
+      ? `withAnimation={${withAnimation}}`
+      : null,
+    withSeparator !== defaultProps.withSeparator
+      ? `withSeparator={${withSeparator}}`
+      : null,
   ].filter(Boolean);
 
   if (attributes.length) {
@@ -58,10 +64,10 @@ function App() {
 
 export const SelectorExample = (props: SelectorProps) => {
   return (
-    <Selector {...props} value="apple">
-      <Selector.Tab anchor="apple" label="Apple" />
-      <Selector.Tab anchor="orange" label="Orange" />
-      <Selector.Tab anchor="banana" label="Banana" />
+    <Selector {...props} value='apple'>
+      <Selector.Tab anchor='apple' label='Apple' />
+      <Selector.Tab anchor='orange' label='Orange' />
+      <Selector.Tab anchor='banana' label='Banana' />
     </Selector>
   );
 };

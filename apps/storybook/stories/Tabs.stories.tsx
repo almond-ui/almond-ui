@@ -1,10 +1,27 @@
-import { Card, Tabs, TabsColor, TabsProps, TabsRadius, TabsSize, TabsTone } from '@rewind-ui/core';
-import * as React from 'react';
+import { HandWaving, Info, Lifebuoy, Sparkle } from '@phosphor-icons/react';
+import {
+  Card,
+  Tabs,
+  TabsColor,
+  TabsProps,
+  TabsRadius,
+  TabsSize,
+  TabsTone,
+} from '@rewind-ui/core';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
-import { HandWaving, Sparkle, Info, Lifebuoy } from '@phosphor-icons/react';
 
-const colors: TabsColor[] = ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'];
+const colors: TabsColor[] = [
+  'blue',
+  'red',
+  'green',
+  'yellow',
+  'purple',
+  'gray',
+  'dark',
+  'black',
+];
 const tones: TabsTone[] = ['line', 'pill'];
 const sizes: TabsSize[] = ['sm', 'md', 'lg'];
 const radiuses: TabsRadius[] = ['none', 'sm', 'base', 'md', 'lg', 'full'];
@@ -113,7 +130,13 @@ const ColorTemplate: Story<TabsProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="color" value={color}>
         {tones.map((tone) => (
-          <Tabs key={tone} {...args} tone={tone} color={color} defaultTab="tab-1">
+          <Tabs
+            key={tone}
+            {...args}
+            tone={tone}
+            color={color}
+            defaultTab="tab-1"
+          >
             <Tabs.List>
               {tabs.map((tab) => (
                 <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -143,7 +166,13 @@ const ToneTemplate: Story<TabsProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {colors.map((color) => (
-          <Tabs key={color} {...args} tone={tone} color={color} defaultTab="tab-1">
+          <Tabs
+            key={color}
+            {...args}
+            tone={tone}
+            color={color}
+            defaultTab="tab-1"
+          >
             <Tabs.List>
               {tabs.map((tab) => (
                 <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -231,7 +260,13 @@ const FullWidthTemplate: Story<TabsProps> = (args) => {
     <React.Fragment key={fullWidth ? '1' : '2'}>
       <View prop="fullWidth" value={fullWidth ? 'true' : 'false'}>
         {tones.map((tone) => (
-          <Tabs key={tone} {...args} tone={tone} fullWidth={fullWidth} defaultTab="tab-1">
+          <Tabs
+            key={tone}
+            {...args}
+            tone={tone}
+            fullWidth={fullWidth}
+            defaultTab="tab-1"
+          >
             <Tabs.List>
               {tabs.map((tab) => (
                 <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -300,7 +335,11 @@ const ExampleTemplate: Story<TabsProps> = (args) => {
               </Tabs.List>
 
               {tabs.map((tab) => (
-                <Tabs.Content key={`content-${tab.anchor}`} anchor={tab.anchor} className="p-5">
+                <Tabs.Content
+                  key={`content-${tab.anchor}`}
+                  anchor={tab.anchor}
+                  className="p-5"
+                >
                   {tab.content}
                 </Tabs.Content>
               ))}

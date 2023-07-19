@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority';
 import Link from 'next/link';
-import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
+import { ReactNode } from 'react';
 
 export const MenuItem = (props: {
   title: string;
@@ -11,12 +11,27 @@ export const MenuItem = (props: {
   newItem?: boolean;
   updated?: boolean;
 }) => {
-  const { title, path, icon, wip = false, newItem = false, updated = false } = props;
+  const {
+    title,
+    path,
+    icon,
+    wip = false,
+    newItem = false,
+    updated = false,
+  } = props;
   const pathname = usePathname();
   const active = pathname === path;
   const hasIcon = !!icon;
   const styles = cva(
-    ['group', 'w-full', 'py-1.5', 'flex', 'space-x-2', 'items-center', 'text-sm'],
+    [
+      'group',
+      'w-full',
+      'py-1.5',
+      'flex',
+      'space-x-2',
+      'items-center',
+      'text-sm',
+    ],
     {
       variants: {
         active: {
@@ -75,17 +90,17 @@ export const MenuItem = (props: {
       {icon && <span className={iconStyles({ active })}>{icon}</span>}
       <span>{title}</span>
       {wip && (
-        <span className="text-xs bg-yellow-50 border border-dashed border-yellow-100 rounded py-[0.15rem] px-[0.3rem] text-yellow-500">
+        <span className='text-xs bg-yellow-50 border border-dashed border-yellow-100 rounded py-[0.15rem] px-[0.3rem] text-yellow-500'>
           WIP
         </span>
       )}
       {newItem && (
-        <span className="text-xs bg-purple-50/75 border border-dashed border-purple-100 rounded py-[0.15rem] px-[0.3rem] text-purple-600">
+        <span className='text-xs bg-purple-50/75 border border-dashed border-purple-100 rounded py-[0.15rem] px-[0.3rem] text-purple-600'>
           NEW
         </span>
       )}
       {updated && (
-        <span className="text-xs bg-green-50/75 border border-dashed border-green-100 rounded py-[0.15rem] px-[0.3rem] text-green-600">
+        <span className='text-xs bg-green-50/75 border border-dashed border-green-100 rounded py-[0.15rem] px-[0.3rem] text-green-600'>
           UPDATED
         </span>
       )}

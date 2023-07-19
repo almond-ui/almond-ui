@@ -1,3 +1,4 @@
+import { WarningCircle } from '@phosphor-icons/react';
 import {
   Alert,
   AlertAccent,
@@ -11,10 +12,9 @@ import {
   Button,
   Text,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
-import { WarningCircle } from '@phosphor-icons/react';
 
 const variants: AlertVariant[] = [
   'primary',
@@ -128,7 +128,13 @@ const ColorTemplate: Story<AlertProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="color" value={color}>
         {tones.map((tone) => (
-          <Alert {...args} key={tone} color={color} tone={tone} title={`Tone: ${tone}`}>
+          <Alert
+            {...args}
+            key={tone}
+            color={color}
+            tone={tone}
+            title={`Tone: ${tone}`}
+          >
             {text}
           </Alert>
         ))}
@@ -146,7 +152,13 @@ const ToneTemplate: Story<AlertProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {colors.map((color) => (
-          <Alert {...args} key={color} color={color} tone={tone} title={`Color: ${color}`}>
+          <Alert
+            {...args}
+            key={color}
+            color={color}
+            tone={tone}
+            title={`Color: ${color}`}
+          >
             {text}
           </Alert>
         ))}
@@ -164,7 +176,13 @@ const AccentTemplate: Story<AlertProps> = (args) => {
     <React.Fragment key={accent}>
       <View prop="accent" value={accent}>
         {tones.map((tone) => (
-          <Alert {...args} key={tone} accent={accent} tone={tone} title={`Tone: ${tone}`}>
+          <Alert
+            {...args}
+            key={tone}
+            accent={accent}
+            tone={tone}
+            title={`Tone: ${tone}`}
+          >
             {text}
           </Alert>
         ))}
@@ -182,7 +200,13 @@ const SizeTemplate: Story<AlertProps> = (args) => {
     <React.Fragment key={size}>
       <View prop="size" value={size}>
         {tones.map((tone) => (
-          <Alert {...args} key={tone} size={size} tone={tone} title={`Tone: ${tone}`}>
+          <Alert
+            {...args}
+            key={tone}
+            size={size}
+            tone={tone}
+            title={`Tone: ${tone}`}
+          >
             {text}
           </Alert>
         ))}
@@ -268,12 +292,20 @@ const ExampleTemplate: Story<AlertProps> = (args) => {
           color="purple"
           className="border border-2 border-dashed border-purple-700"
         >
-          This is a simple informative alert. It has a title, an icon, and some content.
+          This is a simple informative alert. It has a title, an icon, and some
+          content.
         </Alert>
       </EnhancedView>
 
       <EnhancedView prop="Alert with custom JSX content">
-        <Alert {...args} tone="light" color="red" size="lg" shadow="base" className="border">
+        <Alert
+          {...args}
+          tone="light"
+          color="red"
+          size="lg"
+          shadow="base"
+          className="border"
+        >
           <div className="grid gap-y-3 justify-items-center text-red-600 w-full">
             <WarningCircle weight="duotone" className="w-16 h-16" />
             <Text variant="h3" className="text-red-600">
@@ -281,8 +313,9 @@ const ExampleTemplate: Story<AlertProps> = (args) => {
             </Text>
             <div className="border-b border-b-2 border-dashed border-red-200 w-full" />
             <Text size="base" className="text-center text-red-600">
-              Here is some custom JSX content. You can use any component you want here, including
-              Buttons, Text, etc. Furthermore you can use any Tailwind CSS classes you want.
+              Here is some custom JSX content. You can use any component you
+              want here, including Buttons, Text, etc. Furthermore you can use
+              any Tailwind CSS classes you want.
             </Text>
 
             <div className="flex gap-x-2">

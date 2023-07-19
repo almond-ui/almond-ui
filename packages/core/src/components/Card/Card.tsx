@@ -1,5 +1,10 @@
 'use client';
-import { CardComponent, CardContext, CardProps } from '@components/Card/Card.types';
+
+import {
+  CardComponent,
+  CardContext,
+  CardProps,
+} from '@components/Card/Card.types';
 import { CardBody } from '@components/Card/CardBody';
 import { CardFooter } from '@components/Card/CardFooter';
 import { CardHeader } from '@components/Card/CardHeader';

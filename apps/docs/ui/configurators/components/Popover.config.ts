@@ -1,4 +1,7 @@
-import { PopoverCode, PopoverExample } from '@/ui/configurators/components/Popover.example';
+import {
+  PopoverCode,
+  PopoverExample,
+} from '@/ui/configurators/components/Popover.example';
 
 export const PopoverConfig = {
   example: PopoverExample,

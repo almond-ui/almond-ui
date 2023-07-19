@@ -1,4 +1,5 @@
 'use client';
+
 import { RadioGroupContextProvider } from '@components/Radio/RadioGroup.context';
 import {
   RadioGroupComponent,
@@ -17,7 +18,15 @@ const defaultProps: Partial<RadioGroupProps> = {
 const RadioGroup: RadioGroupComponent = forwardRef(
   (props: RadioGroupProps, ref?: ForwardedRef<HTMLDivElement>) => {
     const theme = useComponentTheme('Radio');
-    const { children, className, initialValue, name, onChange, orientation, ...additionalProps } = {
+    const {
+      children,
+      className,
+      initialValue,
+      name,
+      onChange,
+      orientation,
+      ...additionalProps
+    } = {
       ...defaultProps,
       ...props,
     };
@@ -47,7 +56,13 @@ const RadioGroup: RadioGroupComponent = forwardRef(
 
     return (
       <RadioGroupContextProvider value={contextValue}>
-        <div id={id} ref={ref} role="radiogroup" className={classes} {...additionalProps}>
+        <div
+          id={id}
+          ref={ref}
+          role="radiogroup"
+          className={classes}
+          {...additionalProps}
+        >
           {children}
         </div>
       </RadioGroupContextProvider>

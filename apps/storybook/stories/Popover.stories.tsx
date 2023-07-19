@@ -9,8 +9,8 @@ import {
   PopoverShadow,
   PopoverSize,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const sizes: PopoverSize[] = ['tight', 'xs', 'sm', 'md', 'lg'];
@@ -185,9 +185,13 @@ const ExampleTemplate: Story<PopoverProps> = (args) => {
         </Popover.Trigger>
         <Popover.Content>
           <Card shadow="none" size="sm" radius="md">
-            <Card.Header className="bg-gray-50">This is a Card Header</Card.Header>
+            <Card.Header className="bg-gray-50">
+              This is a Card Header
+            </Card.Header>
             <Card.Body>This is the body of the card</Card.Body>
-            <Card.Footer className="bg-gray-50">And here is the footer</Card.Footer>
+            <Card.Footer className="bg-gray-50">
+              And here is the footer
+            </Card.Footer>
           </Card>
         </Popover.Content>
       </Popover>

@@ -2,8 +2,18 @@ import { Progress, ProgressProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const ProgressCode = (props: any) => {
-  const { animated, color, description, label, radius, shadow, showValue, size, striped, value } =
-    props;
+  const {
+    animated,
+    color,
+    description,
+    label,
+    radius,
+    shadow,
+    showValue,
+    size,
+    striped,
+    value,
+  } = props;
 
   const defaultProps = {
     animated: false,

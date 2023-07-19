@@ -1,4 +1,7 @@
-import { BadgeCode, BadgeExample } from '@/ui/configurators/components/Badge.example';
+import {
+  BadgeCode,
+  BadgeExample,
+} from '@/ui/configurators/components/Badge.example';
 
 export const BadgeConfig = {
   example: BadgeExample,
@@ -22,7 +25,17 @@ export const BadgeConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',
@@ -40,7 +53,17 @@ export const BadgeConfig = {
       label: 'Shadow Color',
       name: 'shadowColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Radius',

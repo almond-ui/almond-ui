@@ -228,7 +228,16 @@ const base = cva(
       },
       {
         tone: 'solid',
-        color: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+        color: [
+          'blue',
+          'red',
+          'green',
+          'yellow',
+          'purple',
+          'gray',
+          'dark',
+          'black',
+        ],
         className: ['border-transparent'],
       },
       {
@@ -340,7 +349,12 @@ const base = cva(
       {
         tone: 'solid',
         color: 'black',
-        className: ['text-white', 'bg-black', 'active:bg-black/90', 'disabled:bg-gray-800'],
+        className: [
+          'text-white',
+          'bg-black',
+          'active:bg-black/90',
+          'disabled:bg-gray-800',
+        ],
       },
       {
         tone: 'light',

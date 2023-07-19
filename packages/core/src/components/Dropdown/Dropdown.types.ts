@@ -1,6 +1,6 @@
 import { DropdownItemColor } from '@components/Dropdown/DropdownItem/DropdownItem.types';
-import { Placement, Strategy } from '@floating-ui/react-dom';
 import { FloatingContext, ReferenceType } from '@floating-ui/react';
+import { Placement, Strategy } from '@floating-ui/react-dom';
 import { ComponentPropsWithRef, ForwardRefExoticComponent, Ref } from 'react';
 
 export type DropdownArrowPlacement = 'left' | 'right' | 'top' | 'bottom';
@@ -13,7 +13,8 @@ export type DropdownSize = 'xs' | 'sm' | 'md' | 'lg';
 export type DropdownTone = 'solid' | 'light';
 export type DropdownTrigger = 'click' | 'hover';
 
-export interface DropdownProps extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
+export interface DropdownProps
+  extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
   chevronRotation?: boolean;
   color?: DropdownColor;
   initiallyOpen?: boolean;

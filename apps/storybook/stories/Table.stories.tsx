@@ -1,13 +1,13 @@
 import {
   Table,
+  TableBorderStyle,
+  TableHeaderColor,
   TableProps,
   TableRadius,
   TableSize,
-  TableBorderStyle,
-  TableHeaderColor,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const headings = ['ID', 'Country', 'Code', 'City'];

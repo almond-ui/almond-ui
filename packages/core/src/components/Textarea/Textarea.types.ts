@@ -7,7 +7,8 @@ export type TextareaSize = 'xs' | 'sm' | 'md' | 'lg';
 export type TextareaTone = 'light' | 'solid' | 'transparent';
 export type TextareaValidation = 'none' | 'invalid' | 'valid' | 'warning';
 
-export interface TextareaProps extends Omit<ComponentPropsWithRef<'textarea'>, 'size'> {
+export interface TextareaProps
+  extends Omit<ComponentPropsWithRef<'textarea'>, 'size'> {
   color?: TextareaColor;
   disabled?: boolean;
   radius?: TextareaRadius;

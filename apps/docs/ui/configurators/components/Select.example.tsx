@@ -2,7 +2,8 @@ import { Select, SelectProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const SelectCode = (props: any) => {
-  const { color, size, disabled, tone, shadow, radius, validation, withRing } = props;
+  const { color, size, disabled, tone, shadow, radius, validation, withRing } =
+    props;
 
   const defaultProps = {
     color: 'dark',
@@ -22,7 +23,9 @@ export const SelectCode = (props: any) => {
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
-    validation !== defaultProps.validation ? `validation="${validation}"` : null,
+    validation !== defaultProps.validation
+      ? `validation="${validation}"`
+      : null,
     withRing !== defaultProps.withRing ? `withRing={${withRing}}` : null,
   ].filter(Boolean);
 
@@ -47,9 +50,9 @@ function App() {
 export const SelectExample = (props: SelectProps) => {
   return (
     <Select {...props}>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
+      <option value='1'>Option 1</option>
+      <option value='2'>Option 2</option>
+      <option value='3'>Option 3</option>
     </Select>
   );
 };

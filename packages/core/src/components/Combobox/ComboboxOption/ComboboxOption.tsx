@@ -43,7 +43,14 @@ const ComboboxOption: ComboboxOptionComponent = forwardRef(
       <button
         id={id}
         ref={ref}
-        className={theme.button({ optionColor, radius, selected, hidden, size, mode })}
+        className={theme.button({
+          optionColor,
+          radius,
+          selected,
+          hidden,
+          size,
+          mode,
+        })}
         aria-hidden={hidden}
         disabled={disabled}
         aria-disabled={disabled}
@@ -61,7 +68,9 @@ const ComboboxOption: ComboboxOptionComponent = forwardRef(
           {media}
           <div className={theme.infoWrapper()}>
             <span className={theme.label({ disabled, selected })}>{label}</span>
-            <span className={theme.description({ disabled, selected })}>{description}</span>
+            <span className={theme.description({ disabled, selected })}>
+              {description}
+            </span>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 'use client';
+
 import { createContext, ReactNode, useContext } from 'react';
 
 export function createIndependentContext<ContextValue>() {
@@ -8,9 +9,13 @@ export function createIndependentContext<ContextValue>() {
     return useContext(Context);
   };
 
-  const Provider = ({ children, value }: { value: ContextValue; children: ReactNode }) => (
-    <Context.Provider value={value}>{children}</Context.Provider>
-  );
+  const Provider = ({
+    children,
+    value,
+  }: {
+    value: ContextValue;
+    children: ReactNode;
+  }) => <Context.Provider value={value}>{children}</Context.Provider>;
 
   return [Provider, useIndependentContext] as const;
 }

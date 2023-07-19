@@ -1,4 +1,5 @@
 'use client';
+
 import {
   AvatarGroupComponent,
   AvatarGroupProps,
@@ -20,7 +21,12 @@ const AvatarGroup: AvatarGroupComponent = forwardRef(
     const id = usePropId(props.id);
 
     return (
-      <div id={id} ref={ref} className={theme.group({ className })} {...additionalProps}>
+      <div
+        id={id}
+        ref={ref}
+        className={theme.group({ className })}
+        {...additionalProps}
+      >
         {children}
       </div>
     );

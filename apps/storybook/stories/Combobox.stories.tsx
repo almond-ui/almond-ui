@@ -1,18 +1,18 @@
+import { MagnifyingGlass } from '@phosphor-icons/react';
 import {
+  Button,
   Combobox,
-  ComboboxProps,
-  Image,
-  Text,
   ComboboxColor,
-  ComboboxTone,
-  ComboboxSize,
+  ComboboxGroupType,
+  ComboboxProps,
   ComboboxRadius,
   ComboboxShadow,
+  ComboboxSize,
+  ComboboxTone,
   ComboboxValidation,
-  ComboboxGroupType,
-  Button,
+  Image,
+  Text,
 } from '@rewind-ui/core';
-import { MagnifyingGlass } from '@phosphor-icons/react';
 import { Meta, Story } from '@storybook/react';
 import { useState } from 'react';
 import * as React from 'react';
@@ -22,7 +22,12 @@ const colors: ComboboxColor[] = ['blue', 'purple', 'gray', 'dark', 'black'];
 const sizes: ComboboxSize[] = ['xs', 'sm', 'md', 'lg'];
 const radiuses: ComboboxRadius[] = ['none', 'sm', 'base', 'md', 'lg'];
 const shadows: ComboboxShadow[] = ['none', 'sm', 'base', 'md', 'lg'];
-const validations: ComboboxValidation[] = ['none', 'invalid', 'valid', 'warning'];
+const validations: ComboboxValidation[] = [
+  'none',
+  'invalid',
+  'valid',
+  'warning',
+];
 
 const simpleOptions: ComboboxGroupType[] = [
   {

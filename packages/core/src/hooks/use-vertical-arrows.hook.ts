@@ -1,6 +1,9 @@
 import { useKeypress } from '@hooks/use-keypress';
 
-export function useVerticalArrows(refs: HTMLButtonElement[] = [], active: boolean = true) {
+export function useVerticalArrows(
+  refs: HTMLButtonElement[] = [],
+  active: boolean = true
+) {
   useKeypress('ArrowDown', active, () => {
     if (!active || !refs?.length) {
       return;
@@ -31,7 +34,9 @@ export function useVerticalArrows(refs: HTMLButtonElement[] = [], active: boolea
     }
 
     const currentIndex = refs.findIndex((el) => el.id === activeElement.id);
-    const nextIndex = refs[currentIndex - 1] ? currentIndex - 1 : refs.length - 1;
+    const nextIndex = refs[currentIndex - 1]
+      ? currentIndex - 1
+      : refs.length - 1;
     refs[nextIndex]?.focus();
   });
 }

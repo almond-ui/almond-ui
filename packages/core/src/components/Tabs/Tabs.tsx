@@ -1,8 +1,13 @@
 'use client';
+
 import { Tab } from '@components/Tabs/Tab';
 import { TabContent } from '@components/Tabs/TabContent';
 import { TabList } from '@components/Tabs/TabList';
-import { TabsComponent, TabsContext, TabsProps } from '@components/Tabs/Tabs.types';
+import {
+  TabsComponent,
+  TabsContext,
+  TabsProps,
+} from '@components/Tabs/Tabs.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import { forwardRef, Ref, useState } from 'react';
@@ -49,7 +54,12 @@ const TabsRoot: TabsComponent = forwardRef<HTMLDivElement, TabsProps>(
 
     return (
       <TabsContextProvider value={contextValue}>
-        <div id={id} ref={ref} className={theme.wrapper({ fullWidth })} {...additionalProps}>
+        <div
+          id={id}
+          ref={ref}
+          className={theme.wrapper({ fullWidth })}
+          {...additionalProps}
+        >
           {children}
         </div>
       </TabsContextProvider>

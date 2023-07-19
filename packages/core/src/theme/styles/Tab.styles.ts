@@ -1,7 +1,13 @@
 import { cva } from 'class-variance-authority';
 
 const tab = cva(
-  ['flex', 'flex-inline', 'justify-center', 'items-center', 'focus-visible:outline-0'],
+  [
+    'flex',
+    'flex-inline',
+    'justify-center',
+    'items-center',
+    'focus-visible:outline-0',
+  ],
   {
     variants: {
       tone: {
@@ -291,7 +297,15 @@ const wrapper = cva(['overflow-auto'], {
   },
 });
 
-const list = cva(['flex', 'flex-inline', 'space-x-2', 'px-1', 'mb-2', 'py-2', 'overflow-auto']);
+const list = cva([
+  'flex',
+  'flex-inline',
+  'space-x-2',
+  'px-1',
+  'mb-2',
+  'py-2',
+  'overflow-auto',
+]);
 
 const tabStyles = {
   wrapper,

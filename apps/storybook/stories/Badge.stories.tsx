@@ -8,11 +8,18 @@ import {
   BadgeTone,
   BadgeVariant,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
-const variants: BadgeVariant[] = ['primary', 'secondary', 'danger', 'success', 'warning', 'info'];
+const variants: BadgeVariant[] = [
+  'primary',
+  'secondary',
+  'danger',
+  'success',
+  'warning',
+  'info',
+];
 
 const colors: BadgeColor[] = [
   'white',
@@ -191,7 +198,13 @@ const ShadowColorTemplate: Story<BadgeProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="shadowColor" value={color}>
         {shadows.map((shadow) => (
-          <Badge {...args} key={shadow} shadowColor={color} color={color} shadow={shadow}>
+          <Badge
+            {...args}
+            key={shadow}
+            shadowColor={color}
+            color={color}
+            shadow={shadow}
+          >
             {color}
           </Badge>
         ))}

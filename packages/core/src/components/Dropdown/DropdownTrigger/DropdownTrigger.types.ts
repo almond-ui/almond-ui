@@ -1,7 +1,9 @@
 import { ComponentPropsWithRef, ForwardRefExoticComponent } from 'react';
 
-export interface DropdownTriggerProps extends Omit<ComponentPropsWithRef<'div'>, 'size'> {}
+export interface DropdownTriggerProps
+  extends Omit<ComponentPropsWithRef<'div'>, 'size'> {}
 
-export type DropdownTriggerComponent = ForwardRefExoticComponent<DropdownTriggerProps> & {
-  displayName?: string;
-};
+export type DropdownTriggerComponent =
+  ForwardRefExoticComponent<DropdownTriggerProps> & {
+    displayName?: string;
+  };

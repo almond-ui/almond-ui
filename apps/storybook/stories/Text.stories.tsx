@@ -8,8 +8,8 @@ import {
   TextVariant,
   TextWeight,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const shortSentence =
@@ -54,7 +54,19 @@ const sizes: TextSize[] = [
   '8xl',
   '9xl',
 ];
-const variants: TextVariant[] = ['d1', 'd2', 'd3', 'd4', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'];
+const variants: TextVariant[] = [
+  'd1',
+  'd2',
+  'd3',
+  'd4',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'p',
+];
 const leadings: TextLeading[] = [
   '3',
   '4',
@@ -71,7 +83,14 @@ const leadings: TextLeading[] = [
   'relaxed',
   'loose',
 ];
-const trackings: TextTracking[] = ['tighter', 'tight', 'normal', 'wide', 'wider', 'widest'];
+const trackings: TextTracking[] = [
+  'tighter',
+  'tight',
+  'normal',
+  'wide',
+  'wider',
+  'widest',
+];
 
 const glossaries = {
   variants: {

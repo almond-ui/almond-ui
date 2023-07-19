@@ -1,5 +1,8 @@
 import { useCardContext } from '@components/Card/Card.context';
-import { CardBodyComponent, CardBodyProps } from '@components/Card/CardBody/CardBody.types';
+import {
+  CardBodyComponent,
+  CardBodyProps,
+} from '@components/Card/CardBody/CardBody.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import { forwardRef, Ref, useMemo } from 'react';

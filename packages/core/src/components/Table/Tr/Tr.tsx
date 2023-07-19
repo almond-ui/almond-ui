@@ -15,13 +15,21 @@ const Tr: TrComponent = forwardRef<HTMLTableRowElement, TrProps>(
       ...defaultProps,
       ...props,
     };
-    const { borderStyle, verticalBorders, hoverable, striped, stripePosition } = useTableContext();
+    const { borderStyle, verticalBorders, hoverable, striped, stripePosition } =
+      useTableContext();
     const theme = useComponentTheme('Table');
     const localRef = useRef<HTMLTableRowElement | null>(null);
     const mergedRef = useMergeRefs([localRef, ref || null]);
     const id = usePropId(props.id);
     const [classes, setClasses] = useState<string>(
-      theme.tr({ borderStyle, verticalBorders, className, color, hoverable, striped })
+      theme.tr({
+        borderStyle,
+        verticalBorders,
+        className,
+        color,
+        hoverable,
+        striped,
+      })
     );
 
     useEffect(() => {
@@ -38,7 +46,16 @@ const Tr: TrComponent = forwardRef<HTMLTableRowElement, TrProps>(
           stripePosition,
         })
       );
-    }, [borderStyle, className, color, hoverable, striped, stripePosition, theme, verticalBorders]);
+    }, [
+      borderStyle,
+      className,
+      color,
+      hoverable,
+      striped,
+      stripePosition,
+      theme,
+      verticalBorders,
+    ]);
 
     return (
       <tr id={id} ref={mergedRef} className={classes} {...additionalProps}>

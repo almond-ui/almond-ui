@@ -86,22 +86,25 @@ const base = cva(
   }
 );
 
-const arrow = cva(['absolute', 'w-2', 'h-2', 'bg-inherit', 'rotate-45', 'border', 'box-border'], {
-  variants: {
-    color: {
-      white: ['border-gray-200'],
-      gray: ['border-gray-300'],
-      slate: ['border-slate-300'],
-      zinc: ['border-zinc-300'],
+const arrow = cva(
+  ['absolute', 'w-2', 'h-2', 'bg-inherit', 'rotate-45', 'border', 'box-border'],
+  {
+    variants: {
+      color: {
+        white: ['border-gray-200'],
+        gray: ['border-gray-300'],
+        slate: ['border-slate-300'],
+        zinc: ['border-zinc-300'],
+      },
+      arrowSide: {
+        left: ['border-r-0', 'border-t-0'],
+        right: ['border-l-0', 'border-b-0'],
+        top: ['border-r-0', 'border-b-0'],
+        bottom: ['border-l-0', 'border-t-0'],
+      },
     },
-    arrowSide: {
-      left: ['border-r-0', 'border-t-0'],
-      right: ['border-l-0', 'border-b-0'],
-      top: ['border-r-0', 'border-b-0'],
-      bottom: ['border-l-0', 'border-t-0'],
-    },
-  },
-});
+  }
+);
 
 const popoverStyles = {
   arrow,

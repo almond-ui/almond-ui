@@ -25,8 +25,20 @@ const base = cva(['flex', 'items-center', 'text-center', 'absolute'], {
     position: {
       left: ['left-0', 'top-auto', 'transform', '-translate-x-1'],
       right: ['right-0', 'top-auto', 'transform', 'translate-x-1'],
-      'top-left': ['top-0', 'left-0', 'transform', 'translate-x-4', '-translate-y-1'],
-      'top-right': ['top-0', 'right-0', 'transform', '-translate-x-4', '-translate-y-1'],
+      'top-left': [
+        'top-0',
+        'left-0',
+        'transform',
+        'translate-x-4',
+        '-translate-y-1',
+      ],
+      'top-right': [
+        'top-0',
+        'right-0',
+        'transform',
+        '-translate-x-4',
+        '-translate-y-1',
+      ],
     },
     size: {
       sm: ['text-sm', 'px-1.5', 'h-7'],

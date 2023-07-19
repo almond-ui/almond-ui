@@ -17,7 +17,12 @@ const Td: TdComponent = forwardRef<HTMLTableCellElement, TdProps>(
     const { size } = useTableContext();
 
     return (
-      <td id={id} ref={ref} className={theme.td({ className, size })} {...additionalProps}>
+      <td
+        id={id}
+        ref={ref}
+        className={theme.td({ className, size })}
+        {...additionalProps}
+      >
         {children}
       </td>
     );

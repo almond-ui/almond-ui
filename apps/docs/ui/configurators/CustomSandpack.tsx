@@ -1,6 +1,11 @@
 'use client';
-import { SandpackLayout, SandpackCodeViewer, SandpackProvider } from '@codesandbox/sandpack-react';
+
 import { theme } from '@/lib/theme';
+import {
+  SandpackCodeViewer,
+  SandpackLayout,
+  SandpackProvider,
+} from '@codesandbox/sandpack-react';
 
 export const CustomSandpack = (props: any) => {
   const { children, showLineNumbers = true } = props;
@@ -11,7 +16,7 @@ export const CustomSandpack = (props: any) => {
       files={{
         '/App.js': children,
       }}
-      template="react"
+      template='react'
     >
       <SandpackLayout>
         <SandpackCodeViewer showLineNumbers={showLineNumbers} wrapContent />

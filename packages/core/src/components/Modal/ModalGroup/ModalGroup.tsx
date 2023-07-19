@@ -22,7 +22,12 @@ const ModalGroup: FunctionComponent<PropsWithoutRef<any>> = (props: any) => {
 
       previousModal.animate(
         [
-          { opacity: 1, transform: 'translateY(0%)', filter: 'blur(0)', visibility: 'visible' },
+          {
+            opacity: 1,
+            transform: 'translateY(0%)',
+            filter: 'blur(0)',
+            visibility: 'visible',
+          },
           {
             opacity: 0,
             transform: 'translateY(-50px)',
@@ -48,7 +53,11 @@ const ModalGroup: FunctionComponent<PropsWithoutRef<any>> = (props: any) => {
     setActiveModalId(activeModal.id);
   }, [registry]);
 
-  return <ModalGroupContextProvider value={contextValue}>{children}</ModalGroupContextProvider>;
+  return (
+    <ModalGroupContextProvider value={contextValue}>
+      {children}
+    </ModalGroupContextProvider>
+  );
 };
 
 ModalGroup.displayName = 'ModalGroup';

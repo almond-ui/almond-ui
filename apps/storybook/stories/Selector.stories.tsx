@@ -188,7 +188,12 @@ const SizeTemplate: Story<SelectorProps> = (args) => {
     <ViewGroup>
       {sizes.map((size) => (
         <View key={size} prop="size" value={size}>
-          <Selector {...args} key={size} size={size} value={generateRandomLetter(options)}>
+          <Selector
+            {...args}
+            key={size}
+            size={size}
+            value={generateRandomLetter(options)}
+          >
             {options.map((option) => (
               <Selector.Tab
                 key={size + option.anchor}
@@ -264,7 +269,12 @@ const ShadowTemplate: Story<SelectorProps> = (args) => {
     <ViewGroup>
       {shadows.map((shadow) => (
         <View key={shadow} prop="shadow" value={shadow}>
-          <Selector {...args} key={shadow} shadow={shadow} value={generateRandomLetter(options)}>
+          <Selector
+            {...args}
+            key={shadow}
+            shadow={shadow}
+            value={generateRandomLetter(options)}
+          >
             {options.map((option) => (
               <Selector.Tab
                 key={shadow + option.anchor}
@@ -337,7 +347,11 @@ const SeparatorTemplate: Story<SelectorProps> = (args) => {
       </View>
 
       {separators.map((separator, index) => (
-        <View key={index} prop="withSeparator" value={separator ? 'true' : 'false'}>
+        <View
+          key={index}
+          prop="withSeparator"
+          value={separator ? 'true' : 'false'}
+        >
           <Selector
             {...args}
             key={index}
@@ -366,7 +380,11 @@ const OrientationTemplate: Story<SelectorProps> = (args) => {
   return (
     <ViewGroup>
       <View prop="orientation" value="horizontal">
-        <Selector {...args} orientation="horizontal" value={generateRandomLetter(options)}>
+        <Selector
+          {...args}
+          orientation="horizontal"
+          value={generateRandomLetter(options)}
+        >
           {options.map((option) => (
             <Selector.Tab
               key={3 + option.anchor}
@@ -380,7 +398,11 @@ const OrientationTemplate: Story<SelectorProps> = (args) => {
       </View>
 
       <View prop="orientation" value="vertical">
-        <Selector {...args} orientation="vertical" value={generateRandomLetter(options)}>
+        <Selector
+          {...args}
+          orientation="vertical"
+          value={generateRandomLetter(options)}
+        >
           {options.map((option) => (
             <Selector.Tab
               key={3 + option.anchor}
@@ -407,7 +429,9 @@ const FullWidthTemplate: Story<SelectorProps> = (args) => {
           fullWidth={true}
           orientation="horizontal"
           withSeparator={true}
-          separator={<span className="last-of-type:hidden w-px h-5 rounded-full bg-gray-300" />}
+          separator={
+            <span className="last-of-type:hidden w-px h-5 rounded-full bg-gray-300" />
+          }
           value={generateRandomLetter(options)}
         >
           {options.map((option) => (
@@ -428,7 +452,9 @@ const FullWidthTemplate: Story<SelectorProps> = (args) => {
           fullWidth={true}
           orientation="vertical"
           withSeparator={true}
-          separator={<span className="last-of-type:hidden w-px h-5 rounded-full bg-gray-300" />}
+          separator={
+            <span className="last-of-type:hidden w-px h-5 rounded-full bg-gray-300" />
+          }
           value={generateRandomLetter(options)}
         >
           {options.map((option) => (

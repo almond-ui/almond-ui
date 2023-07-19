@@ -1,4 +1,4 @@
-import { TableProps, Table } from '@almond-ui/core';
+import { Table, TableProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const TableCode = (props: any) => {
@@ -33,19 +33,31 @@ export const TableCode = (props: any) => {
   };
 
   const attributes = [
-    borderStyle !== defaultProps.borderStyle ? `borderStyle="${borderStyle}"` : null,
-    footerBorders !== defaultProps.footerBorders ? `footerBorders={${footerBorders}}` : null,
-    headerBorders !== defaultProps.headerBorders ? `headerBorders={${headerBorders}}` : null,
-    headerColor !== defaultProps.headerColor ? `headerColor="${headerColor}"` : null,
+    borderStyle !== defaultProps.borderStyle
+      ? `borderStyle="${borderStyle}"`
+      : null,
+    footerBorders !== defaultProps.footerBorders
+      ? `footerBorders={${footerBorders}}`
+      : null,
+    headerBorders !== defaultProps.headerBorders
+      ? `headerBorders={${headerBorders}}`
+      : null,
+    headerColor !== defaultProps.headerColor
+      ? `headerColor="${headerColor}"`
+      : null,
     horizontalBorders !== defaultProps.horizontalBorders
       ? `horizontalBorders={${horizontalBorders}}`
       : null,
     hoverable !== defaultProps.hoverable ? `hoverable={${hoverable}}` : null,
-    outerBorders !== defaultProps.outerBorders ? `outerBorders={${outerBorders}}` : null,
+    outerBorders !== defaultProps.outerBorders
+      ? `outerBorders={${outerBorders}}`
+      : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     striped !== defaultProps.striped ? `striped={${striped}}` : null,
-    stripePosition !== defaultProps.stripePosition ? `stripePosition="${stripePosition}"` : null,
+    stripePosition !== defaultProps.stripePosition
+      ? `stripePosition="${stripePosition}"`
+      : null,
     verticalBorders !== defaultProps.verticalBorders
       ? `verticalBorders={${verticalBorders}}`
       : null,
@@ -102,8 +114,8 @@ export const TableExample = (props: TableProps) => {
     <Table {...props}>
       <Table.Thead>
         <Table.Tr>
-          <Table.Th align="left">First Name</Table.Th>
-          <Table.Th align="left">Last Name</Table.Th>
+          <Table.Th align='left'>First Name</Table.Th>
+          <Table.Th align='left'>Last Name</Table.Th>
           <Table.Th>Age</Table.Th>
         </Table.Tr>
       </Table.Thead>
@@ -111,23 +123,23 @@ export const TableExample = (props: TableProps) => {
         <Table.Tr>
           <Table.Td>John</Table.Td>
           <Table.Td>Doe</Table.Td>
-          <Table.Td align="center">32</Table.Td>
+          <Table.Td align='center'>32</Table.Td>
         </Table.Tr>
         <Table.Tr>
           <Table.Td>Jane</Table.Td>
           <Table.Td>Stan</Table.Td>
-          <Table.Td align="center">28</Table.Td>
+          <Table.Td align='center'>28</Table.Td>
         </Table.Tr>
         <Table.Tr>
           <Table.Td>Chris</Table.Td>
           <Table.Td>Doe</Table.Td>
-          <Table.Td align="center">3</Table.Td>
+          <Table.Td align='center'>3</Table.Td>
         </Table.Tr>
       </Table.Tbody>
       <Table.Tfoot>
         <Table.Tr>
-          <Table.Th align="left">First Name</Table.Th>
-          <Table.Th align="left">Last Name</Table.Th>
+          <Table.Th align='left'>First Name</Table.Th>
+          <Table.Th align='left'>Last Name</Table.Th>
           <Table.Th>Age</Table.Th>
         </Table.Tr>
       </Table.Tfoot>

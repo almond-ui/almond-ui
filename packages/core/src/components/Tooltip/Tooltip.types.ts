@@ -1,5 +1,9 @@
 import { Placement } from '@floating-ui/react-dom';
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+} from 'react';
 
 export type TooltipArrowPlacement = 'left' | 'right' | 'top' | 'bottom';
 export type TooltipColor =
@@ -18,7 +22,8 @@ export type TooltipShadow = 'none' | 'sm' | 'base' | 'md';
 export type TooltipSize = 'xs' | 'sm' | 'md' | 'lg';
 export type TooltipTone = 'solid' | 'light';
 
-export interface TooltipProps extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
+export interface TooltipProps
+  extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
   children: ReactNode;
   color?: TooltipColor;
   initiallyOpen?: boolean;

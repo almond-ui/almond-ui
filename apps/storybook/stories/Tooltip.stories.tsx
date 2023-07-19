@@ -8,8 +8,8 @@ import {
   TooltipSize,
 } from '@rewind-ui/core';
 import { TooltipPlacement } from '@rewind-ui/core/src/components/Tooltip/Tooltip.types';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const sizes: TooltipSize[] = ['xs', 'sm', 'md', 'lg'];
@@ -81,7 +81,12 @@ export default meta;
 const DefaultTemplate: Story<TooltipProps> = (args) => {
   return (
     <EnhancedView prop="Default">
-      <Tooltip label="This is a Tooltip" initiallyOpen={true} withinPortal={true} {...args}>
+      <Tooltip
+        label="This is a Tooltip"
+        initiallyOpen={true}
+        withinPortal={true}
+        {...args}
+      >
         <Button>Trigger</Button>
       </Tooltip>
     </EnhancedView>
@@ -197,7 +202,12 @@ const PlacementTemplate: Story<TooltipProps> = (args) => {
   return (
     <ViewGroup>
       {placements.map((placement) => (
-        <View key={placement} prop="placement" value={placement} justify="evenly">
+        <View
+          key={placement}
+          prop="placement"
+          value={placement}
+          justify="evenly"
+        >
           <Tooltip
             label="This is a Tooltip"
             tone="solid"

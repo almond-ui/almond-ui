@@ -1,7 +1,8 @@
 'use client';
+
 import { FaderProps } from '@components/Fader/Fader.types';
-import { forwardRef, Ref, useEffect, useRef, useState } from 'react';
 import { useMergeRefs } from '@floating-ui/react';
+import { forwardRef, Ref, useEffect, useRef, useState } from 'react';
 
 const Fader = forwardRef((props: FaderProps, ref?: Ref<HTMLDivElement>) => {
   const localRef = useRef<HTMLDivElement>(null);
@@ -53,7 +54,9 @@ const Fader = forwardRef((props: FaderProps, ref?: Ref<HTMLDivElement>) => {
           fill: 'forwards',
         };
 
-    const keyframes = isShown ? [{ opacity: 0 }, { opacity: 1 }] : [{ opacity: 1 }, { opacity: 0 }];
+    const keyframes = isShown
+      ? [{ opacity: 0 }, { opacity: 1 }]
+      : [{ opacity: 1 }, { opacity: 0 }];
 
     const animation: Animation = element.animate(keyframes, options);
 

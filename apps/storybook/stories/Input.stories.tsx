@@ -1,3 +1,4 @@
+import { MagnifyingGlass, Rocket, RocketLaunch } from '@phosphor-icons/react';
 import {
   Input,
   InputColor,
@@ -9,10 +10,9 @@ import {
   InputType,
   InputValidation,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
-import { MagnifyingGlass, Rocket, RocketLaunch } from '@phosphor-icons/react';
 
 const tones: InputTone[] = ['light', 'solid', 'transparent'];
 const colors: InputColor[] = ['blue', 'purple', 'gray', 'dark', 'black'];
@@ -177,7 +177,12 @@ const ValidationTemplate: Story<InputProps> = (args) => {
       <View prop="validation" value={validation}>
         {tones.map((tone) => (
           <React.Fragment key={tone}>
-            <Input {...args} validation={validation} tone={tone} placeholder={tone} />
+            <Input
+              {...args}
+              validation={validation}
+              tone={tone}
+              placeholder={tone}
+            />
           </React.Fragment>
         ))}
       </View>
@@ -251,7 +256,13 @@ const FileTemplate: Story<InputProps> = (args) => {
     <View prop="size" value={size} key={size}>
       {tones.map((tone) => (
         <React.Fragment key={tone}>
-          <Input {...args} size={size} tone={tone} placeholder={tone} type="file" />
+          <Input
+            {...args}
+            size={size}
+            tone={tone}
+            placeholder={tone}
+            type="file"
+          />
         </React.Fragment>
       ))}
     </View>

@@ -7,7 +7,16 @@ import {
 } from 'react';
 
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
-export type ImageRadius = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full';
+export type ImageRadius =
+  | 'none'
+  | 'sm'
+  | 'base'
+  | 'md'
+  | 'lg'
+  | 'xl'
+  | '2xl'
+  | '3xl'
+  | 'full';
 export type ImageMode = 'light' | 'dark';
 
 export interface ImageProps extends ComponentPropsWithRef<'div'> {

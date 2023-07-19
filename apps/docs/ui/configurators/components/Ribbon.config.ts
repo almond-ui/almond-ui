@@ -1,4 +1,7 @@
-import { RibbonCode, RibbonExample } from '@/ui/configurators/components/Ribbon.example';
+import {
+  RibbonCode,
+  RibbonExample,
+} from '@/ui/configurators/components/Ribbon.example';
 
 export const RibbonConfig = {
   example: RibbonExample,
@@ -23,7 +26,17 @@ export const RibbonConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Position',
@@ -47,7 +60,17 @@ export const RibbonConfig = {
       label: 'Shadow Color',
       name: 'shadowColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Radius',

@@ -1,7 +1,11 @@
 import {
+  Button,
   Combobox,
+  ComboboxColor,
+  ComboboxGroupProps,
   ComboboxGroupType,
   ComboboxMode,
+  ComboboxOptionColor,
   ComboboxOptionType,
   ComboboxProps,
   ComboboxRadius,
@@ -9,17 +13,13 @@ import {
   ComboboxSize,
   ComboboxTone,
   ComboboxValidation,
-  ComboboxOptionColor,
-  ComboboxGroupProps,
+  FormControl,
   Image,
   InputGroup,
-  FormControl,
-  Button,
-  ComboboxColor,
 } from '@almond-ui/core';
+import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useState } from 'react';
 import * as React from 'react';
-import { MagnifyingGlass } from '@phosphor-icons/react';
 
 export type ComboboxShowcaseProps = {
   showcase:
@@ -134,9 +134,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'The second-most populous country in Europe',
         media: (
           <Image
-            alt="Germany"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/germany-circular.png"
+            alt='Germany'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/germany-circular.png'
           />
         ),
       },
@@ -146,9 +146,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'An island nation in northwestern Europe',
         media: (
           <Image
-            alt="Great Britain"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/great-britain-circular.png"
+            alt='Great Britain'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/great-britain-circular.png'
           />
         ),
       },
@@ -158,9 +158,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'The cradle of Western civilization',
         media: (
           <Image
-            alt="Greece"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/greece-circular.png"
+            alt='Greece'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/greece-circular.png'
           />
         ),
       },
@@ -170,9 +170,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'An economic powerhouse',
         media: (
           <Image
-            alt="Greece"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/sweden-circular.png"
+            alt='Greece'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/sweden-circular.png'
           />
         ),
       },
@@ -187,9 +187,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'An island country in East Asia',
         media: (
           <Image
-            alt="Japan"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/japan-circular.png"
+            alt='Japan'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/japan-circular.png'
           />
         ),
       },
@@ -200,9 +200,9 @@ const groupedOptions: ComboboxGroupType[] = [
         disabled: true,
         media: (
           <Image
-            alt="China"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/china-circular.png"
+            alt='China'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/china-circular.png'
           />
         ),
       },
@@ -212,9 +212,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'The most populous democracy in the world',
         media: (
           <Image
-            alt="India"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/india-circular.png"
+            alt='India'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/india-circular.png'
           />
         ),
       },
@@ -229,9 +229,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'Commonly known as the United States',
         media: (
           <Image
-            alt="USA"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/usa-circular.png"
+            alt='USA'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/usa-circular.png'
           />
         ),
       },
@@ -241,9 +241,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'It has the longest coastline in the world',
         media: (
           <Image
-            alt="Canada"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/canada-circular.png"
+            alt='Canada'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/canada-circular.png'
           />
         ),
       },
@@ -253,9 +253,9 @@ const groupedOptions: ComboboxGroupType[] = [
         description: 'It is organized as a federal republic',
         media: (
           <Image
-            alt="Mexico"
-            className="w-10 h-10"
-            src="https://img.icons8.com/color/64/mexico-circular.png"
+            alt='Mexico'
+            className='w-10 h-10'
+            src='https://img.icons8.com/color/64/mexico-circular.png'
           />
         ),
       },
@@ -279,10 +279,15 @@ const colors: ComboboxColor[] = ['blue', 'purple', 'gray', 'dark', 'black'];
 const sizes: ComboboxSize[] = ['xs', 'sm', 'md', 'lg'];
 const radiuses: ComboboxRadius[] = ['none', 'sm', 'base', 'md', 'lg'];
 const shadows: ComboboxShadow[] = ['none', 'sm', 'base', 'md', 'lg'];
-const validations: ComboboxValidation[] = ['none', 'invalid', 'valid', 'warning'];
+const validations: ComboboxValidation[] = [
+  'none',
+  'invalid',
+  'valid',
+  'warning',
+];
 
 const Template = (args: ComboboxProps) => (
-  <Combobox {...args} placeholder="Select a country..." initialValue="1">
+  <Combobox {...args} placeholder='Select a country...' initialValue='1'>
     {simpleOptions.map((option, index) => (
       <Combobox.Option
         key={index}
@@ -295,7 +300,7 @@ const Template = (args: ComboboxProps) => (
 );
 
 const DescriptionTemplate = (args: ComboboxProps) => (
-  <Combobox {...args} placeholder="Select a country..." initialValue="1">
+  <Combobox {...args} placeholder='Select a country...' initialValue='1'>
     {groupedOptions.map((group: ComboboxGroupType, index: number) => (
       <Combobox.Group heading={group.heading} key={index}>
         {group.options.map((option: ComboboxOptionType) => (
@@ -313,7 +318,7 @@ const DescriptionTemplate = (args: ComboboxProps) => (
 );
 
 const MediaTemplate = (args: ComboboxProps) => (
-  <Combobox {...args} placeholder="Select a country..." initialValue="1">
+  <Combobox {...args} placeholder='Select a country...' initialValue='1'>
     {groupedOptions.map((group: ComboboxGroupType, index: number) => (
       <Combobox.Group heading={group.heading} key={index}>
         {group.options.map((option: ComboboxOptionType) => (
@@ -332,7 +337,7 @@ const MediaTemplate = (args: ComboboxProps) => (
 );
 
 const GroupedTemplate = (args: ComboboxGroupProps) => (
-  <Combobox placeholder="Select a country...">
+  <Combobox placeholder='Select a country...'>
     {groupedOptions.map((group: ComboboxGroupType, index: number) => (
       <Combobox.Group {...args} heading={group.heading} key={index}>
         {group.options.map((option: ComboboxOptionType) => (
@@ -349,7 +354,9 @@ const GroupedTemplate = (args: ComboboxGroupProps) => (
 );
 
 const Tones = () => {
-  const items = tones.map((tone: ComboboxTone) => <Template key={tone} tone={tone} />);
+  const items = tones.map((tone: ComboboxTone) => (
+    <Template key={tone} tone={tone} />
+  ));
 
   return <>{items}</>;
 };
@@ -363,31 +370,41 @@ const OptionColors = () => {
 };
 
 const Colors = () => {
-  const items = colors.map((color: ComboboxColor) => <Template key={color} color={color} />);
+  const items = colors.map((color: ComboboxColor) => (
+    <Template key={color} color={color} />
+  ));
 
   return <>{items}</>;
 };
 
 const Modes = () => {
-  const items = modes.map((mode: ComboboxMode) => <Template key={mode} mode={mode} />);
+  const items = modes.map((mode: ComboboxMode) => (
+    <Template key={mode} mode={mode} />
+  ));
 
   return <>{items}</>;
 };
 
 const Sizes = () => {
-  const items = sizes.map((size: ComboboxSize) => <Template key={size} size={size} />);
+  const items = sizes.map((size: ComboboxSize) => (
+    <Template key={size} size={size} />
+  ));
 
   return <>{items}</>;
 };
 
 const Radiuses = () => {
-  const items = radiuses.map((radius: ComboboxRadius) => <Template key={radius} radius={radius} />);
+  const items = radiuses.map((radius: ComboboxRadius) => (
+    <Template key={radius} radius={radius} />
+  ));
 
   return <>{items}</>;
 };
 
 const Shadows = () => {
-  const items = shadows.map((shadow: ComboboxShadow) => <Template key={shadow} shadow={shadow} />);
+  const items = shadows.map((shadow: ComboboxShadow) => (
+    <Template key={shadow} shadow={shadow} />
+  ));
 
   return <>{items}</>;
 };
@@ -488,7 +505,7 @@ const Controlled = () => {
 
   return (
     <>
-      <div className="flex w-full gap-2">
+      <div className='flex w-full gap-2'>
         <Button onClick={() => setValue('1')}>Germany</Button>
         <Button onClick={() => setValue('2')}>Great Britain</Button>
         <Button onClick={() => setValue('3')}>Greece</Button>
@@ -513,15 +530,15 @@ const OptionMedia = () => {
 
 const InputGroupCombobox = () => {
   return (
-    <InputGroup className="w-full">
+    <InputGroup className='w-full'>
       <InputGroup.Text>Search:</InputGroup.Text>
-      <InputGroup.Combobox initialValue="1">
-        <InputGroup.Combobox.Option value="1" label="Item 1" />
-        <InputGroup.Combobox.Option value="2" label="Item 2" />
-        <InputGroup.Combobox.Option value="3" label="Item 3" />
+      <InputGroup.Combobox initialValue='1'>
+        <InputGroup.Combobox.Option value='1' label='Item 1' />
+        <InputGroup.Combobox.Option value='2' label='Item 2' />
+        <InputGroup.Combobox.Option value='3' label='Item 3' />
       </InputGroup.Combobox>
       <InputGroup.Text>
-        <MagnifyingGlass weight="duotone" />
+        <MagnifyingGlass weight='duotone' />
       </InputGroup.Text>
     </InputGroup>
   );
@@ -529,12 +546,12 @@ const InputGroupCombobox = () => {
 
 const FormControlCombobox = () => {
   return (
-    <FormControl className="min-w-[300px]">
+    <FormControl className='min-w-[300px]'>
       <FormControl.Label>Search</FormControl.Label>
-      <FormControl.Combobox initialValue="1">
-        <FormControl.Combobox.Option value="1" label="Item 1" />
-        <FormControl.Combobox.Option value="2" label="Item 2" />
-        <FormControl.Combobox.Option value="3" label="Item 3" />
+      <FormControl.Combobox initialValue='1'>
+        <FormControl.Combobox.Option value='1' label='Item 1' />
+        <FormControl.Combobox.Option value='2' label='Item 2' />
+        <FormControl.Combobox.Option value='3' label='Item 3' />
       </FormControl.Combobox>
     </FormControl>
   );

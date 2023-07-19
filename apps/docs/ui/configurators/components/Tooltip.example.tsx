@@ -40,7 +40,7 @@ function App() {
 
 export const TooltipExample = (props: TooltipProps) => {
   return (
-    <Tooltip label="This is a Tooltip" initiallyOpen={true} {...props}>
+    <Tooltip label='This is a Tooltip' initiallyOpen={true} {...props}>
       <Button>Hover over me!</Button>
     </Tooltip>
   );

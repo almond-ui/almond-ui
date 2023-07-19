@@ -31,7 +31,8 @@ const SelectorTab: SelectorTabComponent = forwardRef(
     };
     const id = usePropId(props.id);
     const active = anchor === activeTabAnchor;
-    const ariaLabel: string | undefined = typeof label === 'string' ? label : undefined;
+    const ariaLabel: string | undefined =
+      typeof label === 'string' ? label : undefined;
 
     const handleClick = () => {
       setActiveTabAnchor(anchor);
@@ -68,7 +69,9 @@ const SelectorTab: SelectorTabComponent = forwardRef(
           <span className="z-40 h-full flex items-center">{label}</span>
         </button>
         {withSeparator &&
-          (separator || <span className={theme.separator({ orientation, size })} />)}
+          (separator || (
+            <span className={theme.separator({ orientation, size })} />
+          ))}
       </>
     );
   }

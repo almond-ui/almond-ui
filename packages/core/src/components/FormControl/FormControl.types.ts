@@ -14,6 +14,7 @@ export interface FormControlProps extends ComponentPropsWithRef<'div'> {
   validation?: FormControlValidation;
 }
 
-export type FormControlComponent = ForwardRefExoticComponent<FormControlProps> & {
-  displayName?: string;
-};
+export type FormControlComponent =
+  ForwardRefExoticComponent<FormControlProps> & {
+    displayName?: string;
+  };

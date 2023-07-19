@@ -8,4 +8,7 @@ export type {
   RadioSize,
   RadioTone,
 } from './Radio.types';
-export type { RadioGroupProps, RadioGroupOrientation } from './RadioGroup/RadioGroup.types';
+export type {
+  RadioGroupProps,
+  RadioGroupOrientation,
+} from './RadioGroup/RadioGroup.types';

@@ -4,6 +4,7 @@ export interface FormControlLabelProps extends ComponentPropsWithRef<'label'> {
   required?: boolean;
 }
 
-export type FormControlLabelComponent = ForwardRefExoticComponent<FormControlLabelProps> & {
-  displayName?: string;
-};
+export type FormControlLabelComponent =
+  ForwardRefExoticComponent<FormControlLabelProps> & {
+    displayName?: string;
+  };

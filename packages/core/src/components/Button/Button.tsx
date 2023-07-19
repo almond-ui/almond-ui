@@ -1,4 +1,5 @@
 'use client';
+
 import { useDropdownContext } from '@components/Dropdown/Dropdown.context';
 import { useInputGroupContext } from '@components/InputGroup/InputGroup.context';
 import { Spinner } from '@components/Spinner';
@@ -6,10 +7,10 @@ import { ChevronDownIcon } from '@icons/ChevronDown';
 import { useComponentTheme } from '@theme/theme.context';
 import { useComponentVariant } from '@theme/variant.context';
 import { usePropId } from '@utils/usePropId';
-import { PolymorphicComponentProp, PolymorphicRef } from '../../types';
-import { ButtonComponent, ButtonProps } from './Button.types';
 import { ElementType, forwardRef, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { PolymorphicComponentProp, PolymorphicRef } from '../../types';
+import { ButtonComponent, ButtonProps } from './Button.types';
 
 const defaultProps: Partial<ButtonProps> = {
   animation: 'none',
@@ -31,7 +32,10 @@ const Button: ButtonComponent = forwardRef(
     props: PolymorphicComponentProp<C, ButtonProps>,
     ref?: PolymorphicRef<C>
   ) => {
-    const variantProps = useComponentVariant('Button', props.variant) as Partial<ButtonProps>;
+    const variantProps = useComponentVariant(
+      'Button',
+      props.variant
+    ) as Partial<ButtonProps>;
     const theme = useComponentTheme('Button');
     const {
       animation,
@@ -92,7 +96,9 @@ const Button: ButtonComponent = forwardRef(
       tone,
       withRing,
     ]);
-    const chevronClasses = withChevron ? theme.chevron({ open, size, chevronRotation }) : '';
+    const chevronClasses = withChevron
+      ? theme.chevron({ open, size, chevronRotation })
+      : '';
     const spinnerClasses = loading ? theme.spinner({ size }) : '';
 
     const Component = as || 'button';

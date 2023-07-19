@@ -1,4 +1,5 @@
 'use client';
+
 import { RadioComponent, RadioProps } from '@components/Radio';
 import { useRadioGroupContext } from '@components/Radio/RadioGroup.context';
 import { useComponentTheme } from '@theme/theme.context';
@@ -78,28 +79,40 @@ const Radio: RadioComponent = forwardRef<HTMLInputElement, RadioProps>(
           disabled={disabled}
           onChange={handleChange}
           name={name}
-          defaultChecked={!!initialValue ? initialValue === value : defaultChecked}
+          defaultChecked={
+            !!initialValue ? initialValue === value : defaultChecked
+          }
           {...additionalProps}
         />
         <div className="grid grid-cols-1 justify-items-start">
           <label
             id={`${id}-label`}
             htmlFor={id}
-            className={twMerge(theme.label({ disabled, size, className: labelClassName }))}
+            className={twMerge(
+              theme.label({ disabled, size, className: labelClassName })
+            )}
           >
             {label}
           </label>
           {description && (
             <span
               className={twMerge(
-                theme.description({ disabled, size, className: descriptionClassName })
+                theme.description({
+                  disabled,
+                  size,
+                  className: descriptionClassName,
+                })
               )}
             >
               {description}
             </span>
           )}
           {error && (
-            <span className={twMerge(theme.error({ disabled, size, className: errorClassName }))}>
+            <span
+              className={twMerge(
+                theme.error({ disabled, size, className: errorClassName })
+              )}
+            >
               {error}
             </span>
           )}

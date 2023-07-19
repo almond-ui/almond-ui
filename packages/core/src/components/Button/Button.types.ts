@@ -52,10 +52,8 @@ export type ButtonProps = {
   withRing?: boolean;
 };
 
-type PolymorphicButtonProps<C extends ElementType> = PolymorphicComponentPropWithRef<
-  C,
-  ButtonProps
->;
+type PolymorphicButtonProps<C extends ElementType> =
+  PolymorphicComponentPropWithRef<C, ButtonProps>;
 
 type PolymorphicButtonComponent = <C extends ElementType = 'button'>(
   props: PolymorphicButtonProps<C>

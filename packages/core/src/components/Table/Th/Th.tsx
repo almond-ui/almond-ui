@@ -17,7 +17,12 @@ const Th: ThComponent = forwardRef<HTMLTableHeaderCellElement, ThProps>(
     const { size } = useTableContext();
 
     return (
-      <th id={id} ref={ref} className={theme.th({ className, size })} {...additionalProps}>
+      <th
+        id={id}
+        ref={ref}
+        className={theme.th({ className, size })}
+        {...additionalProps}
+      >
         {children}
       </th>
     );

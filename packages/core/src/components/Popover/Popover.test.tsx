@@ -1,7 +1,7 @@
 import { Button } from '@components/Button';
+import { render } from '@testing-library/react';
 import * as React from 'react';
 import { describe, it } from 'vitest';
-import { render } from '@testing-library/react';
 import { Popover } from '.';
 
 describe('Popover', () => {

@@ -1,3 +1,4 @@
+import { MagnifyingGlass } from '@phosphor-icons/react';
 import {
   Select,
   SelectColor,
@@ -8,10 +9,9 @@ import {
   SelectTone,
   SelectValidation,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
-import { MagnifyingGlass } from '@phosphor-icons/react';
 
 const tones: SelectTone[] = ['light', 'solid', 'transparent'];
 const colors: SelectColor[] = ['blue', 'purple', 'gray', 'dark', 'black'];
@@ -179,7 +179,12 @@ const ValidationTemplate: Story<SelectProps> = (args) => {
       <View prop="validation" value={validation}>
         {tones.map((tone) => (
           <React.Fragment key={tone}>
-            <Select {...args} validation={validation} tone={tone} placeholder={tone}>
+            <Select
+              {...args}
+              validation={validation}
+              tone={tone}
+              placeholder={tone}
+            >
               {options}
             </Select>
           </React.Fragment>

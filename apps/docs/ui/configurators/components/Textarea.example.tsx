@@ -2,7 +2,8 @@ import { Textarea, TextareaProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const TextareaCode = (props: any) => {
-  const { color, size, disabled, tone, shadow, radius, validation, withRing } = props;
+  const { color, size, disabled, tone, shadow, radius, validation, withRing } =
+    props;
 
   const defaultProps = {
     color: 'dark',
@@ -22,7 +23,9 @@ export const TextareaCode = (props: any) => {
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
-    validation !== defaultProps.validation ? `validation="${validation}"` : null,
+    validation !== defaultProps.validation
+      ? `validation="${validation}"`
+      : null,
     withRing !== defaultProps.withRing ? `withRing={${withRing}}` : null,
   ].filter(Boolean);
 

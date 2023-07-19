@@ -1,4 +1,5 @@
 'use client';
+
 import { BadgeComponent, BadgeProps } from '@components/Badge/Badge.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { useComponentVariant } from '@theme/variant.context';
@@ -15,48 +16,53 @@ const defaultProps: Partial<BadgeProps> = {
   tone: 'solid',
 };
 
-const Badge: BadgeComponent = forwardRef((props: BadgeProps, ref?: Ref<HTMLSpanElement>) => {
-  const variantProps = useComponentVariant('Badge', props.variant) as Partial<BadgeProps>;
-  const theme = useComponentTheme('Badge');
-  const {
-    children,
-    className = '',
-    color,
-    radius,
-    shadow,
-    shadowColor,
-    size,
-    tone,
-    variant,
-    ...additionalProps
-  } = {
-    ...defaultProps,
-    ...variantProps,
-    ...props,
-  };
+const Badge: BadgeComponent = forwardRef(
+  (props: BadgeProps, ref?: Ref<HTMLSpanElement>) => {
+    const variantProps = useComponentVariant(
+      'Badge',
+      props.variant
+    ) as Partial<BadgeProps>;
+    const theme = useComponentTheme('Badge');
+    const {
+      children,
+      className = '',
+      color,
+      radius,
+      shadow,
+      shadowColor,
+      size,
+      tone,
+      variant,
+      ...additionalProps
+    } = {
+      ...defaultProps,
+      ...variantProps,
+      ...props,
+    };
 
-  const classes = useMemo(() => {
-    return twMerge(
-      theme({
-        className,
-        color,
-        radius,
-        shadow,
-        shadowColor,
-        size,
-        tone,
-      })
+    const classes = useMemo(() => {
+      return twMerge(
+        theme({
+          className,
+          color,
+          radius,
+          shadow,
+          shadowColor,
+          size,
+          tone,
+        })
+      );
+    }, [theme, className, color, radius, shadow, shadowColor, size, tone]);
+
+    const id = usePropId(props.id);
+
+    return (
+      <span id={id} ref={ref} className={classes} {...additionalProps}>
+        {children}
+      </span>
     );
-  }, [theme, className, color, radius, shadow, shadowColor, size, tone]);
-
-  const id = usePropId(props.id);
-
-  return (
-    <span id={id} ref={ref} className={classes} {...additionalProps}>
-      {children}
-    </span>
-  );
-});
+  }
+);
 
 Badge.displayName = 'Badge';
 

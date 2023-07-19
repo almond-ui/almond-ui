@@ -1,11 +1,11 @@
 import '@/styles/globals.css';
-import { Header } from '@/ui/Header';
-import { config } from '@/lib/config';
-import Script from 'next/script';
 import * as process from 'process';
-import { ReactNode } from 'react';
-import { cn } from '@/utils/misc';
+import { config } from '@/lib/config';
 import { fontMono, fontSans } from '@/lib/fonts';
+import { Header } from '@/ui/Header';
+import { cn } from '@/utils/misc';
+import Script from 'next/script';
+import { ReactNode } from 'react';
 
 export const metadata = {
   title: {
@@ -16,7 +16,13 @@ export const metadata = {
   generator: 'Next.js',
   applicationName: 'Almond-UI - Documentation',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Next.js', 'React', 'Tailwind CSS', 'UI', 'React component library'],
+  keywords: [
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'UI',
+    'React component library',
+  ],
   authors: [{ name: 'Francis Masha' }],
   colorScheme: 'light',
   creator: 'Francis Masha',
@@ -48,13 +54,16 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={cn(
-      "bg-background min-h-screen font-sans text-black",
-      fontSans.variable,
-      fontMono.variable,
-    )}>
-      <body className="antialiased">
-        <main>
+    <html
+      lang='en'
+      className={cn(
+        'bg-background min-h-screen font-sans text-black',
+        fontSans.variable,
+        fontMono.variable
+      )}
+    >
+      <body className='antialiased'>
+        <main className='flex min-h-screen flex-col'>
           <Header />
           {children}
         </main>

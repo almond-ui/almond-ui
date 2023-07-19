@@ -1,4 +1,9 @@
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactElement, ReactNode } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactElement,
+  ReactNode,
+} from 'react';
 
 export type ComboboxColor = 'blue' | 'purple' | 'gray' | 'dark' | 'black';
 export type ComboboxOptionColor =
@@ -17,7 +22,8 @@ export type ComboboxSize = 'xs' | 'sm' | 'md' | 'lg';
 export type ComboboxTone = 'light' | 'solid' | 'transparent';
 export type ComboboxValidation = 'none' | 'invalid' | 'valid' | 'warning';
 
-export interface ComboboxProps extends Omit<ComponentPropsWithRef<'div'>, 'onChange'> {
+export interface ComboboxProps
+  extends Omit<ComponentPropsWithRef<'div'>, 'onChange'> {
   clearable?: boolean;
   closeOnEscape?: boolean;
   color?: ComboboxColor;

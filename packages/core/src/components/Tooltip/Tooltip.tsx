@@ -1,7 +1,15 @@
 'use client';
-import { TooltipComponent, TooltipProps } from '@components/Tooltip/Tooltip.types';
+
+import {
+  TooltipComponent,
+  TooltipProps,
+} from '@components/Tooltip/Tooltip.types';
 import { useTooltip } from '@components/Tooltip/use-tooltip.hook';
-import { FloatingArrow, FloatingPortal } from '@floating-ui/react';
+import {
+  FloatingArrow,
+  FloatingPortal,
+  useMergeRefs,
+} from '@floating-ui/react';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import {
@@ -14,7 +22,6 @@ import {
   useMemo,
   useState,
 } from 'react';
-import { useMergeRefs } from '@floating-ui/react';
 import { twMerge } from 'tailwind-merge';
 
 const defaultProps: Partial<TooltipProps> = {
@@ -132,7 +139,11 @@ const Tooltip: TooltipComponent = forwardRef<HTMLDivElement, TooltipProps>(
 
     return (
       <>
-        {withinPortal ? <FloatingPortal>{tooltipElement}</FloatingPortal> : tooltipElement}
+        {withinPortal ? (
+          <FloatingPortal>{tooltipElement}</FloatingPortal>
+        ) : (
+          tooltipElement
+        )}
         {triggerElement}
       </>
     );

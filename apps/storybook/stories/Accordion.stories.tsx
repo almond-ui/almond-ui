@@ -1,17 +1,17 @@
+import { HandWaving, Info, Lifebuoy, Sparkle } from '@phosphor-icons/react';
 import {
   Accordion,
+  AccordionActiveColor,
   AccordionColor,
+  AccordionProps,
   AccordionRadius,
   AccordionShadow,
-  AccordionActiveColor,
-  AccordionTone,
   AccordionSize,
-  AccordionProps,
+  AccordionTone,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
-import { HandWaving, Sparkle, Info, Lifebuoy } from '@phosphor-icons/react';
 
 const colors: AccordionColor[] = ['white', 'gray', 'zinc', 'slate'];
 const tones: AccordionTone[] = ['solid', 'light'];
@@ -115,7 +115,13 @@ const ToneTemplate: Story<AccordionProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="color" value={color}>
         {tones.map((tone) => (
-          <Accordion key={tone} {...args} tone={tone} activeColor={color} defaultItem={'item-1'}>
+          <Accordion
+            key={tone}
+            {...args}
+            tone={tone}
+            activeColor={color}
+            defaultItem={'item-1'}
+          >
             {accordionItems.map((item) => (
               <Accordion.Item key={item.anchor} anchor={item.anchor}>
                 <Accordion.Header>{item.header}</Accordion.Header>
@@ -159,7 +165,13 @@ const ActiveColorTemplate: Story<AccordionProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {activeColors.map((color) => (
-          <Accordion key={color} {...args} tone={tone} activeColor={color} defaultItem={'item-1'}>
+          <Accordion
+            key={color}
+            {...args}
+            tone={tone}
+            activeColor={color}
+            defaultItem={'item-1'}
+          >
             {accordionItems.map((item) => (
               <Accordion.Item key={item.anchor} anchor={item.anchor}>
                 <Accordion.Header>{item.header}</Accordion.Header>
@@ -284,14 +296,22 @@ const ExampleTemplate: Story<AccordionProps> = (args) => {
           {accordionItems.map((item) => (
             <Accordion.Item key={item.anchor} anchor={item.anchor}>
               <Accordion.Header>{item.header}</Accordion.Header>
-              <Accordion.Body className="font-light">{item.body}</Accordion.Body>
+              <Accordion.Body className="font-light">
+                {item.body}
+              </Accordion.Body>
             </Accordion.Item>
           ))}
         </Accordion>
       </EnhancedView>
 
       <EnhancedView prop="Borderless Accordion with Icons">
-        <Accordion {...args} activeColor="blue" size="md" bordered={false} defaultItem={'item-2'}>
+        <Accordion
+          {...args}
+          activeColor="blue"
+          size="md"
+          bordered={false}
+          defaultItem={'item-2'}
+        >
           {accordionItems.map((item) => (
             <Accordion.Item key={item.anchor} anchor={item.anchor}>
               <Accordion.Header>
@@ -300,7 +320,9 @@ const ExampleTemplate: Story<AccordionProps> = (args) => {
                   <span>{item.header}</span>
                 </div>
               </Accordion.Header>
-              <Accordion.Body className="font-light">{item.body}</Accordion.Body>
+              <Accordion.Body className="font-light">
+                {item.body}
+              </Accordion.Body>
             </Accordion.Item>
           ))}
         </Accordion>
@@ -324,7 +346,9 @@ const ExampleTemplate: Story<AccordionProps> = (args) => {
                   <span>{item.header}</span>
                 </div>
               </Accordion.Header>
-              <Accordion.Body className="font-light">{item.body}</Accordion.Body>
+              <Accordion.Body className="font-light">
+                {item.body}
+              </Accordion.Body>
             </Accordion.Item>
           ))}
         </Accordion>

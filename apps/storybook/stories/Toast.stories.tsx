@@ -1,25 +1,30 @@
 import {
+  Alert,
+  AlertProps,
   Button,
-  ToastContainer,
-  Toast,
-  useToast,
-  ToastPosition,
-  ToastColor,
-  ToastTone,
   ButtonProps,
+  Toast,
+  ToastColor,
+  ToastContainer,
+  ToastPosition,
   ToastProps,
   ToastRadius,
   ToastShadow,
+  ToastTone,
   ToastVariant,
-  AlertProps,
-  Alert,
+  useToast,
 } from '@rewind-ui/core';
+import { Meta, Story } from '@storybook/react';
 import { useEffect } from 'react';
 import * as React from 'react';
-import { Meta, Story } from '@storybook/react';
 import { View, ViewGroup } from '../components/View';
 
-const positions: ToastPosition[] = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
+const positions: ToastPosition[] = [
+  'top-left',
+  'top-right',
+  'bottom-left',
+  'bottom-right',
+];
 const colors: ToastColor[] = [
   'white',
   'blue',
@@ -34,7 +39,14 @@ const colors: ToastColor[] = [
 const tones: ToastTone[] = ['solid', 'light'];
 const radiuses: ToastRadius[] = ['none', 'sm', 'base', 'md', 'lg'];
 const shadows: ToastShadow[] = ['none', 'sm', 'base', 'md', 'lg', 'xl'];
-const variants: ToastVariant[] = ['primary', 'secondary', 'danger', 'success', 'warning', 'info'];
+const variants: ToastVariant[] = [
+  'primary',
+  'secondary',
+  'danger',
+  'success',
+  'warning',
+  'info',
+];
 
 const actions = [
   {

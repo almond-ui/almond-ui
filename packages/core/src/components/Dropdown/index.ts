@@ -14,4 +14,7 @@ export type {
   DropdownTrigger,
 } from './Dropdown.types';
 export type { DropdownItemColor } from './DropdownItem/DropdownItem.types';
-export type { DropdownLabelColor, DropdownLabelWeight } from './DropdownLabel/DropdownLabel.types';
+export type {
+  DropdownLabelColor,
+  DropdownLabelWeight,
+} from './DropdownLabel/DropdownLabel.types';

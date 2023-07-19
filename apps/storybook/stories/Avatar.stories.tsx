@@ -5,12 +5,12 @@ import {
   AvatarRadius,
   AvatarShadow,
   AvatarSize,
-  AvatarTone,
   AvatarStatus,
   AvatarStatusPosition,
+  AvatarTone,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const colors: AvatarColor[] = [
@@ -109,7 +109,13 @@ const ColorTemplate: Story<AvatarProps> = (args) => {
     <React.Fragment key={color}>
       <View prop="color" value={color}>
         {tones.map((tone) => (
-          <Avatar {...args} key={tone} color={color} tone={tone} initials="ND" />
+          <Avatar
+            {...args}
+            key={tone}
+            color={color}
+            tone={tone}
+            initials="ND"
+          />
         ))}
       </View>
     </React.Fragment>
@@ -125,7 +131,13 @@ const ToneTemplate: Story<AvatarProps> = (args) => {
     <React.Fragment key={tone}>
       <View prop="tone" value={tone}>
         {colors.map((color) => (
-          <Avatar {...args} key={color} color={color} tone={tone} initials="ND" />
+          <Avatar
+            {...args}
+            key={color}
+            color={color}
+            tone={tone}
+            initials="ND"
+          />
         ))}
       </View>
     </React.Fragment>
@@ -157,7 +169,13 @@ const RadiusTemplate: Story<AvatarProps> = (args) => {
     <React.Fragment key={radius}>
       <View prop="radius" value={radius}>
         {tones.map((tone) => (
-          <Avatar {...args} key={tone} radius={radius} tone={tone} initials="ND" />
+          <Avatar
+            {...args}
+            key={tone}
+            radius={radius}
+            tone={tone}
+            initials="ND"
+          />
         ))}
       </View>
     </React.Fragment>
@@ -173,7 +191,13 @@ const ShadowTemplate: Story<AvatarProps> = (args) => {
     <React.Fragment key={shadow}>
       <View prop="shadow" value={shadow}>
         {tones.map((tone) => (
-          <Avatar {...args} key={tone} shadow={shadow} tone={tone} initials="ND" />
+          <Avatar
+            {...args}
+            key={tone}
+            shadow={shadow}
+            tone={tone}
+            initials="ND"
+          />
         ))}
       </View>
     </React.Fragment>

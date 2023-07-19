@@ -1,6 +1,7 @@
 export const config = {
   github: {
-    repo_url: 'https://github.com/mashafrancis/almond-ui/tree/main/packages/core/src',
+    repo_url:
+      'https://github.com/mashafrancis/almond-ui/tree/main/packages/core/src',
     component_dir: 'components',
     theme_dir: 'theme/styles',
     variants_dir: 'theme/variants',

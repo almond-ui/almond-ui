@@ -1,7 +1,7 @@
-import { Tabs, Radio, Card, Button } from '@almond-ui/core';
+import { Button, Card, Radio, Tabs } from '@almond-ui/core';
+import { HandWaving, Lifebuoy } from '@phosphor-icons/react';
 import { useRef } from 'react';
 import * as React from 'react';
-import { HandWaving, Lifebuoy } from '@phosphor-icons/react';
 
 export type TabsShowcaseProps = {
   showcase:
@@ -39,14 +39,14 @@ const extendedTabs = [
   {
     anchor: 'tab-1',
     label: 'Introduction',
-    icon: <HandWaving weight="duotone" className="text-purple-500" />,
+    icon: <HandWaving weight='duotone' className='text-purple-500' />,
     content:
       'Almond UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
   },
   {
     anchor: 'tab-2',
     label: 'Contribute',
-    icon: <Lifebuoy weight="duotone" className="text-purple-500" />,
+    icon: <Lifebuoy weight='duotone' className='text-purple-500' />,
     content:
       "We're always looking for new contributors to help us improve Almond UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
   },
@@ -74,7 +74,7 @@ export const TabsShowcase = (props: TabsShowcaseProps) => {
 const TonesLine = () => {
   return (
     <>
-      <Tabs tone="line" color="purple" defaultTab="tab-1">
+      <Tabs tone='line' color='purple' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -90,7 +90,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="red" defaultTab="tab-1">
+      <Tabs tone='line' color='red' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -106,7 +106,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="green" defaultTab="tab-1">
+      <Tabs tone='line' color='green' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -122,7 +122,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="yellow" defaultTab="tab-1">
+      <Tabs tone='line' color='yellow' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -138,7 +138,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="purple" defaultTab="tab-1">
+      <Tabs tone='line' color='purple' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -154,7 +154,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="gray" defaultTab="tab-1">
+      <Tabs tone='line' color='gray' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -170,7 +170,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="dark" defaultTab="tab-1">
+      <Tabs tone='line' color='dark' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -186,7 +186,7 @@ const TonesLine = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="line" color="black" defaultTab="tab-1">
+      <Tabs tone='line' color='black' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -208,7 +208,7 @@ const TonesLine = () => {
 const TonesPill = () => {
   return (
     <>
-      <Tabs tone="pill" color="purple" defaultTab="tab-1">
+      <Tabs tone='pill' color='purple' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -224,7 +224,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="red" defaultTab="tab-1">
+      <Tabs tone='pill' color='red' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -240,7 +240,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="green" defaultTab="tab-1">
+      <Tabs tone='pill' color='green' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -256,7 +256,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="yellow" defaultTab="tab-1">
+      <Tabs tone='pill' color='yellow' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -272,7 +272,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="purple" defaultTab="tab-1">
+      <Tabs tone='pill' color='purple' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -288,7 +288,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="gray" defaultTab="tab-1">
+      <Tabs tone='pill' color='gray' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -304,7 +304,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="dark" defaultTab="tab-1">
+      <Tabs tone='pill' color='dark' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -320,7 +320,7 @@ const TonesPill = () => {
         ))}
       </Tabs>
 
-      <Tabs tone="pill" color="black" defaultTab="tab-1">
+      <Tabs tone='pill' color='black' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -342,7 +342,7 @@ const TonesPill = () => {
 const Sizes = () => {
   return (
     <>
-      <Tabs size="sm" defaultTab="tab-1">
+      <Tabs size='sm' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -357,7 +357,7 @@ const Sizes = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs size="md" defaultTab="tab-1">
+      <Tabs size='md' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -372,7 +372,7 @@ const Sizes = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs size="lg" defaultTab="tab-1">
+      <Tabs size='lg' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -394,7 +394,7 @@ const Sizes = () => {
 const Radiuses = () => {
   return (
     <>
-      <Tabs tone="pill" radius="none" defaultTab="tab-1">
+      <Tabs tone='pill' radius='none' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -409,7 +409,7 @@ const Radiuses = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs tone="pill" radius="sm" defaultTab="tab-1">
+      <Tabs tone='pill' radius='sm' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -424,7 +424,7 @@ const Radiuses = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs tone="pill" radius="base" defaultTab="tab-1">
+      <Tabs tone='pill' radius='base' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -439,7 +439,7 @@ const Radiuses = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs tone="pill" radius="md" defaultTab="tab-1">
+      <Tabs tone='pill' radius='md' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -454,7 +454,7 @@ const Radiuses = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs tone="pill" radius="lg" defaultTab="tab-1">
+      <Tabs tone='pill' radius='lg' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -469,7 +469,7 @@ const Radiuses = () => {
           </Tabs.Content>
         ))}
       </Tabs>
-      <Tabs tone="pill" radius="full" defaultTab="tab-1">
+      <Tabs tone='pill' radius='full' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -491,7 +491,7 @@ const Radiuses = () => {
 const FullWidth = () => {
   return (
     <>
-      <Tabs fullWidth={true} defaultTab="tab-1">
+      <Tabs fullWidth={true} defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -513,7 +513,7 @@ const FullWidth = () => {
 const MethodsHide = () => {
   return (
     <>
-      <Tabs method="hide" defaultTab="tab-1">
+      <Tabs method='hide' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -525,13 +525,19 @@ const MethodsHide = () => {
         {tabs.map((tab) => (
           <Tabs.Content
             key={`content-${tab.anchor}`}
-            className="flex flex-col space-y-1"
+            className='flex flex-col space-y-1'
             anchor={tab.anchor}
           >
-            <span>Change the following values and switch tabs back and forth</span>
-            <Radio name={`hide-${tab.anchor}`} label="Option A" defaultChecked />
-            <Radio name={`hide-${tab.anchor}`} label="Option B" />
-            <Radio name={`hide-${tab.anchor}`} label="Option C" />
+            <span>
+              Change the following values and switch tabs back and forth
+            </span>
+            <Radio
+              name={`hide-${tab.anchor}`}
+              label='Option A'
+              defaultChecked
+            />
+            <Radio name={`hide-${tab.anchor}`} label='Option B' />
+            <Radio name={`hide-${tab.anchor}`} label='Option C' />
           </Tabs.Content>
         ))}
       </Tabs>
@@ -542,7 +548,7 @@ const MethodsHide = () => {
 const MethodsUnmount = () => {
   return (
     <>
-      <Tabs method="unmount" defaultTab="tab-1">
+      <Tabs method='unmount' defaultTab='tab-1'>
         <Tabs.List>
           {tabs.map((tab) => (
             <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
@@ -554,13 +560,19 @@ const MethodsUnmount = () => {
         {tabs.map((tab) => (
           <Tabs.Content
             key={`content-${tab.anchor}`}
-            className="flex flex-col space-y-1"
+            className='flex flex-col space-y-1'
             anchor={tab.anchor}
           >
-            <span>Change the following values and switch tabs back and forth</span>
-            <Radio name={`unmount-${tab.anchor}`} label="Option A" defaultChecked />
-            <Radio name={`unmount-${tab.anchor}`} label="Option B" />
-            <Radio name={`unmount-${tab.anchor}`} label="Option C" />
+            <span>
+              Change the following values and switch tabs back and forth
+            </span>
+            <Radio
+              name={`unmount-${tab.anchor}`}
+              label='Option A'
+              defaultChecked
+            />
+            <Radio name={`unmount-${tab.anchor}`} label='Option B' />
+            <Radio name={`unmount-${tab.anchor}`} label='Option C' />
           </Tabs.Content>
         ))}
       </Tabs>
@@ -573,8 +585,8 @@ const Ref = () => {
   const ref2 = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex gap-2">
+    <div className='flex flex-col gap-2'>
+      <div className='flex gap-2'>
         <Button
           onClick={() => {
             ref1.current?.click();
@@ -591,19 +603,19 @@ const Ref = () => {
         </Button>
       </div>
 
-      <Tabs defaultTab="tab-2" fullWidth>
+      <Tabs defaultTab='tab-2' fullWidth>
         <Tabs.List>
-          <Tabs.Tab ref={ref1} anchor="tab-1">
+          <Tabs.Tab ref={ref1} anchor='tab-1'>
             Tab 1
           </Tabs.Tab>
-          <Tabs.Tab ref={ref2} anchor="tab-2">
+          <Tabs.Tab ref={ref2} anchor='tab-2'>
             Tab 2
           </Tabs.Tab>
         </Tabs.List>
 
-        <Tabs.Content anchor="tab-1">Tab 1 content</Tabs.Content>
+        <Tabs.Content anchor='tab-1'>Tab 1 content</Tabs.Content>
 
-        <Tabs.Content anchor="tab-2">Tab 2 content</Tabs.Content>
+        <Tabs.Content anchor='tab-2'>Tab 2 content</Tabs.Content>
       </Tabs>
     </div>
   );
@@ -612,13 +624,13 @@ const Ref = () => {
 const ExamplesContentInCards = () => {
   return (
     <>
-      <Tabs defaultTab="tab-1">
+      <Tabs defaultTab='tab-1'>
         <Tabs.List>
           {extendedTabs.map((tab) => (
             <Tabs.Tab
               key={`tab-${tab.anchor}`}
               anchor={tab.anchor}
-              className="flex items-center gap-x-2"
+              className='flex items-center gap-x-2'
             >
               {tab.icon} {tab.label}
             </Tabs.Tab>
@@ -640,15 +652,15 @@ const ExamplesContentInCards = () => {
 const ExamplesTabsInCard = () => {
   return (
     <>
-      <Card shadow="base">
-        <Card.Body className="p-0">
-          <Tabs tone="line" fullWidth={true} defaultTab="tab-1">
-            <Tabs.List className="m-0 p-0 bg-gray-100/50">
+      <Card shadow='base'>
+        <Card.Body className='p-0'>
+          <Tabs tone='line' fullWidth={true} defaultTab='tab-1'>
+            <Tabs.List className='m-0 p-0 bg-gray-100/50'>
               {extendedTabs.map((tab) => (
                 <Tabs.Tab
                   key={`tab-${tab.anchor}`}
                   anchor={tab.anchor}
-                  className="py-3.5 flex items-center gap-x-2"
+                  className='py-3.5 flex items-center gap-x-2'
                 >
                   {tab.icon} {tab.label}
                 </Tabs.Tab>
@@ -656,7 +668,11 @@ const ExamplesTabsInCard = () => {
             </Tabs.List>
 
             {extendedTabs.map((tab) => (
-              <Tabs.Content key={`content-${tab.anchor}`} anchor={tab.anchor} className="p-5">
+              <Tabs.Content
+                key={`content-${tab.anchor}`}
+                anchor={tab.anchor}
+                className='p-5'
+              >
                 {tab.content}
               </Tabs.Content>
             ))}

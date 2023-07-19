@@ -1,5 +1,8 @@
 import { useTableContext } from '@components/Table/Table.context';
-import { TbodyComponent, TbodyProps } from '@components/Table/Tbody/Tbody.types';
+import {
+  TbodyComponent,
+  TbodyProps,
+} from '@components/Table/Tbody/Tbody.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import { ForwardedRef, forwardRef } from 'react';

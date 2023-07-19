@@ -1,6 +1,10 @@
-import * as React from 'react';
-import { SandpackLayout, SandpackCodeViewer, SandpackProvider } from '@codesandbox/sandpack-react';
 import { theme } from '@/lib/theme';
+import {
+  SandpackCodeViewer,
+  SandpackLayout,
+  SandpackProvider,
+} from '@codesandbox/sandpack-react';
+import * as React from 'react';
 
 export const CustomMdxSandpack = (props: any) => {
   const { children } = props;
@@ -11,7 +15,7 @@ export const CustomMdxSandpack = (props: any) => {
       files={{
         '/App.js': children?.props?.children?.trim(),
       }}
-      template="react"
+      template='react'
     >
       <SandpackLayout>
         <SandpackCodeViewer showLineNumbers={true} />

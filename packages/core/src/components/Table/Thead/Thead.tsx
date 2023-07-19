@@ -1,5 +1,8 @@
 import { useTableContext } from '@components/Table/Table.context';
-import { TheadComponent, TheadProps } from '@components/Table/Thead/Thead.types';
+import {
+  TheadComponent,
+  TheadProps,
+} from '@components/Table/Thead/Thead.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
 import { ForwardedRef, forwardRef } from 'react';
@@ -20,7 +23,12 @@ const Thead: TheadComponent = forwardRef<HTMLTableSectionElement, TheadProps>(
       <thead
         id={id}
         ref={ref}
-        className={theme.thead({ borderStyle, headerBorders, headerColor, size })}
+        className={theme.thead({
+          borderStyle,
+          headerBorders,
+          headerColor,
+          size,
+        })}
         {...additionalProps}
       >
         {children}

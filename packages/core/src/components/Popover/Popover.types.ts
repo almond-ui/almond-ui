@@ -29,7 +29,8 @@ export interface PopoverContext<RT extends ReferenceType = ReferenceType> {
   y: number | null;
 }
 
-export interface PopoverProps extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
+export interface PopoverProps
+  extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
   color?: PopoverColor;
   initiallyOpen?: boolean;
   offset?: number;

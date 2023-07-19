@@ -1,6 +1,6 @@
+import { CheckFat } from '@phosphor-icons/react';
 import { cva } from 'class-variance-authority';
 import { useState } from 'react';
-import { CheckFat } from '@phosphor-icons/react';
 
 export type Color =
   | 'white'
@@ -142,7 +142,7 @@ const Color = ({
       className={style({ color, selected: selectedColor === color })}
     >
       {selectedColor === color && (
-        <CheckFat size={13} weight="duotone" className={iconStyle({ color })} />
+        <CheckFat size={13} weight='duotone' className={iconStyle({ color })} />
       )}
     </div>
   );
@@ -150,7 +150,17 @@ const Color = ({
 
 export const ColorPicker = ({
   onClick,
-  colors = ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+  colors = [
+    'white',
+    'blue',
+    'red',
+    'green',
+    'yellow',
+    'purple',
+    'gray',
+    'dark',
+    'black',
+  ],
   initialValue = 'white',
 }: {
   onClick: (color: Color) => void;
@@ -160,7 +170,7 @@ export const ColorPicker = ({
   const [selectedColor, setSelectedColor] = useState<Color>(initialValue);
 
   return (
-    <div className="flex flex-wrap gap-1">
+    <div className='flex flex-wrap gap-1'>
       {colors.map((color: Color) => (
         <Color
           key={color}

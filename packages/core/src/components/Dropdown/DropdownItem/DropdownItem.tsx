@@ -3,10 +3,10 @@ import {
   DropdownItemComponent,
   DropdownItemProps,
 } from '@components/Dropdown/DropdownItem/DropdownItem.types';
+import { useMergeRefs } from '@floating-ui/react';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
-import { Ref, forwardRef, useRef, useMemo } from 'react';
-import { useMergeRefs } from '@floating-ui/react';
+import { forwardRef, Ref, useMemo, useRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const DropdownItem: DropdownItemComponent = forwardRef(

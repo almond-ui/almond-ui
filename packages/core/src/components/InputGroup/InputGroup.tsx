@@ -1,4 +1,5 @@
 'use client';
+
 import { Button } from '@components/Button';
 import { Combobox } from '@components/Combobox';
 import { useFormControlContext } from '@components/FormControl/FormControl.context';
@@ -13,7 +14,14 @@ import { Select } from '@components/Select';
 import { Textarea } from '@components/Textarea';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
-import { Children, cloneElement, forwardRef, ReactNode, Ref, useMemo } from 'react';
+import {
+  Children,
+  cloneElement,
+  forwardRef,
+  ReactNode,
+  Ref,
+  useMemo,
+} from 'react';
 import { twMerge } from 'tailwind-merge';
 import { InputGroupContextProvider } from './InputGroup.context';
 

@@ -28,13 +28,13 @@ export type DropdownLabelProps = {
   weight?: DropdownLabelWeight;
 };
 
-type PolymorphicDropdownLabelProps<C extends ElementType> = PolymorphicComponentPropWithRef<
-  C,
-  DropdownLabelProps
->;
+type PolymorphicDropdownLabelProps<C extends ElementType> =
+  PolymorphicComponentPropWithRef<C, DropdownLabelProps>;
 
 type PolymorphicDropdownLabelComponent = <C extends ElementType = 'span'>(
   props: PolymorphicDropdownLabelProps<C>
 ) => ReactElement | null;
 
-export type DropdownLabelComponent = PolymorphicDropdownLabelComponent & { displayName?: string };
+export type DropdownLabelComponent = PolymorphicDropdownLabelComponent & {
+  displayName?: string;
+};

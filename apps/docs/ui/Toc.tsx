@@ -1,6 +1,7 @@
 // Copied from: https://github.com/shadcn/ui/blob/0a241be17ffe07cf21cc72702feb1aea852ef571/apps/www/components/toc.tsx
 
 'use client';
+
 import { useMounted } from '@/hooks/use-mounted';
 import { TableOfContents } from '@/utils/toc.util';
 import { Text } from '@almond-ui/core';
@@ -32,8 +33,8 @@ export function Toc({ toc }: TocProps) {
   }
 
   return (
-    <div className="fixed h-[calc(100%-14rem)] space-y-2 w-[16rem] overflow-auto">
-      <Text weight="medium" color="dark" size="base">
+    <div className='fixed h-[calc(100%-14rem)] space-y-2 w-[16rem] overflow-auto'>
+      <Text weight='medium' color='dark' size='base'>
         Quick navigation
       </Text>
       <Tree tree={toc} activeItem={activeHeading} />
@@ -105,10 +106,12 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
     <ul className={tocListStyles({ inner: level > 1 })}>
       {tree.items.map((item, index) => {
         return (
-          <li key={index} className="pt-3">
+          <li key={index} className='pt-3'>
             <a
               href={item.url}
-              className={tocAnchorStyles({ active: item.url === `#${activeItem}` })}
+              className={tocAnchorStyles({
+                active: item.url === `#${activeItem}`,
+              })}
             >
               {item.title}
             </a>

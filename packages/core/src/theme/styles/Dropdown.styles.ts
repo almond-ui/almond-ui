@@ -101,7 +101,16 @@ const base = cva(
 );
 
 const arrow = cva(
-  ['absolute', 'w-2', 'h-2', 'bg-inherit', 'rotate-45', 'border', 'box-border', 'z-0'],
+  [
+    'absolute',
+    'w-2',
+    'h-2',
+    'bg-inherit',
+    'rotate-45',
+    'border',
+    'box-border',
+    'z-0',
+  ],
   {
     variants: {
       color: {

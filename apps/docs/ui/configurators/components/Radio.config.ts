@@ -1,4 +1,7 @@
-import { RadioCode, RadioExample } from '@/ui/configurators/components/Radio.example';
+import {
+  RadioCode,
+  RadioExample,
+} from '@/ui/configurators/components/Radio.example';
 
 export const RadioConfig = {
   example: RadioExample,
@@ -24,7 +27,16 @@ export const RadioConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

@@ -1,5 +1,10 @@
 'use client';
-import { ToastComponent, ToastIconType, ToastProps } from '@components/Toast/Toast.types';
+
+import {
+  ToastComponent,
+  ToastIconType,
+  ToastProps,
+} from '@components/Toast/Toast.types';
 import { useToast } from '@components/Toast/use-toast.hook';
 import { ErrorIcon } from '@icons/Error';
 import { InfoIcon } from '@icons/Info';
@@ -34,7 +39,10 @@ const icons: Record<ToastIconType, JSX.Element> = {
 
 const Toast: ToastComponent = forwardRef<HTMLDivElement, ToastProps>(
   (props: ToastProps, ref?: Ref<HTMLDivElement>) => {
-    const variantProps = useComponentVariant('Toast', props.variant) as Partial<ToastProps>;
+    const variantProps = useComponentVariant(
+      'Toast',
+      props.variant
+    ) as Partial<ToastProps>;
     const theme = useComponentTheme('Toast');
     const {
       actions = [],
@@ -68,7 +76,9 @@ const Toast: ToastComponent = forwardRef<HTMLDivElement, ToastProps>(
     const hasTitle = !!title;
 
     const classes = useMemo(() => {
-      return twMerge(theme.toast({ className, color, tone, radius, shadow, shadowColor }));
+      return twMerge(
+        theme.toast({ className, color, tone, radius, shadow, shadowColor })
+      );
     }, [className, color, tone, radius, shadow, shadowColor, theme]);
 
     const handleOnClick = () => {
@@ -140,11 +150,16 @@ const Toast: ToastComponent = forwardRef<HTMLDivElement, ToastProps>(
           </div>
         )}
 
-        <div className={theme.contentWrapper({ closeOnClick })} onClick={handleOnClick}>
+        <div
+          className={theme.contentWrapper({ closeOnClick })}
+          onClick={handleOnClick}
+        >
           {iconType && icons[iconType]}
           <div className={theme.content()}>
             {title && <h4 className={theme.title()}>{title}</h4>}
-            {description && <p className={theme.description({ hasTitle })}>{description}</p>}
+            {description && (
+              <p className={theme.description({ hasTitle })}>{description}</p>
+            )}
           </div>
         </div>
 
@@ -153,7 +168,11 @@ const Toast: ToastComponent = forwardRef<HTMLDivElement, ToastProps>(
             {actions.map((action, index) => (
               <button
                 key={`action-${id}-${index}`}
-                className={theme.action({ primary: action.primary, tone, color })}
+                className={theme.action({
+                  primary: action.primary,
+                  tone,
+                  color,
+                })}
                 onClick={action.onClick}
               >
                 {action.label}

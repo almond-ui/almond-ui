@@ -1,4 +1,7 @@
-import { AccordionCode, AccordionExample } from '@/ui/configurators/components/Accordion.example';
+import {
+  AccordionCode,
+  AccordionExample,
+} from '@/ui/configurators/components/Accordion.example';
 
 export const AccordionConfig = {
   example: AccordionExample,
@@ -31,7 +34,17 @@ export const AccordionConfig = {
       label: 'Active Color',
       name: 'activeColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

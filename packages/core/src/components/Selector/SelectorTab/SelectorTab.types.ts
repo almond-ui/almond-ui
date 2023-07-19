@@ -1,4 +1,8 @@
-import { ComponentPropsWithRef, ForwardRefExoticComponent, ReactNode } from 'react';
+import {
+  ComponentPropsWithRef,
+  ForwardRefExoticComponent,
+  ReactNode,
+} from 'react';
 
 export type SelectorTabColor =
   | 'white'
@@ -18,6 +22,7 @@ export interface SelectorTabProps extends ComponentPropsWithRef<'button'> {
   label: string | ReactNode;
 }
 
-export type SelectorTabComponent = ForwardRefExoticComponent<SelectorTabProps> & {
-  displayName?: string;
-};
+export type SelectorTabComponent =
+  ForwardRefExoticComponent<SelectorTabProps> & {
+    displayName?: string;
+  };

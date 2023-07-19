@@ -1,8 +1,9 @@
 'use client';
+
 import { CustomSandpack } from '@/ui/configurators/CustomSandpack';
+import { Alert, AlertColor } from '@almond-ui/core';
 import { useEffect, useState } from 'react';
 import * as React from 'react';
-import { Alert, AlertColor } from '@almond-ui/core';
 
 export const ConfigurationProps = () => {
   const [alertCode, setAlertCode] = React.useState(
@@ -61,43 +62,44 @@ export const ConfigurationProps = () => {
   }, [activeStep]);
 
   return (
-    <div className="flex flex-col">
-      <div className="flex items-center text-purple-600 text-2xl font-black justify-center border-4 border-purple-50 shadow shadow-purple-200 rounded-full bg-gradient-to-bl from-purple-100 to-purple-200 p-2 w-16 h-16 mb-4">
+    <div className='flex flex-col'>
+      <div className='flex items-center text-purple-600 text-2xl font-black justify-center border-4 border-purple-50 shadow shadow-purple-200 rounded-full bg-gradient-to-bl from-purple-100 to-purple-200 p-2 w-16 h-16 mb-4'>
         1.
       </div>
 
-      <div className="flex gap-6">
-        <div className="w-2/3">
-          <h4 className="font-semibold text-xl text-slate-700 mb-2">
+      <div className='flex gap-6'>
+        <div className='w-2/3'>
+          <h4 className='font-semibold text-xl text-slate-700 mb-2'>
             Customize through parameters
           </h4>
 
-          <p className="text-lg text-slate-600">
-            All components are highly customizable through parameters. The end styles of each
-            component are a result of the given parameters or their combinations.
+          <p className='text-lg text-slate-600'>
+            All components are highly customizable through parameters. The end
+            styles of each component are a result of the given parameters or
+            their combinations.
           </p>
         </div>
-        <div className="w-1/3">
-          <div className="flex flex-col gap-6">
+        <div className='w-1/3'>
+          <div className='flex flex-col gap-6'>
             <Alert
-              className="transition-colors"
+              className='transition-colors'
               icon={
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns='http://www.w3.org/2000/svg'
                   className={`mt-2 fill-${activeStep.color}-500 transition-colors`}
-                  height="1.5em"
-                  viewBox="0 0 384 512"
+                  height='1.5em'
+                  viewBox='0 0 384 512'
                 >
-                  <path d="M80 320c8.8 0 16 7.2 16 16c0 44.2 35.8 80 80 80c8.8 0 16 7.2 16 16s-7.2 16-16 16c-61.9 0-112-50.1-112-112c0-8.8 7.2-16 16-16z" />
+                  <path d='M80 320c8.8 0 16 7.2 16 16c0 44.2 35.8 80 80 80c8.8 0 16 7.2 16 16s-7.2 16-16 16c-61.9 0-112-50.1-112-112c0-8.8 7.2-16 16-16z' />
                   <path
-                    className="opacity-50"
-                    d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"
+                    className='opacity-50'
+                    d='M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z'
                   />
                 </svg>
               }
               color={activeStep.color}
               title={activeStep.title}
-              size="md"
+              size='md'
             >
               {activeStep.description}
             </Alert>

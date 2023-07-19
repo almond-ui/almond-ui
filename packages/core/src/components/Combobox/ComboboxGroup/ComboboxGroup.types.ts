@@ -14,6 +14,7 @@ export interface ComboboxGroupProps extends ComponentPropsWithRef<'div'> {
     | 'black';
 }
 
-export type ComboboxGroupComponent = ForwardRefExoticComponent<ComboboxGroupProps> & {
-  displayName?: string;
-};
+export type ComboboxGroupComponent =
+  ForwardRefExoticComponent<ComboboxGroupProps> & {
+    displayName?: string;
+  };

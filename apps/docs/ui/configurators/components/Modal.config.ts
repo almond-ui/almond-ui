@@ -1,4 +1,7 @@
-import { ModalCode, ModalExample } from '@/ui/configurators/components/Modal.example';
+import {
+  ModalCode,
+  ModalExample,
+} from '@/ui/configurators/components/Modal.example';
 
 export const ModalConfig = {
   example: ModalExample,

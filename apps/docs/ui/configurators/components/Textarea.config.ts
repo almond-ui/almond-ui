@@ -1,4 +1,7 @@
-import { TextareaCode, TextareaExample } from '@/ui/configurators/components/Textarea.example';
+import {
+  TextareaCode,
+  TextareaExample,
+} from '@/ui/configurators/components/Textarea.example';
 
 export const TextareaConfig = {
   example: TextareaExample,

@@ -27,8 +27,18 @@ const base = cva(
         lg: ['px-4', 'text-lg', 'py-4'],
       },
       tone: {
-        light: ['text-gray-800', 'border', 'focus:bg-gray-50', 'placeholder:text-gray-400'],
-        solid: ['text-gray-800', 'border', 'focus:bg-gray-100', 'placeholder:text-gray-400'],
+        light: [
+          'text-gray-800',
+          'border',
+          'focus:bg-gray-50',
+          'placeholder:text-gray-400',
+        ],
+        solid: [
+          'text-gray-800',
+          'border',
+          'focus:bg-gray-100',
+          'placeholder:text-gray-400',
+        ],
         transparent: ['text-gray-800', 'border', 'placeholder:text-gray-400'],
       },
       radius: {

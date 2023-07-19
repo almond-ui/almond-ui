@@ -1,6 +1,13 @@
-import { Card, CardColor, CardProps, CardRadius, CardShadow, CardSize } from '@rewind-ui/core';
-import * as React from 'react';
+import {
+  Card,
+  CardColor,
+  CardProps,
+  CardRadius,
+  CardShadow,
+  CardSize,
+} from '@rewind-ui/core';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const colors: CardColor[] = ['white', 'gray', 'zinc', 'slate'];
@@ -183,7 +190,11 @@ const ImageTemplate: Story<CardProps> = (args) => {
   return (
     <View prop="bordered" value="true">
       <Card {...args} bordered={true}>
-        <Card.Image src={imgSrc} caption="This is a beautiful image" mode="dark"></Card.Image>
+        <Card.Image
+          src={imgSrc}
+          caption="This is a beautiful image"
+          mode="dark"
+        ></Card.Image>
         <Card.Body>{bodyText}</Card.Body>
       </Card>
     </View>

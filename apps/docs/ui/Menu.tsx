@@ -1,7 +1,6 @@
 'use client';
+
 import { Text } from '@almond-ui/core';
-import { ReactNode } from 'react';
-import { MenuItem } from './MenuItem';
 import {
   Lifebuoy,
   Palette,
@@ -10,6 +9,8 @@ import {
   Rocket,
   SlidersHorizontal,
 } from '@phosphor-icons/react';
+import { ReactNode } from 'react';
+import { MenuItem } from './MenuItem';
 
 type MenuItem = {
   title: string;
@@ -30,32 +31,32 @@ const menuItems: MenuItem[] = [
       {
         title: 'Introduction',
         path: '/introduction',
-        icon: <Rocket size={18} weight="duotone" />,
+        icon: <Rocket size={18} weight='duotone' />,
       },
       {
         title: 'Theming',
         path: '/theming',
-        icon: <Palette size={18} weight="duotone" />,
+        icon: <Palette size={18} weight='duotone' />,
       },
       {
         title: 'Variants',
         path: '/variants',
-        icon: <SlidersHorizontal size={18} weight="duotone" />,
+        icon: <SlidersHorizontal size={18} weight='duotone' />,
       },
       {
         title: 'Accessibility',
         path: '/accessibility',
-        icon: <PersonArmsSpread size={18} weight="duotone" />,
+        icon: <PersonArmsSpread size={18} weight='duotone' />,
       },
       {
         title: 'Roadmap',
         path: '/roadmap',
-        icon: <RoadHorizon size={18} weight="duotone" />,
+        icon: <RoadHorizon size={18} weight='duotone' />,
       },
       {
         title: 'Contributing',
         path: '/contributing',
-        icon: <Lifebuoy size={18} weight="duotone" />,
+        icon: <Lifebuoy size={18} weight='duotone' />,
       },
     ],
   },
@@ -180,13 +181,13 @@ const menuItems: MenuItem[] = [
 
 export const Menu = () => {
   return (
-    <div className="flex flex-col space-y-6 pb-4">
+    <div className='flex flex-col space-y-6 pb-4'>
       {menuItems.map((menuItem, categoryIndex) => (
-        <div key={`title-${categoryIndex}`} className="flex flex-col space-y-3">
-          <Text weight="medium" color="dark">
+        <div key={`title-${categoryIndex}`} className='flex flex-col space-y-3'>
+          <Text weight='medium' color='dark'>
             {menuItem.title}
           </Text>
-          <div className="flex flex-col text-sm">
+          <div className='flex flex-col text-sm'>
             {menuItem.items.map((item, index) => (
               <MenuItem
                 key={`item-${categoryIndex}-${index}`}

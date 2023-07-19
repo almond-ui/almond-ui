@@ -1,4 +1,5 @@
 'use client';
+
 import {
   AccordionComponent,
   AccordionContext,
@@ -26,66 +27,70 @@ const defaultProps: Partial<AccordionProps> = {
   withRing: true,
 };
 
-const AccordionRoot: AccordionComponent = forwardRef<HTMLDivElement, AccordionProps>(
-  (props: AccordionProps, ref?: Ref<HTMLDivElement>) => {
-    const variant = useComponentVariant('Accordion', props.variant) as Partial<AccordionProps>;
-    const theme = useComponentTheme('Accordion');
-    const {
-      activeColor,
-      bordered = true,
-      children,
-      className = '',
-      color,
-      defaultItem,
-      radius,
-      shadow,
-      shadowColor,
-      size,
-      tone,
-      withRing,
-      ...additionalProps
-    } = {
-      ...defaultProps,
-      ...variant,
-      ...props,
-    };
-    const id = usePropId(props.id);
-    const [activeItemAnchor, setActiveItemAnchor] = useState(defaultItem);
-    const contextValue: AccordionContext = {
-      activeColor,
-      activeItemAnchor,
-      bordered,
-      color,
-      radius,
-      setActiveItemAnchor,
-      size,
-      tone,
-      withRing,
-    };
+const AccordionRoot: AccordionComponent = forwardRef<
+  HTMLDivElement,
+  AccordionProps
+>((props: AccordionProps, ref?: Ref<HTMLDivElement>) => {
+  const variant = useComponentVariant(
+    'Accordion',
+    props.variant
+  ) as Partial<AccordionProps>;
+  const theme = useComponentTheme('Accordion');
+  const {
+    activeColor,
+    bordered = true,
+    children,
+    className = '',
+    color,
+    defaultItem,
+    radius,
+    shadow,
+    shadowColor,
+    size,
+    tone,
+    withRing,
+    ...additionalProps
+  } = {
+    ...defaultProps,
+    ...variant,
+    ...props,
+  };
+  const id = usePropId(props.id);
+  const [activeItemAnchor, setActiveItemAnchor] = useState(defaultItem);
+  const contextValue: AccordionContext = {
+    activeColor,
+    activeItemAnchor,
+    bordered,
+    color,
+    radius,
+    setActiveItemAnchor,
+    size,
+    tone,
+    withRing,
+  };
 
-    const classes = useMemo(() => {
-      return twMerge(
-        theme.base({
-          bordered,
-          className,
-          color,
-          radius,
-          shadow,
-          shadowColor,
-          size,
-        })
-      );
-    }, [bordered, className, color, radius, shadow, shadowColor, size, theme]);
-
-    return (
-      <AccordionContextProvider value={contextValue}>
-        <div id={id} ref={ref} className={classes} {...additionalProps}>
-          {children}
-        </div>
-      </AccordionContextProvider>
+  const classes = useMemo(() => {
+    return twMerge(
+      theme.base({
+        bordered,
+        className,
+        color,
+        radius,
+        shadow,
+        shadowColor,
+        size,
+      })
     );
-  }
-);
+  }, [bordered, className, color, radius, shadow, shadowColor, size, theme]);
+
+  return (
+    <AccordionContextProvider value={contextValue}>
+      <div id={id} ref={ref} className={classes} {...additionalProps}>
+        {children}
+      </div>
+    </AccordionContextProvider>
+  );
+});
 
 AccordionRoot.displayName = 'Accordion';
 

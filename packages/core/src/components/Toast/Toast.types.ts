@@ -15,7 +15,12 @@ export type ToastColor =
   | 'gray'
   | 'dark'
   | 'black';
-export type ToastIconType = 'info' | 'success' | 'warning' | 'error' | 'question';
+export type ToastIconType =
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'question';
 export type ToastRadius = 'none' | 'sm' | 'base' | 'md' | 'lg';
 export type ToastShadow = 'none' | 'sm' | 'base' | 'md' | 'lg' | 'xl';
 export type ToastShadowColor =
@@ -30,7 +35,13 @@ export type ToastShadowColor =
   | 'dark'
   | 'black';
 export type ToastTone = 'solid' | 'light';
-export type ToastVariant = 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info';
+export type ToastVariant =
+  | 'primary'
+  | 'secondary'
+  | 'danger'
+  | 'success'
+  | 'warning'
+  | 'info';
 
 export interface ToastProps extends Omit<ComponentPropsWithRef<'div'>, 'size'> {
   actions?: ToastAction[];

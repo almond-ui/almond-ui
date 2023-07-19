@@ -1,4 +1,5 @@
 'use client';
+
 import { accordionVariants } from '@theme/variants/Accordion.variants';
 import { alertVariants } from '@theme/variants/Alert.variants';
 import { buttonVariants } from '@theme/variants/Button.variants';
@@ -40,7 +41,8 @@ const VariantContext = createContext<VariantContextType>({
   variant: defaultVariant,
 });
 
-export const VariantProvider: Provider<VariantContextType> = VariantContext.Provider;
+export const VariantProvider: Provider<VariantContextType> =
+  VariantContext.Provider;
 
 export function useVariant(): Variant {
   return useContext(VariantContext)?.variant || defaultVariant;

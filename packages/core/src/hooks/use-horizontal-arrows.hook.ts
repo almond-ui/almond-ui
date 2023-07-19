@@ -20,7 +20,9 @@ export function useHorizontalArrows(
       return;
     }
 
-    const buttons = ref.current?.querySelectorAll('button:not([disabled="true"])');
+    const buttons = ref.current?.querySelectorAll(
+      'button:not([disabled="true"])'
+    );
 
     if (!buttons) {
       return;
@@ -56,7 +58,9 @@ export function useHorizontalArrows(
       return;
     }
 
-    const buttons = ref.current?.querySelectorAll('button:not([disabled="true"])');
+    const buttons = ref.current?.querySelectorAll(
+      'button:not([disabled="true"])'
+    );
 
     if (!buttons) {
       return;

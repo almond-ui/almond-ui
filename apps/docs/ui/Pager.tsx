@@ -1,9 +1,10 @@
 'use client';
+
+import { CaretCircleLeft, CaretCircleRight } from '@phosphor-icons/react';
+import { clsx } from 'clsx';
 import { Component, Page } from 'contentlayer/generated';
 import Link from 'next/link';
-import { clsx } from 'clsx';
 import * as React from 'react';
-import { CaretCircleLeft, CaretCircleRight } from '@phosphor-icons/react';
 
 export type CollectionItem = {
   title: string;
@@ -35,7 +36,13 @@ function getPrevAndNext(
   };
 }
 
-const PagerItem = ({ item, side }: { item: CollectionItem; side: 'left' | 'right' }) => {
+const PagerItem = ({
+  item,
+  side,
+}: {
+  item: CollectionItem;
+  side: 'left' | 'right';
+}) => {
   return (
     <Link
       href={item.url}
@@ -44,9 +51,9 @@ const PagerItem = ({ item, side }: { item: CollectionItem; side: 'left' | 'right
         side === 'right' && 'ml-auto'
       )}
     >
-      {side === 'left' && <CaretCircleLeft size={28} weight="duotone" />}
+      {side === 'left' && <CaretCircleLeft size={28} weight='duotone' />}
       <span>{item.title}</span>
-      {side === 'right' && <CaretCircleRight size={28} weight="duotone" />}
+      {side === 'right' && <CaretCircleRight size={28} weight='duotone' />}
     </Link>
   );
 };
@@ -222,9 +229,9 @@ export const Pager = (props: PagerProps) => {
   const { prev, next } = getPrevAndNext(collection, index);
 
   return (
-    <div className="flex gap-4 w-full pt-10">
-      {prev && <PagerItem item={prev} side="left" />}
-      {next && <PagerItem item={next} side="right" />}
+    <div className='flex gap-4 w-full pt-10'>
+      {prev && <PagerItem item={prev} side='left' />}
+      {next && <PagerItem item={next} side='right' />}
     </div>
   );
 };

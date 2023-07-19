@@ -1,4 +1,7 @@
-import { SelectCode, SelectExample } from '@/ui/configurators/components/Select.example';
+import {
+  SelectCode,
+  SelectExample,
+} from '@/ui/configurators/components/Select.example';
 
 export const SelectConfig = {
   example: SelectExample,

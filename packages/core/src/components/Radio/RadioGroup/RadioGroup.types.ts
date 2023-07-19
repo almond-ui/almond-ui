@@ -2,7 +2,8 @@ import { ComponentPropsWithRef, ForwardRefExoticComponent } from 'react';
 
 export type RadioGroupOrientation = 'horizontal' | 'vertical';
 
-export interface RadioGroupProps extends Omit<ComponentPropsWithRef<'div'>, 'onChange'> {
+export interface RadioGroupProps
+  extends Omit<ComponentPropsWithRef<'div'>, 'onChange'> {
   initialValue?: string;
   name: string;
   onChange?(value: string | null | undefined): void;

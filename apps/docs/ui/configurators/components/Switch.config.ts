@@ -1,4 +1,7 @@
-import { SwitchCode, SwitchExample } from '@/ui/configurators/components/Switch.example';
+import {
+  SwitchCode,
+  SwitchExample,
+} from '@/ui/configurators/components/Switch.example';
 
 export const SwitchConfig = {
   example: SwitchExample,
@@ -17,7 +20,16 @@ export const SwitchConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

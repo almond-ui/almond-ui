@@ -1,19 +1,19 @@
 import {
-  InputGroup,
-  InputGroupProps,
-  InputGroupRadius,
-  InputGroupSize,
-  InputGroupTone,
-  InputGroupShadow,
-} from '@rewind-ui/core';
-import { Meta, Story } from '@storybook/react';
-import {
   ChatDots,
   FloppyDisk,
   MagnifyingGlass,
   PaperPlaneTilt,
   Users,
 } from '@phosphor-icons/react';
+import {
+  InputGroup,
+  InputGroupProps,
+  InputGroupRadius,
+  InputGroupShadow,
+  InputGroupSize,
+  InputGroupTone,
+} from '@rewind-ui/core';
+import { Meta, Story } from '@storybook/react';
 import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
@@ -128,7 +128,10 @@ const InputExample = (args) => (
     <InputGroup.Text>
       <MagnifyingGlass weight="duotone" />
     </InputGroup.Text>
-    <InputGroup.Input placeholder={'Search...'} type="search"></InputGroup.Input>
+    <InputGroup.Input
+      placeholder={'Search...'}
+      type="search"
+    ></InputGroup.Input>
   </InputGroup>
 );
 

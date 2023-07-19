@@ -1,9 +1,24 @@
-import { Switch, SwitchProps, SwitchColor, SwitchRadius, SwitchSize } from '@rewind-ui/core';
-import * as React from 'react';
+import {
+  Switch,
+  SwitchColor,
+  SwitchProps,
+  SwitchRadius,
+  SwitchSize,
+} from '@rewind-ui/core';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
 
-const colors: SwitchColor[] = ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'];
+const colors: SwitchColor[] = [
+  'blue',
+  'red',
+  'green',
+  'yellow',
+  'purple',
+  'gray',
+  'dark',
+  'black',
+];
 const sizes: SwitchSize[] = ['sm', 'md', 'lg', 'xl'];
 const radiuses: SwitchRadius[] = ['none', 'sm', 'base', 'md', 'lg', 'full'];
 
@@ -43,7 +58,13 @@ export default meta;
 const DefaultTemplate: Story<SwitchProps> = (args) => {
   return (
     <EnhancedView prop="Default">
-      <Switch checked {...args} label={label} description={description} error={error} />
+      <Switch
+        checked
+        {...args}
+        label={label}
+        description={description}
+        error={error}
+      />
     </EnhancedView>
   );
 };

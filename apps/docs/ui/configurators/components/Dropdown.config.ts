@@ -1,4 +1,7 @@
-import { DropdownCode, DropdownExample } from '@/ui/configurators/components/Dropdown.example';
+import {
+  DropdownCode,
+  DropdownExample,
+} from '@/ui/configurators/components/Dropdown.example';
 
 export const DropdownConfig = {
   example: DropdownExample,
@@ -34,7 +37,17 @@ export const DropdownConfig = {
       label: 'Item Color',
       name: 'itemColor',
       type: 'color',
-      colors: ['white', 'blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'white',
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Mode',

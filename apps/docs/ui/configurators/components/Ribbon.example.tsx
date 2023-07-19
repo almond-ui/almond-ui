@@ -1,4 +1,10 @@
-import { RibbonProps, Ribbon, Card, FormControl, Button } from '@almond-ui/core';
+import {
+  Button,
+  Card,
+  FormControl,
+  Ribbon,
+  RibbonProps,
+} from '@almond-ui/core';
 import * as React from 'react';
 
 export const RibbonCode = (props: any) => {
@@ -18,7 +24,9 @@ export const RibbonCode = (props: any) => {
     color !== defaultProps.color ? `color="${color}"` : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor ? `shadowColor="${shadowColor}"` : null,
+    shadowColor !== defaultProps.shadowColor
+      ? `shadowColor="${shadowColor}"`
+      : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
     position !== defaultProps.position ? `position="${position}"` : null,
@@ -48,38 +56,52 @@ function App() {
 
 export const RibbonExample = (props: RibbonProps) => {
   const className =
-    props.position === 'left' || props.position === 'top-left' ? 'ml-auto' : 'mr-auto';
+    props.position === 'left' || props.position === 'top-left'
+      ? 'ml-auto'
+      : 'mr-auto';
 
   return (
-    <Card size="base" withDivider={false}>
-      <Card.Header className="relative">
+    <Card size='base' withDivider={false}>
+      <Card.Header className='relative'>
         <Ribbon {...props}>Free trial</Ribbon>
         <div className={`${className} flex flex-col`}>
-          <span className={`${className} text-lg leading-8 text-gray-700 font-semibold`}>
+          <span
+            className={`${className} text-lg leading-8 text-gray-700 font-semibold`}
+          >
             Create new account
           </span>
-          <span className="text-gray-500 font-normal">Start your 7-days trial period</span>
+          <span className='text-gray-500 font-normal'>
+            Start your 7-days trial period
+          </span>
         </div>
       </Card.Header>
-      <Card.Body className="min-w-[300px] md:min-w-[400px]">
-        <div className="flex flex-col space-y-4">
+      <Card.Body className='min-w-[300px] md:min-w-[400px]'>
+        <div className='flex flex-col space-y-4'>
           <FormControl>
-            <FormControl.Label className="text-gray-700">Full name</FormControl.Label>
-            <FormControl.Input shadow="sm" tone="solid" placeholder="Enter your full name..." />
+            <FormControl.Label className='text-gray-700'>
+              Full name
+            </FormControl.Label>
+            <FormControl.Input
+              shadow='sm'
+              tone='solid'
+              placeholder='Enter your full name...'
+            />
           </FormControl>
 
           <FormControl>
-            <FormControl.Label className="text-gray-700">Email address</FormControl.Label>
+            <FormControl.Label className='text-gray-700'>
+              Email address
+            </FormControl.Label>
             <FormControl.Input
-              shadow="sm"
-              tone="solid"
-              placeholder="Enter a valid email address..."
+              shadow='sm'
+              tone='solid'
+              placeholder='Enter a valid email address...'
             />
           </FormControl>
         </div>
       </Card.Body>
       <Card.Footer>
-        <Button color="black" className="w-full">
+        <Button color='black' className='w-full'>
           Continue
         </Button>
       </Card.Footer>

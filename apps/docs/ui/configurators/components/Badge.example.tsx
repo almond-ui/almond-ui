@@ -1,4 +1,4 @@
-import { BadgeProps, Badge } from '@almond-ui/core';
+import { Badge, BadgeProps } from '@almond-ui/core';
 import * as React from 'react';
 
 export const BadgeCode = (props: any) => {
@@ -17,7 +17,9 @@ export const BadgeCode = (props: any) => {
     color !== defaultProps.color ? `color="${color}"` : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor ? `shadowColor="${shadowColor}"` : null,
+    shadowColor !== defaultProps.shadowColor
+      ? `shadowColor="${shadowColor}"`
+      : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     tone !== defaultProps.tone ? `tone="${tone}"` : null,
   ].filter(Boolean);

@@ -1,4 +1,7 @@
-import { TooltipArrowPlacement, TooltipProps } from '@components/Tooltip/Tooltip.types';
+import {
+  TooltipArrowPlacement,
+  TooltipProps,
+} from '@components/Tooltip/Tooltip.types';
 import {
   arrow,
   autoUpdate,

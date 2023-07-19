@@ -39,40 +39,40 @@ export const TooltipShowcase = (props: TooltipShowcaseProps) => {
 const ToneSolid = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" tone="solid" color="white">
-        <Button color="white">White</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='white'>
+        <Button color='white'>White</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="blue">
-        <Button color="blue">Blue</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='blue'>
+        <Button color='blue'>Blue</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="red">
-        <Button color="red">Red</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='red'>
+        <Button color='red'>Red</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="green">
-        <Button color="green">Green</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='green'>
+        <Button color='green'>Green</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="yellow">
-        <Button color="yellow">Yellow</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='yellow'>
+        <Button color='yellow'>Yellow</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="purple">
-        <Button color="purple">Purple</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='purple'>
+        <Button color='purple'>Purple</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="gray">
-        <Button color="gray">Gray</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='gray'>
+        <Button color='gray'>Gray</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="dark">
-        <Button color="dark">Dark</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='dark'>
+        <Button color='dark'>Dark</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="solid" color="black">
-        <Button color="black">Black</Button>
+      <Tooltip label='This is a Tooltip' tone='solid' color='black'>
+        <Button color='black'>Black</Button>
       </Tooltip>
     </>
   );
@@ -81,56 +81,56 @@ const ToneSolid = () => {
 const ToneLight = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" tone="light" color="white">
-        <Button tone="light" color="white">
+      <Tooltip label='This is a Tooltip' tone='light' color='white'>
+        <Button tone='light' color='white'>
           White
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="blue">
-        <Button tone="light" color="blue">
+      <Tooltip label='This is a Tooltip' tone='light' color='blue'>
+        <Button tone='light' color='blue'>
           Blue
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="red">
-        <Button tone="light" color="red">
+      <Tooltip label='This is a Tooltip' tone='light' color='red'>
+        <Button tone='light' color='red'>
           Red
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="green">
-        <Button tone="light" color="green">
+      <Tooltip label='This is a Tooltip' tone='light' color='green'>
+        <Button tone='light' color='green'>
           Green
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="yellow">
-        <Button tone="light" color="yellow">
+      <Tooltip label='This is a Tooltip' tone='light' color='yellow'>
+        <Button tone='light' color='yellow'>
           Yellow
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="purple">
-        <Button tone="light" color="purple">
+      <Tooltip label='This is a Tooltip' tone='light' color='purple'>
+        <Button tone='light' color='purple'>
           Purple
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="gray">
-        <Button tone="light" color="gray">
+      <Tooltip label='This is a Tooltip' tone='light' color='gray'>
+        <Button tone='light' color='gray'>
           Gray
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="dark">
-        <Button tone="light" color="dark">
+      <Tooltip label='This is a Tooltip' tone='light' color='dark'>
+        <Button tone='light' color='dark'>
           Dark
         </Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" tone="light" color="black">
-        <Button tone="light" color="black">
+      <Tooltip label='This is a Tooltip' tone='light' color='black'>
+        <Button tone='light' color='black'>
           Black
         </Button>
       </Tooltip>
@@ -141,19 +141,19 @@ const ToneLight = () => {
 const Sizes = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" size="xs">
+      <Tooltip label='This is a Tooltip' size='xs'>
         <Button>Extra small</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" size="sm">
+      <Tooltip label='This is a Tooltip' size='sm'>
         <Button>Small</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" size="md">
+      <Tooltip label='This is a Tooltip' size='md'>
         <Button>Medium</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" size="lg">
+      <Tooltip label='This is a Tooltip' size='lg'>
         <Button>Large</Button>
       </Tooltip>
     </>
@@ -163,27 +163,27 @@ const Sizes = () => {
 const Radiuses = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" radius="none">
+      <Tooltip label='This is a Tooltip' radius='none'>
         <Button>None</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" radius="sm">
+      <Tooltip label='This is a Tooltip' radius='sm'>
         <Button>Small</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" radius="base">
+      <Tooltip label='This is a Tooltip' radius='base'>
         <Button>Base</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" radius="md">
+      <Tooltip label='This is a Tooltip' radius='md'>
         <Button>Medium</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" radius="lg">
+      <Tooltip label='This is a Tooltip' radius='lg'>
         <Button>Large</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" radius="full">
+      <Tooltip label='This is a Tooltip' radius='full'>
         <Button>Full</Button>
       </Tooltip>
     </>
@@ -193,19 +193,19 @@ const Radiuses = () => {
 const Shadows = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" shadow="none" color="white">
+      <Tooltip label='This is a Tooltip' shadow='none' color='white'>
         <Button>None</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" shadow="sm" color="white">
+      <Tooltip label='This is a Tooltip' shadow='sm' color='white'>
         <Button>Small</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" shadow="base" color="white">
+      <Tooltip label='This is a Tooltip' shadow='base' color='white'>
         <Button>Base</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" shadow="md" color="white">
+      <Tooltip label='This is a Tooltip' shadow='md' color='white'>
         <Button>Medium</Button>
       </Tooltip>
     </>
@@ -215,19 +215,19 @@ const Shadows = () => {
 const Placements = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" placement="top">
+      <Tooltip label='This is a Tooltip' placement='top'>
         <Button>Top</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="bottom">
+      <Tooltip label='This is a Tooltip' placement='bottom'>
         <Button>Bottom</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="left">
+      <Tooltip label='This is a Tooltip' placement='left'>
         <Button>Left</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="right">
+      <Tooltip label='This is a Tooltip' placement='right'>
         <Button>Right</Button>
       </Tooltip>
     </>
@@ -237,11 +237,11 @@ const Placements = () => {
 const PlacementsExtendedTop = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" placement="top-start">
+      <Tooltip label='This is a Tooltip' placement='top-start'>
         <Button>Top start</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="top-end">
+      <Tooltip label='This is a Tooltip' placement='top-end'>
         <Button>Top end</Button>
       </Tooltip>
     </>
@@ -251,11 +251,11 @@ const PlacementsExtendedTop = () => {
 const PlacementsExtendedBottom = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" placement="bottom-start">
+      <Tooltip label='This is a Tooltip' placement='bottom-start'>
         <Button>Bottom start</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="bottom-end">
+      <Tooltip label='This is a Tooltip' placement='bottom-end'>
         <Button>Bottom end</Button>
       </Tooltip>
     </>
@@ -265,11 +265,11 @@ const PlacementsExtendedBottom = () => {
 const PlacementsExtendedLeft = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" placement="left-start">
+      <Tooltip label='This is a Tooltip' placement='left-start'>
         <Button>Left start</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="left-end">
+      <Tooltip label='This is a Tooltip' placement='left-end'>
         <Button>Left end</Button>
       </Tooltip>
     </>
@@ -279,11 +279,11 @@ const PlacementsExtendedLeft = () => {
 const PlacementsExtendedRight = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" placement="right-start">
+      <Tooltip label='This is a Tooltip' placement='right-start'>
         <Button>Right start</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" placement="right-end">
+      <Tooltip label='This is a Tooltip' placement='right-end'>
         <Button>Right end</Button>
       </Tooltip>
     </>
@@ -293,11 +293,11 @@ const PlacementsExtendedRight = () => {
 const InitiallyOpen = () => {
   return (
     <>
-      <Tooltip label="This is a Tooltip" initiallyOpen={true}>
+      <Tooltip label='This is a Tooltip' initiallyOpen={true}>
         <Button>Opened</Button>
       </Tooltip>
 
-      <Tooltip label="This is a Tooltip" initiallyOpen={false}>
+      <Tooltip label='This is a Tooltip' initiallyOpen={false}>
         <Button>Closed</Button>
       </Tooltip>
     </>

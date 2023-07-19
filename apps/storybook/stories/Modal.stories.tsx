@@ -1,4 +1,11 @@
-import { ModalSize, Modal, ModalProps, Card, Button, Text } from '@rewind-ui/core';
+import {
+  Button,
+  Card,
+  Modal,
+  ModalProps,
+  ModalSize,
+  Text,
+} from '@rewind-ui/core';
 import { Meta, Story } from '@storybook/react';
 import { useState } from 'react';
 import * as React from 'react';
@@ -59,14 +66,21 @@ const Template: Story<ModalProps> = (args) => {
           </Card>
         </Modal>
 
-        <Modal {...args} open={firstChildOpen} onClose={() => setFirstChildOpen(false)}>
+        <Modal
+          {...args}
+          open={firstChildOpen}
+          onClose={() => setFirstChildOpen(false)}
+        >
           <Card className="w-full">
             <Card.Body>
               <h1>This is a child modal</h1>
             </Card.Body>
 
             <Card.Footer className="bg-gray-50/50 justify-end space-x-2">
-              <Button variant="secondary" onClick={() => setFirstChildOpen(false)}>
+              <Button
+                variant="secondary"
+                onClick={() => setFirstChildOpen(false)}
+              >
                 Back
               </Button>
               <Button onClick={() => setSecondChildOpen(true)}>Next</Button>
@@ -74,14 +88,21 @@ const Template: Story<ModalProps> = (args) => {
           </Card>
         </Modal>
 
-        <Modal {...args} open={secondChildOpen} onClose={() => setSecondChildOpen(false)}>
+        <Modal
+          {...args}
+          open={secondChildOpen}
+          onClose={() => setSecondChildOpen(false)}
+        >
           <Card className="w-full">
             <Card.Body>
               <h1>This is a second child modal</h1>
             </Card.Body>
 
             <Card.Footer className="bg-gray-50/50 justify-end space-x-2">
-              <Button variant="secondary" onClick={() => setSecondChildOpen(false)}>
+              <Button
+                variant="secondary"
+                onClick={() => setSecondChildOpen(false)}
+              >
                 Back
               </Button>
             </Card.Footer>
@@ -105,7 +126,13 @@ const FullscreenTemplate: Story<ModalProps> = (args) => {
 
   return (
     <>
-      <Modal {...args} mode="fullscreen" radius="none" open={open} onClose={() => setOpen(false)}>
+      <Modal
+        {...args}
+        mode="fullscreen"
+        radius="none"
+        open={open}
+        onClose={() => setOpen(false)}
+      >
         <div className="flex flex-col h-full space-y-2 p-2">
           <Text>This is a fullscreen modal</Text>
 

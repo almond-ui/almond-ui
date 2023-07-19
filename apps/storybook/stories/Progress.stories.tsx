@@ -85,7 +85,13 @@ const ColorTemplate: Story<ProgressProps> = (args) => {
   const items = colors.map((color) => (
     <React.Fragment key={color}>
       <View prop="color" value={color} direction="column">
-        <Progress {...args} key={color} color={color} label={`Color: ${color}`} value={75} />
+        <Progress
+          {...args}
+          key={color}
+          color={color}
+          label={`Color: ${color}`}
+          value={75}
+        />
       </View>
     </React.Fragment>
   ));
@@ -99,7 +105,13 @@ const SizeTemplate: Story<ProgressProps> = (args) => {
   const items = sizes.map((size) => (
     <React.Fragment key={size}>
       <View prop="size" value={size} direction="column">
-        <Progress {...args} key={size} size={size} label={`Size: ${size}`} value={75} />
+        <Progress
+          {...args}
+          key={size}
+          size={size}
+          label={`Size: ${size}`}
+          value={75}
+        />
       </View>
     </React.Fragment>
   ));
@@ -113,7 +125,13 @@ const RadiusTemplate: Story<ProgressProps> = (args) => {
   const items = radiuses.map((radius) => (
     <React.Fragment key={radius}>
       <View prop="radius" value={radius} direction="column">
-        <Progress {...args} key={radius} radius={radius} label={`Radius: ${radius}`} value={75} />
+        <Progress
+          {...args}
+          key={radius}
+          radius={radius}
+          label={`Radius: ${radius}`}
+          value={75}
+        />
       </View>
     </React.Fragment>
   ));
@@ -127,7 +145,13 @@ const ShadowTemplate: Story<ProgressProps> = (args) => {
   const items = shadows.map((shadow) => (
     <React.Fragment key={shadow}>
       <View prop="shadow" value={shadow} direction="column">
-        <Progress {...args} key={shadow} shadow={shadow} label={`Shadow: ${shadow}`} value={75} />
+        <Progress
+          {...args}
+          key={shadow}
+          shadow={shadow}
+          label={`Shadow: ${shadow}`}
+          value={75}
+        />
       </View>
     </React.Fragment>
   ));

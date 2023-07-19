@@ -18,7 +18,9 @@ export const SwitchCode = (props: any) => {
     'label="Click me!"',
     color !== defaultProps.color ? `color="${color}"` : null,
     error !== defaultProps.error ? `error="${error}"` : null,
-    description !== defaultProps.description ? `description="${description}"` : null,
+    description !== defaultProps.description
+      ? `description="${description}"`
+      : null,
     radius !== defaultProps.radius ? `radius="${radius}"` : null,
     size !== defaultProps.size ? `size="${size}"` : null,
     disabled !== defaultProps.disabled ? `disabled={${disabled}}` : null,
@@ -36,5 +38,5 @@ function App() {
 };
 
 export const SwitchExample = (props: SwitchProps) => {
-  return <Switch label="Click me!" {...props} />;
+  return <Switch label='Click me!' {...props} />;
 };

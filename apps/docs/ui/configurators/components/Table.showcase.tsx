@@ -1,20 +1,20 @@
 import {
+  Avatar,
+  AvatarColor,
+  Badge,
+  Button,
+  Dropdown,
   Table,
+  TableBorderStyle,
+  TableHeaderColor,
   TableProps,
   TableRadius,
   TableSize,
-  TableBorderStyle,
-  TableHeaderColor,
-  Badge,
-  Dropdown,
-  Button,
-  Avatar,
-  AvatarColor,
 } from '@almond-ui/core';
 import { TableStripePosition } from '@almond-ui/core/dist/components/Table/Table.types';
 import { TrColor } from '@almond-ui/core/dist/components/Table/Tr/Tr.types';
+import { ChartLineDown, ChartLineUp, DotsThree } from '@phosphor-icons/react';
 import * as React from 'react';
-import { DotsThree, ChartLineUp, ChartLineDown } from '@phosphor-icons/react';
 
 export type TableShowcaseProps = {
   showcase:
@@ -132,7 +132,7 @@ const Template = (args: TableProps) => (
         <Table.Tr key={row.first_name}>
           <Table.Td>{row.first_name}</Table.Td>
           <Table.Td>{row.last_name}</Table.Td>
-          <Table.Td align="center">{row.age}</Table.Td>
+          <Table.Td align='center'>{row.age}</Table.Td>
         </Table.Tr>
       ))}
     </Table.Tbody>
@@ -157,13 +157,17 @@ const HeaderColor = () => {
 };
 
 const Size = () => {
-  const items = sizes.map((size: TableSize) => <Template key={size} size={size} />);
+  const items = sizes.map((size: TableSize) => (
+    <Template key={size} size={size} />
+  ));
 
   return <>{items}</>;
 };
 
 const Radius = () => {
-  const items = radiuses.map((radius: TableRadius) => <Template key={radius} radius={radius} />);
+  const items = radiuses.map((radius: TableRadius) => (
+    <Template key={radius} radius={radius} />
+  ));
 
   return <>{items}</>;
 };
@@ -178,7 +182,11 @@ const Striped = () => {
 
 const StripePosition = () => {
   const items = stripePositions.map((stripePosition: TableStripePosition) => (
-    <Template key={stripePosition} striped={true} stripePosition={stripePosition} />
+    <Template
+      key={stripePosition}
+      striped={true}
+      stripePosition={stripePosition}
+    />
   ));
 
   return <>{items}</>;
@@ -197,8 +205,8 @@ const BorderStyle = () => {
     <Template
       key={borderStyle}
       borderStyle={borderStyle}
-      stripePosition="odd"
-      headerColor="white"
+      stripePosition='odd'
+      headerColor='white'
     />
   ));
 
@@ -222,7 +230,7 @@ const RowColor = () => {
           <Table.Tr key={row.first_name} color={index === 1 ? color : 'none'}>
             <Table.Td>{row.first_name}</Table.Td>
             <Table.Td>{row.last_name}</Table.Td>
-            <Table.Td align="center">{row.age}</Table.Td>
+            <Table.Td align='center'>{row.age}</Table.Td>
           </Table.Tr>
         ))}
       </Table.Tbody>
@@ -281,171 +289,197 @@ type UserCardProps = {
 
 const UserCard = ({ initials, color = 'blue', name, email }: UserCardProps) => {
   return (
-    <div className="flex space-x-3 p-2">
-      <Avatar color={color} initials={initials} tone="glossy" />
-      <div className="flex flex-col space-y-1 text-sm">
-        <div className="font-medium">{name}</div>
-        <div className="text-gray-500">{email}</div>
+    <div className='flex space-x-3 p-2'>
+      <Avatar color={color} initials={initials} tone='glossy' />
+      <div className='flex flex-col space-y-1 text-sm'>
+        <div className='font-medium'>{name}</div>
+        <div className='text-gray-500'>{email}</div>
       </div>
     </div>
   );
 };
 
 const UsersTable = () => (
-  <Table radius="lg" striped={true} hoverable={true} headerColor="white" borderStyle="dashed">
+  <Table
+    radius='lg'
+    striped={true}
+    hoverable={true}
+    headerColor='white'
+    borderStyle='dashed'
+  >
     <Table.Thead>
       <Table.Tr>
-        <Table.Th align="left">User</Table.Th>
-        <Table.Th align="left">Role</Table.Th>
-        <Table.Th align="left">Status</Table.Th>
-        <Table.Th align="right">Actions</Table.Th>
+        <Table.Th align='left'>User</Table.Th>
+        <Table.Th align='left'>Role</Table.Th>
+        <Table.Th align='left'>Status</Table.Th>
+        <Table.Th align='right'>Actions</Table.Th>
       </Table.Tr>
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr>
         <Table.Td>
-          <UserCard initials="JD" name="John Doe" email="john.doe@mail.com" color="purple" />
+          <UserCard
+            initials='JD'
+            name='John Doe'
+            email='john.doe@mail.com'
+            color='purple'
+          />
         </Table.Td>
         <Table.Td>
-          <Badge color="purple" tone="light">
+          <Badge color='purple' tone='light'>
             Admin
           </Badge>
         </Table.Td>
         <Table.Td>
-          <Badge color="green" tone="outline">
-            <div className="w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5" />
+          <Badge color='green' tone='outline'>
+            <div className='w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5' />
             Active
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
+        <Table.Td align='right'>
           <Dropdown
-            itemColor="gray"
-            tone="light"
-            placement="bottom-end"
-            shadow="sm"
+            itemColor='gray'
+            tone='light'
+            placement='bottom-end'
+            shadow='sm'
             withChevron={false}
           >
             <Dropdown.Trigger>
-              <Button color="white" tone="light" size="sm" shadow="sm" icon>
+              <Button color='white' tone='light' size='sm' shadow='sm' icon>
                 <DotsThree size={18} />
               </Button>
             </Dropdown.Trigger>
-            <Dropdown.Content className="min-w-[7rem]">
+            <Dropdown.Content className='min-w-[7rem]'>
               <Dropdown.Item>View</Dropdown.Item>
               <Dropdown.Item>Edit</Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item color="red">Delete</Dropdown.Item>
+              <Dropdown.Item color='red'>Delete</Dropdown.Item>
             </Dropdown.Content>
           </Dropdown>
         </Table.Td>
       </Table.Tr>
       <Table.Tr>
         <Table.Td>
-          <UserCard initials="JS" name="Jane Stan" email="jane.stan@mail.com" color="red" />
+          <UserCard
+            initials='JS'
+            name='Jane Stan'
+            email='jane.stan@mail.com'
+            color='red'
+          />
         </Table.Td>
         <Table.Td>
-          <Badge color="red" tone="light">
+          <Badge color='red' tone='light'>
             Moderator
           </Badge>
         </Table.Td>
         <Table.Td>
-          <Badge color="green" tone="outline">
-            <div className="w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5" />
+          <Badge color='green' tone='outline'>
+            <div className='w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5' />
             Active
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
+        <Table.Td align='right'>
           <Dropdown
-            itemColor="gray"
-            tone="light"
-            placement="bottom-end"
-            shadow="sm"
+            itemColor='gray'
+            tone='light'
+            placement='bottom-end'
+            shadow='sm'
             withChevron={false}
           >
             <Dropdown.Trigger>
-              <Button color="white" tone="light" size="sm" shadow="sm" icon>
+              <Button color='white' tone='light' size='sm' shadow='sm' icon>
                 <DotsThree size={18} />
               </Button>
             </Dropdown.Trigger>
-            <Dropdown.Content className="min-w-[7rem]">
+            <Dropdown.Content className='min-w-[7rem]'>
               <Dropdown.Item>View</Dropdown.Item>
               <Dropdown.Item>Edit</Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item color="red">Delete</Dropdown.Item>
+              <Dropdown.Item color='red'>Delete</Dropdown.Item>
             </Dropdown.Content>
           </Dropdown>
         </Table.Td>
       </Table.Tr>
       <Table.Tr>
         <Table.Td>
-          <UserCard initials="CD" name="Chris Doe" email="chris.doe@mail.com" color="gray" />
+          <UserCard
+            initials='CD'
+            name='Chris Doe'
+            email='chris.doe@mail.com'
+            color='gray'
+          />
         </Table.Td>
         <Table.Td>
-          <Badge color="dark" tone="light">
+          <Badge color='dark' tone='light'>
             User
           </Badge>
         </Table.Td>
         <Table.Td>
-          <Badge color="red" tone="outline">
-            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mr-1.5" />
+          <Badge color='red' tone='outline'>
+            <div className='w-1.5 h-1.5 bg-red-500 rounded-full mr-1.5' />
             Inactive
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
+        <Table.Td align='right'>
           <Dropdown
-            itemColor="gray"
-            tone="light"
-            placement="bottom-end"
-            shadow="sm"
+            itemColor='gray'
+            tone='light'
+            placement='bottom-end'
+            shadow='sm'
             withChevron={false}
           >
             <Dropdown.Trigger>
-              <Button color="white" tone="light" size="sm" shadow="sm" icon>
+              <Button color='white' tone='light' size='sm' shadow='sm' icon>
                 <DotsThree size={18} />
               </Button>
             </Dropdown.Trigger>
-            <Dropdown.Content className="min-w-[7rem]">
+            <Dropdown.Content className='min-w-[7rem]'>
               <Dropdown.Item>View</Dropdown.Item>
               <Dropdown.Item>Edit</Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item color="red">Delete</Dropdown.Item>
+              <Dropdown.Item color='red'>Delete</Dropdown.Item>
             </Dropdown.Content>
           </Dropdown>
         </Table.Td>
       </Table.Tr>
       <Table.Tr>
         <Table.Td>
-          <UserCard initials="JC" name="John Clark" email="john.clark@mail.com" color="blue" />
+          <UserCard
+            initials='JC'
+            name='John Clark'
+            email='john.clark@mail.com'
+            color='blue'
+          />
         </Table.Td>
         <Table.Td>
-          <Badge color="dark" tone="light">
+          <Badge color='dark' tone='light'>
             User
           </Badge>
         </Table.Td>
         <Table.Td>
-          <Badge color="green" tone="outline">
-            <div className="w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5" />
+          <Badge color='green' tone='outline'>
+            <div className='w-1.5 h-1.5 bg-green-500 animate-pulse rounded-full mr-1.5' />
             Active
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
+        <Table.Td align='right'>
           <Dropdown
-            itemColor="gray"
-            tone="light"
-            placement="bottom-end"
-            shadow="sm"
+            itemColor='gray'
+            tone='light'
+            placement='bottom-end'
+            shadow='sm'
             withChevron={false}
           >
             <Dropdown.Trigger>
-              <Button color="white" tone="light" size="sm" shadow="sm" icon>
+              <Button color='white' tone='light' size='sm' shadow='sm' icon>
                 <DotsThree size={18} />
               </Button>
             </Dropdown.Trigger>
-            <Dropdown.Content className="min-w-[7rem]">
+            <Dropdown.Content className='min-w-[7rem]'>
               <Dropdown.Item>View</Dropdown.Item>
               <Dropdown.Item>Edit</Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item color="red">Delete</Dropdown.Item>
+              <Dropdown.Item color='red'>Delete</Dropdown.Item>
             </Dropdown.Content>
           </Dropdown>
         </Table.Td>
@@ -456,31 +490,31 @@ const UsersTable = () => (
 
 const ProductsTable = () => (
   <Table
-    radius="base"
+    radius='base'
     striped={true}
     hoverable={true}
     horizontalBorders={false}
     outerBorders={false}
-    headerColor="dark"
+    headerColor='dark'
   >
     <Table.Thead>
       <Table.Tr>
-        <Table.Th align="left">Product</Table.Th>
-        <Table.Th align="left">Category</Table.Th>
-        <Table.Th align="right">Price</Table.Th>
+        <Table.Th align='left'>Product</Table.Th>
+        <Table.Th align='left'>Category</Table.Th>
+        <Table.Th align='right'>Price</Table.Th>
       </Table.Tr>
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr>
         <Table.Td>Google Pixel 7</Table.Td>
         <Table.Td>
-          <Badge color="purple" tone="light">
+          <Badge color='purple' tone='light'>
             Mobile
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
-          <Badge color="red" tone="outline">
-            <ChartLineDown size={16} className="mr-1" weight="duotone" />
+        <Table.Td align='right'>
+          <Badge color='red' tone='outline'>
+            <ChartLineDown size={16} className='mr-1' weight='duotone' />
             $599.00
           </Badge>
         </Table.Td>
@@ -488,13 +522,13 @@ const ProductsTable = () => (
       <Table.Tr>
         <Table.Td>iPhone 12 Pro Max</Table.Td>
         <Table.Td>
-          <Badge color="purple" tone="light">
+          <Badge color='purple' tone='light'>
             Mobile
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
-          <Badge color="green" tone="outline">
-            <ChartLineUp size={16} className="mr-1" weight="duotone" />
+        <Table.Td align='right'>
+          <Badge color='green' tone='outline'>
+            <ChartLineUp size={16} className='mr-1' weight='duotone' />
             $1,099.00
           </Badge>
         </Table.Td>
@@ -502,13 +536,13 @@ const ProductsTable = () => (
       <Table.Tr>
         <Table.Td>Apple Studio Display</Table.Td>
         <Table.Td>
-          <Badge color="red" tone="light">
+          <Badge color='red' tone='light'>
             Monitors
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
-          <Badge color="red" tone="outline">
-            <ChartLineDown size={16} className="mr-1" weight="duotone" />
+        <Table.Td align='right'>
+          <Badge color='red' tone='outline'>
+            <ChartLineDown size={16} className='mr-1' weight='duotone' />
             $1,799.00
           </Badge>
         </Table.Td>
@@ -516,13 +550,13 @@ const ProductsTable = () => (
       <Table.Tr>
         <Table.Td>Microsoft Surface Pro</Table.Td>
         <Table.Td>
-          <Badge color="blue" tone="light">
+          <Badge color='blue' tone='light'>
             Laptop
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
-          <Badge color="green" tone="outline">
-            <ChartLineUp size={16} className="mr-1" weight="duotone" />
+        <Table.Td align='right'>
+          <Badge color='green' tone='outline'>
+            <ChartLineUp size={16} className='mr-1' weight='duotone' />
             $1,099.00
           </Badge>
         </Table.Td>
@@ -530,13 +564,13 @@ const ProductsTable = () => (
       <Table.Tr>
         <Table.Td>Magic Keyboard</Table.Td>
         <Table.Td>
-          <Badge color="green" tone="light">
+          <Badge color='green' tone='light'>
             Accessories
           </Badge>
         </Table.Td>
-        <Table.Td align="right">
-          <Badge color="green" tone="outline">
-            <ChartLineUp size={16} className="mr-1" weight="duotone" />
+        <Table.Td align='right'>
+          <Badge color='green' tone='outline'>
+            <ChartLineUp size={16} className='mr-1' weight='duotone' />
             $349.00
           </Badge>
         </Table.Td>

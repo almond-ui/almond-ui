@@ -1,4 +1,7 @@
-import { InputCode, InputExample } from '@/ui/configurators/components/Input.example';
+import {
+  InputCode,
+  InputExample,
+} from '@/ui/configurators/components/Input.example';
 
 export const InputConfig = {
   example: InputExample,

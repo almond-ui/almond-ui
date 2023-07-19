@@ -1,4 +1,7 @@
-import { CheckboxCode, CheckboxExample } from '@/ui/configurators/components/Checkbox.example';
+import {
+  CheckboxCode,
+  CheckboxExample,
+} from '@/ui/configurators/components/Checkbox.example';
 
 export const CheckboxConfig = {
   example: CheckboxExample,
@@ -24,7 +27,16 @@ export const CheckboxConfig = {
       label: 'Color',
       name: 'color',
       type: 'color',
-      colors: ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'],
+      colors: [
+        'blue',
+        'red',
+        'green',
+        'yellow',
+        'purple',
+        'gray',
+        'dark',
+        'black',
+      ],
     },
     {
       label: 'Size',

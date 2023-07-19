@@ -40,8 +40,25 @@ export type TextSize =
   | '7xl'
   | '8xl'
   | '9xl';
-export type TextTracking = 'tighter' | 'tight' | 'normal' | 'wide' | 'wider' | 'widest';
-export type TextVariant = 'd1' | 'd2' | 'd3' | 'd4' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
+export type TextTracking =
+  | 'tighter'
+  | 'tight'
+  | 'normal'
+  | 'wide'
+  | 'wider'
+  | 'widest';
+export type TextVariant =
+  | 'd1'
+  | 'd2'
+  | 'd3'
+  | 'd4'
+  | 'h1'
+  | 'h2'
+  | 'h3'
+  | 'h4'
+  | 'h5'
+  | 'h6'
+  | 'p';
 export type TextWeight =
   | 'thin'
   | 'extraLight'
@@ -62,7 +79,8 @@ export type TextProps = {
   weight?: TextWeight;
 };
 
-type PolymorphicTextProps<C extends ElementType> = PolymorphicComponentPropWithRef<C, TextProps>;
+type PolymorphicTextProps<C extends ElementType> =
+  PolymorphicComponentPropWithRef<C, TextProps>;
 
 type PolymorphicTextComponent = <C extends ElementType = 'span'>(
   props: PolymorphicTextProps<C>

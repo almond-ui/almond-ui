@@ -1,4 +1,8 @@
-import { TabComponent, TabProps, TabStateType } from '@components/Tabs/Tab/Tab.types';
+import {
+  TabComponent,
+  TabProps,
+  TabStateType,
+} from '@components/Tabs/Tab/Tab.types';
 import { useTabsContext } from '@components/Tabs/Tabs.context';
 import { useComponentTheme } from '@theme/theme.context';
 import { forwardRef, Ref, useMemo } from 'react';
@@ -9,7 +13,16 @@ const Tab: TabComponent = forwardRef<HTMLButtonElement, TabProps>(
     const theme = useComponentTheme('Tabs');
     const { anchor, children, className, ...additionalProps } = props;
 
-    const { activeTabAnchor, baseId, color, fullWidth, radius, setActiveTabAnchor, size, tone } = {
+    const {
+      activeTabAnchor,
+      baseId,
+      color,
+      fullWidth,
+      radius,
+      setActiveTabAnchor,
+      size,
+      tone,
+    } = {
       ...useTabsContext(),
     };
     const id = `tab-${baseId}-${anchor}`;

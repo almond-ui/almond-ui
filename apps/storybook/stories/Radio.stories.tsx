@@ -1,17 +1,26 @@
 import {
   Radio,
+  RadioColor,
   RadioGroup,
   RadioProps,
-  RadioColor,
   RadioRadius,
   RadioSize,
   RadioTone,
 } from '@rewind-ui/core';
-import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
 import { View, ViewGroup } from '../components/View';
 
-const colors: RadioColor[] = ['blue', 'red', 'green', 'yellow', 'purple', 'gray', 'dark', 'black'];
+const colors: RadioColor[] = [
+  'blue',
+  'red',
+  'green',
+  'yellow',
+  'purple',
+  'gray',
+  'dark',
+  'black',
+];
 const radiuses: RadioRadius[] = ['none', 'sm', 'base', 'md', 'lg', 'full'];
 const sizes: RadioSize[] = ['sm', 'md', 'lg', 'xl'];
 const tones: RadioTone[] = ['solid', 'light'];
@@ -71,7 +80,13 @@ export const Default = DefaultTemplate.bind({});
 const ColorTemplate: Story<RadioProps> = (args) => {
   const items = colors.map((color) => (
     <View prop="color" value={color} key={color}>
-      <Radio name={'color'} label={label} color={color} defaultChecked={true} {...args} />
+      <Radio
+        name={'color'}
+        label={label}
+        color={color}
+        defaultChecked={true}
+        {...args}
+      />
     </View>
   ));
 

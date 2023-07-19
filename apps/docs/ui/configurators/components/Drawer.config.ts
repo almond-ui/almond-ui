@@ -1,4 +1,7 @@
-import { DrawerCode, DrawerExample } from '@/ui/configurators/components/Drawer.example';
+import {
+  DrawerCode,
+  DrawerExample,
+} from '@/ui/configurators/components/Drawer.example';
 
 export const DrawerConfig = {
   example: DrawerExample,

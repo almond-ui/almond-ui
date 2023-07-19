@@ -1,4 +1,5 @@
 'use client';
+
 import { CheckboxComponent, CheckboxProps } from '@components/Checkbox';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
@@ -69,21 +70,31 @@ const Checkbox: CheckboxComponent = forwardRef<HTMLInputElement, CheckboxProps>(
           <label
             id={`${id}-label`}
             htmlFor={id}
-            className={twMerge(theme.label({ disabled, size, className: labelClassName }))}
+            className={twMerge(
+              theme.label({ disabled, size, className: labelClassName })
+            )}
           >
             {label}
           </label>
           {description && (
             <span
               className={twMerge(
-                theme.description({ disabled, size, className: descriptionClassName })
+                theme.description({
+                  disabled,
+                  size,
+                  className: descriptionClassName,
+                })
               )}
             >
               {description}
             </span>
           )}
           {error && (
-            <span className={twMerge(theme.error({ disabled, size, className: errorClassName }))}>
+            <span
+              className={twMerge(
+                theme.error({ disabled, size, className: errorClassName })
+              )}
+            >
               {error}
             </span>
           )}

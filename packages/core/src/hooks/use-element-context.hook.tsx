@@ -1,4 +1,5 @@
 'use client';
+
 import { createContext, ReactNode, useContext } from 'react';
 
 export function createElementContext<ContextValue>(errorMessage: string) {
@@ -14,9 +15,13 @@ export function createElementContext<ContextValue>(errorMessage: string) {
     return context;
   };
 
-  const Provider = ({ children, value }: { value: ContextValue; children: ReactNode }) => (
-    <Context.Provider value={value}>{children}</Context.Provider>
-  );
+  const Provider = ({
+    children,
+    value,
+  }: {
+    value: ContextValue;
+    children: ReactNode;
+  }) => <Context.Provider value={value}>{children}</Context.Provider>;
 
   return [Provider, useElementContext] as const;
 }

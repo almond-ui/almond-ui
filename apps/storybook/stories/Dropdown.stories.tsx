@@ -1,19 +1,4 @@
 import {
-  DropdownSize,
-  DropdownRadius,
-  DropdownPlacement,
-  DropdownShadow,
-  DropdownColor,
-  DropdownMode,
-  Dropdown,
-  Button,
-  DropdownProps,
-  DropdownItemColor,
-} from '@rewind-ui/core';
-import * as React from 'react';
-import { Meta, Story } from '@storybook/react';
-import { EnhancedView, View, ViewGroup } from '../components/View';
-import {
   ChatCircleText,
   Export,
   Gear,
@@ -23,6 +8,21 @@ import {
   Trash,
   XCircle,
 } from '@phosphor-icons/react';
+import {
+  Button,
+  Dropdown,
+  DropdownColor,
+  DropdownItemColor,
+  DropdownMode,
+  DropdownPlacement,
+  DropdownProps,
+  DropdownRadius,
+  DropdownShadow,
+  DropdownSize,
+} from '@rewind-ui/core';
+import { Meta, Story } from '@storybook/react';
+import * as React from 'react';
+import { EnhancedView, View, ViewGroup } from '../components/View';
 
 const sizes: DropdownSize[] = ['xs', 'sm', 'md', 'lg'];
 const radiuses: DropdownRadius[] = ['none', 'sm', 'base', 'md', 'lg'];

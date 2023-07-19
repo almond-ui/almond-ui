@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
+import { config } from '@/lib/config';
 import { Aside } from '@/ui/Aside';
 import { Footer } from '@/ui/Footer';
-import { config } from '@/lib/config';
 import { ReactNode } from 'react';
 
 export const metadata = {
@@ -13,7 +13,13 @@ export const metadata = {
   generator: 'Next.js',
   applicationName: 'Almond-UI - Documentation',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Next.js', 'React', 'Tailwind CSS', 'UI', 'React component library'],
+  keywords: [
+    'Next.js',
+    'React',
+    'Tailwind CSS',
+    'UI',
+    'React component library',
+  ],
   authors: [{ name: 'Francis Masha' }],
   colorScheme: 'light',
   creator: 'Francis Masha',
@@ -46,13 +52,15 @@ export const metadata = {
 export default function DocsLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <div className="container max-w-8xl h-full flex items-center mx-auto">
-        <div className="flex w-full">
-          <div className="hidden 2xl:block 2xl:w-1/6 border-r border-r-gray-100">
+      <div className='container max-w-8xl h-full flex items-center mx-auto'>
+        <div className='flex w-full'>
+          <div className='hidden 2xl:block 2xl:w-1/6 border-r border-r-gray-100'>
             <Aside />
           </div>
 
-          <div className="w-full 2xl:block 2xl:w-5/6 min-h-[85vh] mb-4">{children}</div>
+          <div className='w-full 2xl:block 2xl:w-5/6 min-h-[85vh] mb-4'>
+            {children}
+          </div>
         </div>
       </div>
 
