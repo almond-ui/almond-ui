@@ -7,14 +7,14 @@
 		"name": "Francis Masha",
 		"email": "francismasha96@gmail.com"
 	},
-	"homepage": "https://almond-ui.dev/",
+	"homepage": "https://almond-ui.francismasha.com/",
 	"repository": {
-		"url": "https://github.com/mashafrancis/almond-ui.git",
+		"url": "https://github.com/almond-ui/almond-ui.git",
 		"type": "git",
 		"directory": "packages/core"
 	},
 	"bugs": {
-		"url": "https://github.com/mashafrancis/almond-ui/issues"
+		"url": "https://github.com/almond-ui/almond-ui/issues"
 	},
 	"keywords": [
 		"react",
