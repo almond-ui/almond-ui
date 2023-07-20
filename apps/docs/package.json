@@ -11,7 +11,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .next && rm -rf .contentlayer"
   },
   "dependencies": {
-    "@almond-ui/core": "workspace:*",
+    "@almond-ui/core": "1.0.0",
     "@codesandbox/sandpack-react": "^2.6.9",
     "@phosphor-icons/react": "^2.0.10",
     "@types/node": "^20.4.2",

@@ -36,7 +36,7 @@ importers:
   apps/docs:
     dependencies:
       '@almond-ui/core':
-        specifier: workspace:*
+        specifier: 1.0.0
         version: link:../../packages/core
       '@codesandbox/sandpack-react':
         specifier: ^2.6.9
@@ -148,7 +148,7 @@ importers:
   apps/storybook:
     dependencies:
       '@almond-ui/core':
-        specifier: workspace:*
+        specifier: 1.0.0
         version: link:../../packages/core
       '@phosphor-icons/react':
         specifier: ^2.0.10

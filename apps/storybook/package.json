@@ -9,7 +9,7 @@
 		"clean": "rm -rf .turbo && rm -rf node_modules"
 	},
 	"dependencies": {
-		"@almond-ui/core": "workspace:*",
+		"@almond-ui/core": "1.0.0",
 		"@phosphor-icons/react": "^2.0.10",
 		"class-variance-authority": "^0.7.0",
 		"react": "^18.2.0",
