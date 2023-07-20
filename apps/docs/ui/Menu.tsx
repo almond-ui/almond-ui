@@ -127,7 +127,6 @@ const menuItems: MenuItem[] = [
       {
         title: 'Toast',
         path: '/components/toast',
-        newItem: true,
       },
       {
         title: 'Tooltip',

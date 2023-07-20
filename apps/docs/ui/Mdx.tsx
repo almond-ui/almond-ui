@@ -41,6 +41,10 @@ import {
   TabsShowcaseProps,
 } from '@/ui/configurators/components/Tabs.showcase';
 import {
+  ToastShowcase,
+  ToastShowcaseProps,
+} from '@/ui/configurators/components/Toast.showcase';
+import {
   TooltipShowcase,
   TooltipShowcaseProps,
 } from '@/ui/configurators/components/Tooltip.showcase';
@@ -66,6 +70,7 @@ import {
   Table,
   Text,
   Textarea,
+  Toast,
 } from '@almond-ui/core';
 import {
   At,
@@ -122,7 +127,9 @@ const components = {
   a: ({ ...props }) => (
     <a
       className='text-blue-600 underline decoration-blue-500 decoration-solid decoration-2'
-      target='_blank'
+      target={
+        props.href && props.href.startsWith('http') ? '_blank' : undefined
+      }
       {...props}
     />
   ),
@@ -200,6 +207,10 @@ const components = {
   RadioGroup: ({ name, ...props }) => <RadioGroup name={name} {...props} />,
   Ribbon: ({ ...props }) => <Ribbon {...props} />,
   Switch: ({ ...props }) => <Switch {...props} />,
+  Toast: ({ ...props }) => <Toast {...props} />,
+  ToastShowcase: ({ showcase }: ToastShowcaseProps) => (
+    <ToastShowcase showcase={showcase} />
+  ),
   DropdownShowcase: ({ showcase }: DropdownShowcaseProps) => (
     <DropdownShowcase showcase={showcase} />
   ),
