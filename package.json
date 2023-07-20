@@ -1,5 +1,9 @@
 {
 	"name": "@almond-ui/almond-ui",
+	"author": {
+		"name": "Francis Masha",
+		"email": "francismasha96@gmail.com"
+	},
 	"private": true,
 	"scripts": {
 		"build": "turbo run build",

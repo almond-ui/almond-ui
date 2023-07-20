@@ -1,6 +1,6 @@
 {
 	"name": "@almond-ui/storybook",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "storybook dev -p 6006 --no-open",
@@ -9,7 +9,7 @@
 		"clean": "rm -rf .turbo && rm -rf node_modules"
 	},
 	"dependencies": {
-		"@almond-ui/core": "1.0.0",
+		"@almond-ui/core": "workspace:*",
 		"@phosphor-icons/react": "^2.0.10",
 		"class-variance-authority": "^0.7.0",
 		"react": "^18.2.0",
