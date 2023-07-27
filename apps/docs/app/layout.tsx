@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       )}
     >
       <body className='antialiased'>
-        <main className='flex min-h-screen flex-col'>
+        <main className='relative flex min-h-screen flex-col items-center justify-center'>
           <Header />
           {children}
         </main>

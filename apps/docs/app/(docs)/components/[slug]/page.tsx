@@ -88,7 +88,7 @@ const ComponentLayout = async ({ params }: ComponentProps) => {
         <Pager current={component} />
       </article>
 
-      <div className='hidden 2xl:block 2xl:w-1/6'>
+      <div className='hidden border-l border-l-gray-100 pl-4 2xl:block 2xl:w-1/6'>
         <Toc toc={toc} />
       </div>
     </div>

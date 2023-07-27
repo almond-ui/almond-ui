@@ -35,8 +35,8 @@ export const MenuItem = (props: {
     {
       variants: {
         active: {
-          true: ['text-blue-600', 'font-medium'],
-          false: ['text-gray-600'],
+          true: ['text-blue-900', 'font-medium'],
+          false: ['text-gray-800'],
         },
         hasIcon: {
           true: ['pr-4'],
@@ -51,12 +51,12 @@ export const MenuItem = (props: {
         {
           active: true,
           hasIcon: false,
-          className: ['border-l-blue-500', 'bg-blue-50'],
+          className: ['border-l-blue-900', 'bg-blue-50'],
         },
         {
           active: false,
           hasIcon: false,
-          className: ['hover:border-l-blue-300', 'hover:bg-blue-50/25'],
+          className: ['hover:border-l-blue-700', 'hover:bg-blue-50/25'],
         },
       ],
     }
@@ -66,17 +66,17 @@ export const MenuItem = (props: {
     variants: {
       active: {
         true: [
-          'border-blue-500',
-          'text-blue-500',
+          'border-blue-900',
+          'text-blue-900',
           'bg-blue-50',
           'shadow-sm',
-          'shadow-blue-500/50',
+          'shadow-blue-900/50',
         ],
         false: [
           'border-gray-300',
           'text-gray-400',
-          'group-hover:text-blue-300',
-          'group-hover:border-blue-300',
+          'group-hover:text-blue-900',
+          'group-hover:border-blue-900',
           'group-hover:bg-blue-50',
         ],
       },

@@ -4,7 +4,7 @@ const base = cva(['cursor-pointer', 'form-checkbox'], {
   variants: {
     color: {
       blue: [
-        'text-blue-500',
+        'text-blue-900',
         'hover:text-blue-600',
         'focus:text-blue-600',
         'focus:ring-blue-100',

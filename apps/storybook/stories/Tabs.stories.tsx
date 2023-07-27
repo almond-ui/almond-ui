@@ -1,4 +1,3 @@
-import { HandWaving, Info, Lifebuoy, Sparkle } from '@phosphor-icons/react';
 import {
   Card,
   Tabs,
@@ -7,7 +6,8 @@ import {
   TabsRadius,
   TabsSize,
   TabsTone,
-} from '@rewind-ui/core';
+} from '@almond-ui/core';
+import { HandWaving, Info, Lifebuoy, Sparkle } from '@phosphor-icons/react';
 import { Meta, Story } from '@storybook/react';
 import * as React from 'react';
 import { EnhancedView, View, ViewGroup } from '../components/View';
@@ -30,28 +30,28 @@ const tabs = [
   {
     anchor: 'tab-1',
     label: 'Introduction',
-    icon: <HandWaving weight="duotone" className="text-blue-500" />,
+    icon: <HandWaving weight="duotone" className="text-blue-900" />,
     content:
       "Rewind UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project. We've designed our components to be flexible and easy to use, so you can focus on what matters most: building great user experiences.",
   },
   {
     anchor: 'tab-2',
     label: 'Getting started',
-    icon: <Sparkle weight="duotone" className="text-blue-500" />,
+    icon: <Sparkle weight="duotone" className="text-blue-900" />,
     content:
       "Getting started with Rewind UI is easy! Simply install the package using your package manager of choice, and you're ready to go. We've also included a set of Storybook stories to help you get familiar with our components and how to use them.",
   },
   {
     anchor: 'tab-3',
     label: 'Contribute',
-    icon: <Lifebuoy weight="duotone" className="text-blue-500" />,
+    icon: <Lifebuoy weight="duotone" className="text-blue-900" />,
     content:
       "We're always looking for new contributors to help us improve Rewind UI! If you'd like to contribute, please check out our contribution guidelines to get started. We're looking forward to working with you!",
   },
   {
     anchor: 'tab-4',
     label: 'Information',
-    icon: <Info weight="duotone" className="text-blue-500" />,
+    icon: <Info weight="duotone" className="text-blue-900" />,
     content:
       "If you'd like to learn more about Rewind UI, please visit our website. You can also follow us on Twitter to stay up to date with the latest news and updates.",
   },
