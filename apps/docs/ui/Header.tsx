@@ -62,7 +62,7 @@ export const Header = () => {
         >
           <div className='container mx-auto flex justify-between'>
             <div className='hidden items-center justify-center gap-2 align-middle lg:flex'>
-              <ScribbleLoop size={32} color='#1976d2' weight='duotone' />
+              <ScribbleLoop size={32} color='#0074a6' weight='duotone' />
               <Link
                 href='/'
                 aria-label='musings'

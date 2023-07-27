@@ -126,7 +126,7 @@ const components = {
   ),
   a: ({ ...props }) => (
     <a
-      className='text-blue-600 underline decoration-blue-500 decoration-solid decoration-2'
+      className='text-blue-800'
       target={
         props.href && props.href.startsWith('http') ? '_blank' : undefined
       }
@@ -143,7 +143,7 @@ const components = {
   ),
   code: ({ ...props }) => (
     <code
-      className='rounded border border-blue-100 bg-blue-50/75 px-[0.3rem] py-[0.15rem] font-mono text-sm font-medium text-blue-600'
+      className='rounded border border-blue-100 bg-blue-50/75 px-[0.3rem] py-[0.15rem] font-mono text-sm font-medium text-blue-900'
       {...props}
     />
   ),

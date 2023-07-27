@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --blue: 198 100% 33%;
+    }
+
+    .dark {
+        --blue: 198 100% 33%;
+    }
+}
+
+@layer base {
+    body {
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
 @media (min-width: 400px) {
     .bg-gradient::before {
         background: radial-gradient(

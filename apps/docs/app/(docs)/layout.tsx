@@ -52,7 +52,7 @@ export const metadata = {
 export default function DocsLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <div className='max-w-8xl container mx-auto flex h-full items-center'>
+      <div className='container mx-auto flex h-full items-center'>
         <div className='flex w-full'>
           <div className='hidden border-r border-r-gray-100 2xl:block 2xl:w-1/6'>
             <Aside />

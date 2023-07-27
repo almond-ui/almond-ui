@@ -372,7 +372,7 @@ const base = cva(
         tone: 'light',
         color: 'blue',
         className: [
-          'text-blue-500',
+          'text-blue-900',
           'disabled:text-blue-400',
           'disabled:hover:text-blue-400',
           'bg-blue-100',
@@ -508,7 +508,7 @@ const base = cva(
         tone: 'transparent',
         color: 'blue',
         className: [
-          'text-blue-500',
+          'text-blue-900',
           'disabled:text-blue-200',
           'hover:text-blue-600',
           'active:text-blue-700',
@@ -583,7 +583,7 @@ const base = cva(
         tone: 'outline',
         color: 'blue',
         className: [
-          'text-blue-500',
+          'text-blue-900',
           'disabled:text-blue-300',
           'disabled:hover:text-blue-300',
           'hover:text-blue-600',

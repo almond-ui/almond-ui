@@ -392,7 +392,7 @@ const label = cva([], {
       tight: [],
     },
     color: {
-      blue: 'text-blue-500',
+      blue: 'text-blue-900',
       red: 'text-red-500',
       green: 'text-green-500',
       yellow: 'text-yellow-400',

@@ -272,7 +272,7 @@ const base = cva(['inline-flex', 'items-center', 'text-center'], {
     {
       tone: 'outline',
       color: 'blue',
-      className: ['text-blue-500', 'border-blue-500'],
+      className: ['text-blue-900', 'border-blue-500'],
     },
     {
       tone: 'outline',

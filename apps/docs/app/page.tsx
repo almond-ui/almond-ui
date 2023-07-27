@@ -1,8 +1,10 @@
 import { config } from '@/lib/config';
+import { CopyCommand } from '@/ui/CopyCommand';
+import ExpandingArrow from '@/ui/ExpandingArrow';
 import { Features } from '@/ui/Features';
 import { Footer } from '@/ui/Footer';
-import { Hero } from '@/ui/Hero';
 import { Support } from '@/ui/Support';
+import Link from 'next/link';
 import * as React from 'react';
 
 export const generateMetadata = ({ params }) => {
@@ -31,15 +33,22 @@ export const generateMetadata = ({ params }) => {
   };
 };
 
-const LandingLayout = async ({ params }) => {
+const LandingLayout = async () => {
   return (
-    <div className='flex min-h-screen flex-col'>
-      <div className='bg-gradient-to-tr from-transparent to-slate-100'>
-        <div className='max-w-8xl container mx-auto'>
-          <Hero />
-        </div>
-      </div>
-    </div>
+    <>
+      <Link
+        href='/introduction'
+        className='group mt-20 flex space-x-1 rounded-full border border-blue-100 bg-white/30 px-10 py-2 text-sm font-medium text-gray-600 ring-0 transition-all hover:border-blue-800 hover:bg-blue-50 sm:mt-0'
+      >
+        <p>Get your boring components here</p>
+        <ExpandingArrow />
+      </Link>
+      <h1 className='bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text pb-8 pt-4 text-center text-2xl font-medium text-transparent md:text-4xl'>
+        Another boring component library
+      </h1>
+
+      <CopyCommand />
+    </>
   );
 };
 

@@ -327,7 +327,7 @@ const tab = cva(
         active: true,
         tone: 'light',
         color: 'blue',
-        className: ['text-blue-500'],
+        className: ['text-blue-900'],
       },
       {
         active: true,

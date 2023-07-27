@@ -142,7 +142,7 @@ const base = cva(
       {
         tone: 'light',
         color: 'blue',
-        className: ['bg-blue-100', 'text-blue-500'],
+        className: ['bg-blue-100', 'text-blue-900'],
       },
       {
         tone: 'light',

@@ -6,14 +6,14 @@ const tabs = [
   {
     anchor: 'tab-1',
     label: 'Introduction',
-    icon: <HandWaving weight='duotone' className='text-blue-500' />,
+    icon: <HandWaving weight='duotone' className='text-blue-900' />,
     content:
       'Rewind UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
   },
   {
     anchor: 'tab-2',
     label: 'Contribute',
-    icon: <Lifebuoy weight='duotone' className='text-blue-500' />,
+    icon: <Lifebuoy weight='duotone' className='text-blue-900' />,
     content:
       "We're always looking for new contributors to help us improve Rewind UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
   },
