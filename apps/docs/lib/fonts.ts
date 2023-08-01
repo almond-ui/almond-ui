@@ -20,7 +20,7 @@ export const fontSans = localFont({
       style: 'normal',
     },
     {
-      path: '../assets/fonts/InterSoft-SemiBold.woff2',
+      path: '../assets/fonts/InterSoft-Semibold.woff2',
       weight: '600',
       style: 'normal',
     },
