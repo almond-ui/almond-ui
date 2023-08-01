@@ -4,6 +4,7 @@ import { fontMono, fontSans } from '@/lib/fonts';
 import { Header } from '@/ui/Header';
 import { cn } from '@/utils/misc';
 import { ReactNode } from 'react';
+import * as React from 'react';
 
 export const metadata = {
   title: {

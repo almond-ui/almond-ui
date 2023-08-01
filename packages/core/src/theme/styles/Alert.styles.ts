@@ -162,7 +162,7 @@ const base = cva(['flex', 'gap-x-3', 'w-full'], {
     {
       tone: 'light',
       color: 'blue',
-      className: ['text-blue-700', 'bg-blue-100/95', 'border-blue-500'],
+      className: ['text-blue-900', 'bg-blue-50/95', 'border-blue-500'],
     },
     {
       tone: 'light',

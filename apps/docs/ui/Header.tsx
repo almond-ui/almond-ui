@@ -58,15 +58,15 @@ export const Header = () => {
       <div className='flex h-12 items-center justify-between gap-6 border-b py-4 md:gap-10'>
         <nav
           ref={navRef}
-          className='inset-x-0 top-0 z-10 w-full p-4 lg:fixed lg:p-2 lg:px-0'
+          className='fixed inset-x-0 top-0 z-10 w-full p-4 lg:p-2 lg:px-0'
         >
           <div className='container mx-auto flex justify-between'>
-            <div className='hidden items-center justify-center gap-2 align-middle lg:flex'>
+            <div className='flex items-center justify-center gap-2 align-middle'>
               <ScribbleLoop size={32} color='#0074a6' weight='duotone' />
               <Link
                 href='/'
-                aria-label='musings'
-                className='text-primary underlined font-heading block whitespace-nowrap text-xl font-medium transition focus:outline-none'
+                aria-label='almond-ui'
+                className='block whitespace-nowrap text-xl font-medium transition focus:outline-none'
               >
                 almond-ui
               </Link>
