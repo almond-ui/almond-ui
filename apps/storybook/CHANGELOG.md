@@ -1,5 +1,12 @@
 # @almond-ui/storybook
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [af8a16e]
+  - @almond-ui/core@1.1.0
+
 ## 1.0.0
 
 ### Major Changes
