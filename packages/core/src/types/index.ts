@@ -1,5 +1,5 @@
 export type {
-  PolymorphicComponentProp,
-  PolymorphicComponentPropWithRef,
-  PolymorphicRef,
+	PolymorphicComponentProp,
+	PolymorphicComponentPropWithRef,
+	PolymorphicRef,
 } from './polymorphic.types';

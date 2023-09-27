@@ -1,81 +1,82 @@
+import { Ref, forwardRef, useMemo, useRef } from 'react';
+
 import { useDropdownContext } from '@components/Dropdown/Dropdown.context';
 import {
-  DropdownItemComponent,
-  DropdownItemProps,
+	DropdownItemComponent,
+	DropdownItemProps,
 } from '@components/Dropdown/DropdownItem/DropdownItem.types';
 import { useMergeRefs } from '@floating-ui/react';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
-import { forwardRef, Ref, useMemo, useRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const DropdownItem: DropdownItemComponent = forwardRef(
-  (props: DropdownItemProps, ref?: Ref<HTMLButtonElement>) => {
-    const theme = useComponentTheme('Dropdown');
-    const { tone, itemColor, mode, radius, size, setOpen } = {
-      ...props,
-      ...useDropdownContext(),
-    };
-    const {
-      children,
-      className = '',
-      color = itemColor,
-      tabIndex = 0,
-      onClick,
-      ...additionalProps
-    } = {
-      ...props,
-    };
-    const localRef = useRef<HTMLButtonElement>(null);
-    const mergedRef = useMergeRefs([ref || null, localRef]);
+	(props: DropdownItemProps, ref?: Ref<HTMLButtonElement>) => {
+		const theme = useComponentTheme('Dropdown');
+		const { tone, itemColor, mode, radius, size, setOpen } = {
+			...props,
+			...useDropdownContext(),
+		};
+		const {
+			children,
+			className = '',
+			color = itemColor,
+			tabIndex = 0,
+			onClick,
+			...additionalProps
+		} = {
+			...props,
+		};
+		const localRef = useRef<HTMLButtonElement>(null);
+		const mergedRef = useMergeRefs([ref || null, localRef]);
 
-    const id = usePropId(props.id);
-    const classes = useMemo(() => {
-      return twMerge(
-        theme.item({
-          tone,
-          className,
-          color,
-          mode,
-          radius,
-          size,
-        })
-      );
-    }, [tone, className, color, mode, radius, size, theme]);
+		const id = usePropId(props.id);
+		const classes = useMemo(() => {
+			return twMerge(
+				theme.item({
+					tone,
+					className,
+					color,
+					mode,
+					radius,
+					size,
+				})
+			);
+		}, [tone, className, color, mode, radius, size, theme]);
 
-    const handleMouseEnter = () => {
-      if (localRef.current) {
-        localRef.current.focus();
-      }
-    };
-    const handleMouseLeave = () => {
-      if (localRef.current) {
-        localRef.current.blur();
-      }
-    };
+		const handleMouseEnter = () => {
+			if (localRef.current) {
+				localRef.current.focus();
+			}
+		};
+		const handleMouseLeave = () => {
+			if (localRef.current) {
+				localRef.current.blur();
+			}
+		};
 
-    return (
-      <button
-        id={id}
-        ref={mergedRef}
-        tabIndex={tabIndex}
-        className={classes}
-        role="menuitem"
-        onClick={(event) => {
-          setOpen(false);
+		return (
+			<button
+				id={id}
+				ref={mergedRef}
+				tabIndex={tabIndex}
+				className={classes}
+				role='menuitem'
+				onClick={(event) => {
+					setOpen(false);
 
-          if (onClick) {
-            onClick(event);
-          }
-        }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        {...additionalProps}
-      >
-        {children}
-      </button>
-    );
-  }
+					if (onClick) {
+						onClick(event);
+					}
+				}}
+				onMouseEnter={handleMouseEnter}
+				onMouseLeave={handleMouseLeave}
+				{...additionalProps}
+			>
+				{children}
+			</button>
+		);
+	}
 );
 
 DropdownItem.displayName = 'DropdownItem';

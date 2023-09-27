@@ -3,67 +3,69 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --blue: 198 100% 33%;
-    }
+	:root {
+		--blue: 198 100% 33%;
+	}
 
-    .dark {
-        --blue: 198 100% 33%;
-    }
+	.dark {
+		--blue: 198 100% 33%;
+	}
 }
 
 @layer base {
-    body {
-        font-feature-settings: "rlig" 1, "calt" 1;
-    }
+	body {
+		font-feature-settings:
+			'rlig' 1,
+			'calt' 1;
+	}
 }
 
 @media (min-width: 400px) {
-    .bg-gradient::before {
-        background: radial-gradient(
-                20% 50% at 50% 50%,
-                rgba(71, 127, 247, 0.376) 0%,
-                rgba(37, 38, 44, 0) 100%
-        );
-        z-index: -10;
-        content: "";
-        position: absolute;
-        inset: 0;
-        transform: scale(1);
-        pointer-events: none;
-    }
+	.bg-gradient::before {
+		background: radial-gradient(
+			20% 50% at 50% 50%,
+			rgba(71, 127, 247, 0.376) 0%,
+			rgba(37, 38, 44, 0) 100%
+		);
+		z-index: -10;
+		content: '';
+		position: absolute;
+		inset: 0;
+		transform: scale(1);
+		pointer-events: none;
+	}
 }
 
 .bg-grid {
-    background-color: #F5F5F5;
-    background-image: url("/images/grid.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+	background-color: #f5f5f5;
+	background-image: url('/images/grid.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 code {
-    -webkit-font-smoothing: initial;
+	-webkit-font-smoothing: initial;
 }
 
 .sp-layout {
-    max-height: 300px !important;
-    overflow: auto !important;
+	max-height: 300px !important;
+	overflow: auto !important;
 }
 
 .sp-wrapper {
-    height: 100% !important;
+	height: 100% !important;
 }
 
 .sp-stack {
-    height: 100% !important;
+	height: 100% !important;
 }
 
 a {
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
 }

@@ -1,27 +1,27 @@
 'use client';
 
-import { createContext, ReactNode, useContext } from 'react';
+import { ReactNode, createContext, useContext } from 'react';
 
 export function createElementContext<ContextValue>(errorMessage: string) {
-  const Context = createContext<ContextValue | null>(null);
+	const Context = createContext<ContextValue | null>(null);
 
-  const useElementContext = () => {
-    const context = useContext(Context);
+	const useElementContext = () => {
+		const context = useContext(Context);
 
-    if (context === null) {
-      throw new Error(errorMessage);
-    }
+		if (context === null) {
+			throw new Error(errorMessage);
+		}
 
-    return context;
-  };
+		return context;
+	};
 
-  const Provider = ({
-    children,
-    value,
-  }: {
-    value: ContextValue;
-    children: ReactNode;
-  }) => <Context.Provider value={value}>{children}</Context.Provider>;
+	const Provider = ({
+		children,
+		value,
+	}: {
+		value: ContextValue;
+		children: ReactNode;
+	}) => <Context.Provider value={value}>{children}</Context.Provider>;
 
-  return [Provider, useElementContext] as const;
+	return [Provider, useElementContext] as const;
 }

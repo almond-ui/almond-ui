@@ -1,34 +1,35 @@
-import { Badge, BadgeProps } from '@almond-ui/core';
 import * as React from 'react';
 
+import { Badge, BadgeProps } from '@almond-ui/core';
+
 export const BadgeCode = (props: any) => {
-  const { color, radius, shadow, shadowColor, size, tone } = props;
+	const { color, radius, shadow, shadowColor, size, tone } = props;
 
-  const defaultProps = {
-    color: 'dark',
-    radius: 'md',
-    shadow: 'none',
-    shadowColor: 'none',
-    size: 'sm',
-    tone: 'solid',
-  };
+	const defaultProps = {
+		color: 'dark',
+		radius: 'md',
+		shadow: 'none',
+		shadowColor: 'none',
+		size: 'sm',
+		tone: 'solid',
+	};
 
-  const attributes = [
-    color !== defaultProps.color ? `color="${color}"` : null,
-    radius !== defaultProps.radius ? `radius="${radius}"` : null,
-    shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor
-      ? `shadowColor="${shadowColor}"`
-      : null,
-    size !== defaultProps.size ? `size="${size}"` : null,
-    tone !== defaultProps.tone ? `tone="${tone}"` : null,
-  ].filter(Boolean);
+	const attributes = [
+		color !== defaultProps.color ? `color="${color}"` : null,
+		radius !== defaultProps.radius ? `radius="${radius}"` : null,
+		shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
+		shadowColor !== defaultProps.shadowColor
+			? `shadowColor="${shadowColor}"`
+			: null,
+		size !== defaultProps.size ? `size="${size}"` : null,
+		tone !== defaultProps.tone ? `tone="${tone}"` : null,
+	].filter(Boolean);
 
-  if (attributes.length) {
-    attributes.unshift(null);
-  }
+	if (attributes.length) {
+		attributes.unshift(null);
+	}
 
-  return `import { Badge } from '@almond-ui/core';
+	return `import { Badge } from '@almond-ui/core';
 
 function App() {
   return (
@@ -39,5 +40,5 @@ function App() {
 };
 
 export const BadgeExample = (props: BadgeProps) => {
-  return <Badge {...props}>Badge</Badge>;
+	return <Badge {...props}>Badge</Badge>;
 };

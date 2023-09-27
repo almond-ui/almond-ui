@@ -1,7 +1,7 @@
 import {
-  ComponentPropsWithRef,
-  ForwardRefExoticComponent,
-  ReactElement,
+	ComponentPropsWithRef,
+	ForwardRefExoticComponent,
+	ReactElement,
 } from 'react';
 
 export type SelectColor = 'blue' | 'purple' | 'gray' | 'dark' | 'black';
@@ -12,18 +12,18 @@ export type SelectTone = 'light' | 'solid' | 'transparent';
 export type SelectValidation = 'none' | 'invalid' | 'valid' | 'warning';
 
 export interface SelectProps
-  extends Omit<ComponentPropsWithRef<'select'>, 'size'> {
-  color?: SelectColor;
-  disabled?: boolean;
-  leftIcon?: ReactElement;
-  radius?: SelectRadius;
-  shadow?: SelectShadow;
-  size?: SelectSize;
-  tone?: SelectTone;
-  validation?: SelectValidation;
-  withRing?: boolean;
+	extends Omit<ComponentPropsWithRef<'select'>, 'size'> {
+	color?: SelectColor;
+	disabled?: boolean;
+	leftIcon?: ReactElement;
+	radius?: SelectRadius;
+	shadow?: SelectShadow;
+	size?: SelectSize;
+	tone?: SelectTone;
+	validation?: SelectValidation;
+	withRing?: boolean;
 }
 
 export type SelectComponent = ForwardRefExoticComponent<SelectProps> & {
-  displayName?: string;
+	displayName?: string;
 };

@@ -8,17 +8,17 @@ export type TextareaTone = 'light' | 'solid' | 'transparent';
 export type TextareaValidation = 'none' | 'invalid' | 'valid' | 'warning';
 
 export interface TextareaProps
-  extends Omit<ComponentPropsWithRef<'textarea'>, 'size'> {
-  color?: TextareaColor;
-  disabled?: boolean;
-  radius?: TextareaRadius;
-  shadow?: TextareaShadow;
-  size?: TextareaSize;
-  tone?: TextareaTone;
-  validation?: TextareaValidation;
-  withRing?: boolean;
+	extends Omit<ComponentPropsWithRef<'textarea'>, 'size'> {
+	color?: TextareaColor;
+	disabled?: boolean;
+	radius?: TextareaRadius;
+	shadow?: TextareaShadow;
+	size?: TextareaSize;
+	tone?: TextareaTone;
+	validation?: TextareaValidation;
+	withRing?: boolean;
 }
 
 export type TextareaComponent = ForwardRefExoticComponent<TextareaProps> & {
-  displayName?: string;
+	displayName?: string;
 };

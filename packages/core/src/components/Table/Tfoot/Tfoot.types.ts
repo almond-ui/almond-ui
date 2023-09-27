@@ -1,14 +1,14 @@
 import {
-  ComponentPropsWithRef,
-  ForwardRefExoticComponent,
-  PropsWithoutRef,
-  RefAttributes,
+	ComponentPropsWithRef,
+	ForwardRefExoticComponent,
+	PropsWithoutRef,
+	RefAttributes,
 } from 'react';
 
 export interface TfootProps extends ComponentPropsWithRef<'tfoot'> {}
 
 export type TfootComponent = ForwardRefExoticComponent<
-  PropsWithoutRef<TfootProps> & RefAttributes<HTMLTableSectionElement>
+	PropsWithoutRef<TfootProps> & RefAttributes<HTMLTableSectionElement>
 > & {
-  displayName?: string;
+	displayName?: string;
 };

@@ -1,34 +1,35 @@
-import { useDropdownContext } from '@components/Dropdown/Dropdown.context';
 import {
-  DropdownTriggerComponent,
-  DropdownTriggerProps,
-} from '@components/Dropdown/DropdownTrigger/DropdownTrigger.types';
-import { useMergeRefs } from '@floating-ui/react';
-import {
-  Children,
-  cloneElement,
-  ForwardedRef,
-  forwardRef,
-  ReactElement,
+	Children,
+	ForwardedRef,
+	ReactElement,
+	cloneElement,
+	forwardRef,
 } from 'react';
 
+import { useDropdownContext } from '@components/Dropdown/Dropdown.context';
+import {
+	DropdownTriggerComponent,
+	DropdownTriggerProps,
+} from '@components/Dropdown/DropdownTrigger/DropdownTrigger.types';
+import { useMergeRefs } from '@floating-ui/react';
+
 const DropdownTrigger: DropdownTriggerComponent = forwardRef<
-  HTMLDivElement,
-  DropdownTriggerProps
+	HTMLDivElement,
+	DropdownTriggerProps
 >((props: DropdownTriggerProps, ref?: ForwardedRef<HTMLDivElement>) => {
-  const { children } = props;
-  const { open, reference, getReferenceProps } = useDropdownContext();
-  const child = Children.only(children) as ReactElement;
-  const childRef = useMergeRefs([reference, ref || null]);
+	const { children } = props;
+	const { open, reference, getReferenceProps } = useDropdownContext();
+	const child = Children.only(children) as ReactElement;
+	const childRef = useMergeRefs([reference, ref || null]);
 
-  const triggerElement = cloneElement(child, {
-    ref: childRef,
-    ...{ 'aria-expanded': open, 'aria-pressed': true, 'aria-haspopup': true },
-    ...child.props,
-    ...getReferenceProps,
-  });
+	const triggerElement = cloneElement(child, {
+		ref: childRef,
+		...{ 'aria-expanded': open, 'aria-pressed': true, 'aria-haspopup': true },
+		...child.props,
+		...getReferenceProps,
+	});
 
-  return <>{triggerElement}</>;
+	return <>{triggerElement}</>;
 });
 
 DropdownTrigger.displayName = 'DropdownTrigger';

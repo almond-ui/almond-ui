@@ -1,7 +1,7 @@
 import {
-  ComponentPropsWithRef,
-  ForwardRefExoticComponent,
-  ReactElement,
+	ComponentPropsWithRef,
+	ForwardRefExoticComponent,
+	ReactElement,
 } from 'react';
 
 export type InputColor = 'blue' | 'purple' | 'gray' | 'dark' | 'black';
@@ -10,35 +10,35 @@ export type InputShadow = 'none' | 'sm' | 'base' | 'md';
 export type InputSize = 'xs' | 'sm' | 'md' | 'lg';
 export type InputTone = 'light' | 'solid' | 'transparent';
 export type InputType =
-  | 'text'
-  | 'number'
-  | 'password'
-  | 'file'
-  | 'date'
-  | 'time'
-  | 'email'
-  | 'search'
-  | 'range'
-  | 'datetime-local'
-  | 'color';
+	| 'text'
+	| 'number'
+	| 'password'
+	| 'file'
+	| 'date'
+	| 'time'
+	| 'email'
+	| 'search'
+	| 'range'
+	| 'datetime-local'
+	| 'color';
 export type InputValidation = 'none' | 'invalid' | 'valid' | 'warning';
 
 export interface InputProps
-  extends Omit<ComponentPropsWithRef<'input'>, 'size' | 'type'> {
-  color?: InputColor;
-  disabled?: boolean;
-  leftIcon?: ReactElement;
-  loading?: boolean;
-  radius?: InputRadius;
-  rightIcon?: ReactElement;
-  shadow?: InputShadow;
-  size?: InputSize;
-  tone?: InputTone;
-  type?: InputType;
-  validation?: InputValidation;
-  withRing?: boolean;
+	extends Omit<ComponentPropsWithRef<'input'>, 'size' | 'type'> {
+	color?: InputColor;
+	disabled?: boolean;
+	leftIcon?: ReactElement;
+	loading?: boolean;
+	radius?: InputRadius;
+	rightIcon?: ReactElement;
+	shadow?: InputShadow;
+	size?: InputSize;
+	tone?: InputTone;
+	type?: InputType;
+	validation?: InputValidation;
+	withRing?: boolean;
 }
 
 export type InputComponent = ForwardRefExoticComponent<InputProps> & {
-  displayName?: string;
+	displayName?: string;
 };

@@ -1,50 +1,51 @@
-import { Tabs, TabsProps } from '@almond-ui/core';
-import { HandWaving, Lifebuoy } from '@phosphor-icons/react';
 import * as React from 'react';
 
+import { Tabs, TabsProps } from '@almond-ui/core';
+import { HandWaving, Lifebuoy } from '@phosphor-icons/react';
+
 const tabs = [
-  {
-    anchor: 'tab-1',
-    label: 'Introduction',
-    icon: <HandWaving weight='duotone' className='text-blue-900' />,
-    content:
-      'Rewind UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
-  },
-  {
-    anchor: 'tab-2',
-    label: 'Contribute',
-    icon: <Lifebuoy weight='duotone' className='text-blue-900' />,
-    content:
-      "We're always looking for new contributors to help us improve Rewind UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
-  },
+	{
+		anchor: 'tab-1',
+		label: 'Introduction',
+		icon: <HandWaving weight='duotone' className='text-blue-900' />,
+		content:
+			'Almond UI is a React component library that provides a set of accessible, reusable, and customizable components to help you build your next project.',
+	},
+	{
+		anchor: 'tab-2',
+		label: 'Contribute',
+		icon: <Lifebuoy weight='duotone' className='text-blue-900' />,
+		content:
+			"We're always looking for new contributors to help us improve Almond UI! If you'd like to contribute, please check out our contribution guidelines to get started.",
+	},
 ];
 
 export const TabsCode = (props: any) => {
-  const { size, color, fullWidth, tone, method, radius } = props;
+	const { size, color, fullWidth, tone, method, radius } = props;
 
-  const defaultProps: Partial<TabsProps> = {
-    color: 'dark',
-    fullWidth: false,
-    method: 'hide',
-    radius: 'none',
-    size: 'md',
-    tone: 'line',
-  };
+	const defaultProps: Partial<TabsProps> = {
+		color: 'dark',
+		fullWidth: false,
+		method: 'hide',
+		radius: 'none',
+		size: 'md',
+		tone: 'line',
+	};
 
-  const attributes = [
-    color !== defaultProps.color ? `color="${color}"` : null,
-    method !== defaultProps.method ? `method="${method}"` : null,
-    radius !== defaultProps.radius ? `radius="${radius}"` : null,
-    size !== defaultProps.size ? `size="${size}"` : null,
-    tone !== defaultProps.tone ? `tone="${tone}"` : null,
-    fullWidth !== defaultProps.fullWidth ? `fullWidth={${fullWidth}}` : null,
-  ].filter(Boolean);
+	const attributes = [
+		color !== defaultProps.color ? `color="${color}"` : null,
+		method !== defaultProps.method ? `method="${method}"` : null,
+		radius !== defaultProps.radius ? `radius="${radius}"` : null,
+		size !== defaultProps.size ? `size="${size}"` : null,
+		tone !== defaultProps.tone ? `tone="${tone}"` : null,
+		fullWidth !== defaultProps.fullWidth ? `fullWidth={${fullWidth}}` : null,
+	].filter(Boolean);
 
-  if (attributes.length) {
-    attributes.unshift(null);
-  }
+	if (attributes.length) {
+		attributes.unshift(null);
+	}
 
-  return `import { Tabs } from '@almond-ui/core';
+	return `import { Tabs } from '@almond-ui/core';
 
 function App() {
   return (
@@ -77,21 +78,21 @@ function App() {
 };
 
 export const TabsExample = (props: TabsProps) => {
-  return (
-    <Tabs {...props} defaultTab={'tab-1'}>
-      <Tabs.List>
-        {tabs.map((tab) => (
-          <Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
-            {tab.label}
-          </Tabs.Tab>
-        ))}
-      </Tabs.List>
+	return (
+		<Tabs {...props} defaultTab={'tab-1'}>
+			<Tabs.List>
+				{tabs.map((tab) => (
+					<Tabs.Tab key={`tab-${tab.anchor}`} anchor={tab.anchor}>
+						{tab.label}
+					</Tabs.Tab>
+				))}
+			</Tabs.List>
 
-      {tabs.map((tab) => (
-        <Tabs.Content key={`content-${tab.anchor}`} anchor={tab.anchor}>
-          {tab.content}
-        </Tabs.Content>
-      ))}
-    </Tabs>
-  );
+			{tabs.map((tab) => (
+				<Tabs.Content key={`content-${tab.anchor}`} anchor={tab.anchor}>
+					{tab.content}
+				</Tabs.Content>
+			))}
+		</Tabs>
+	);
 };

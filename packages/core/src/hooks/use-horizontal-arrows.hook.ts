@@ -1,83 +1,84 @@
-import { useKeypress } from '@hooks/use-keypress';
 import { RefObject } from 'react';
 
+import { useKeypress } from '@hooks/use-keypress';
+
 export function useHorizontalArrows(
-  ref: RefObject<HTMLElement> | undefined,
-  active: boolean = true
+	ref: RefObject<HTMLElement> | undefined,
+	active: boolean = true
 ) {
-  useKeypress('ArrowRight', active, () => {
-    if (!active) {
-      return;
-    }
+	useKeypress('ArrowRight', active, () => {
+		if (!active) {
+			return;
+		}
 
-    const activeElement = document.activeElement as HTMLButtonElement;
+		const activeElement = document.activeElement as HTMLButtonElement;
 
-    if (!activeElement) {
-      return;
-    }
+		if (!activeElement) {
+			return;
+		}
 
-    if (!ref) {
-      return;
-    }
+		if (!ref) {
+			return;
+		}
 
-    const buttons = ref.current?.querySelectorAll(
-      'button:not([disabled="true"])'
-    );
+		const buttons = ref.current?.querySelectorAll(
+			'button:not([disabled="true"])'
+		);
 
-    if (!buttons) {
-      return;
-    }
+		if (!buttons) {
+			return;
+		}
 
-    const ids: string[] = [];
+		const ids: string[] = [];
 
-    buttons.forEach((button: Element) => {
-      ids.push(button.id);
-    });
+		buttons.forEach((button: Element) => {
+			ids.push(button.id);
+		});
 
-    if (!ids.includes(activeElement.id)) {
-      return;
-    }
+		if (!ids.includes(activeElement.id)) {
+			return;
+		}
 
-    const currentIndex = ids.findIndex((id: string) => id === activeElement.id);
-    const nextIndex = ids[currentIndex + 1] ? currentIndex + 1 : 0;
-    document.getElementById(ids[nextIndex])?.focus();
-  });
+		const currentIndex = ids.findIndex((id: string) => id === activeElement.id);
+		const nextIndex = ids[currentIndex + 1] ? currentIndex + 1 : 0;
+		document.getElementById(ids[nextIndex])?.focus();
+	});
 
-  useKeypress('ArrowLeft', active, () => {
-    if (!active) {
-      return;
-    }
+	useKeypress('ArrowLeft', active, () => {
+		if (!active) {
+			return;
+		}
 
-    const activeElement = document.activeElement as HTMLButtonElement;
+		const activeElement = document.activeElement as HTMLButtonElement;
 
-    if (!activeElement) {
-      return;
-    }
+		if (!activeElement) {
+			return;
+		}
 
-    if (!ref) {
-      return;
-    }
+		if (!ref) {
+			return;
+		}
 
-    const buttons = ref.current?.querySelectorAll(
-      'button:not([disabled="true"])'
-    );
+		const buttons = ref.current?.querySelectorAll(
+			'button:not([disabled="true"])'
+		);
 
-    if (!buttons) {
-      return;
-    }
+		if (!buttons) {
+			return;
+		}
 
-    const ids: string[] = [];
+		const ids: string[] = [];
 
-    buttons.forEach((button: Element) => {
-      ids.push(button.id);
-    });
+		buttons.forEach((button: Element) => {
+			ids.push(button.id);
+		});
 
-    if (!ids.includes(activeElement.id)) {
-      return;
-    }
+		if (!ids.includes(activeElement.id)) {
+			return;
+		}
 
-    const currentIndex = ids.findIndex((id: string) => id === activeElement.id);
-    const nextIndex = ids[currentIndex - 1] ? currentIndex - 1 : ids.length - 1;
-    document.getElementById(ids[nextIndex])?.focus();
-  });
+		const currentIndex = ids.findIndex((id: string) => id === activeElement.id);
+		const nextIndex = ids[currentIndex - 1] ? currentIndex - 1 : ids.length - 1;
+		document.getElementById(ids[nextIndex])?.focus();
+	});
 }
