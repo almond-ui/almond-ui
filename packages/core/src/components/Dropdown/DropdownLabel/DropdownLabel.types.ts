@@ -1,40 +1,42 @@
-import { DropdownSize } from '@components/Dropdown/Dropdown.types';
 import { ElementType, ReactElement } from 'react';
+
+import { DropdownSize } from '@components/Dropdown/Dropdown.types';
+
 import { PolymorphicComponentPropWithRef } from '../../../types';
 
 export type DropdownLabelColor =
-  | 'blue'
-  | 'red'
-  | 'green'
-  | 'yellow'
-  | 'purple'
-  | 'gray'
-  | 'dark'
-  | 'black';
+	| 'blue'
+	| 'red'
+	| 'green'
+	| 'yellow'
+	| 'purple'
+	| 'gray'
+	| 'dark'
+	| 'black';
 export type DropdownLabelWeight =
-  | 'thin'
-  | 'extraLight'
-  | 'light'
-  | 'normal'
-  | 'medium'
-  | 'semiBold'
-  | 'bold'
-  | 'extraBold'
-  | 'black';
+	| 'thin'
+	| 'extraLight'
+	| 'light'
+	| 'normal'
+	| 'medium'
+	| 'semiBold'
+	| 'bold'
+	| 'extraBold'
+	| 'black';
 
 export type DropdownLabelProps = {
-  color?: DropdownLabelColor;
-  size?: DropdownSize;
-  weight?: DropdownLabelWeight;
+	color?: DropdownLabelColor;
+	size?: DropdownSize;
+	weight?: DropdownLabelWeight;
 };
 
 type PolymorphicDropdownLabelProps<C extends ElementType> =
-  PolymorphicComponentPropWithRef<C, DropdownLabelProps>;
+	PolymorphicComponentPropWithRef<C, DropdownLabelProps>;
 
 type PolymorphicDropdownLabelComponent = <C extends ElementType = 'span'>(
-  props: PolymorphicDropdownLabelProps<C>
+	props: PolymorphicDropdownLabelProps<C>
 ) => ReactElement | null;
 
 export type DropdownLabelComponent = PolymorphicDropdownLabelComponent & {
-  displayName?: string;
+	displayName?: string;
 };

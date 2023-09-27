@@ -1,42 +1,43 @@
-import {
-  Button,
-  Card,
-  FormControl,
-  Ribbon,
-  RibbonProps,
-} from '@almond-ui/core';
 import * as React from 'react';
 
+import {
+	Button,
+	Card,
+	FormControl,
+	Ribbon,
+	RibbonProps,
+} from '@almond-ui/core';
+
 export const RibbonCode = (props: any) => {
-  const { color, position, radius, shadow, shadowColor, size, tone } = props;
+	const { color, position, radius, shadow, shadowColor, size, tone } = props;
 
-  const defaultProps = {
-    color: 'dark',
-    position: 'top-right',
-    radius: 'base',
-    shadow: 'base',
-    shadowColor: 'none',
-    size: 'md',
-    tone: 'solid',
-  };
+	const defaultProps = {
+		color: 'dark',
+		position: 'top-right',
+		radius: 'base',
+		shadow: 'base',
+		shadowColor: 'none',
+		size: 'md',
+		tone: 'solid',
+	};
 
-  const attributes = [
-    color !== defaultProps.color ? `color="${color}"` : null,
-    radius !== defaultProps.radius ? `radius="${radius}"` : null,
-    shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor
-      ? `shadowColor="${shadowColor}"`
-      : null,
-    size !== defaultProps.size ? `size="${size}"` : null,
-    tone !== defaultProps.tone ? `tone="${tone}"` : null,
-    position !== defaultProps.position ? `position="${position}"` : null,
-  ].filter(Boolean);
+	const attributes = [
+		color !== defaultProps.color ? `color="${color}"` : null,
+		radius !== defaultProps.radius ? `radius="${radius}"` : null,
+		shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
+		shadowColor !== defaultProps.shadowColor
+			? `shadowColor="${shadowColor}"`
+			: null,
+		size !== defaultProps.size ? `size="${size}"` : null,
+		tone !== defaultProps.tone ? `tone="${tone}"` : null,
+		position !== defaultProps.position ? `position="${position}"` : null,
+	].filter(Boolean);
 
-  if (attributes.length) {
-    attributes.unshift(null);
-  }
+	if (attributes.length) {
+		attributes.unshift(null);
+	}
 
-  return `import { Ribbon } from '@almond-ui/core';
+	return `import { Ribbon } from '@almond-ui/core';
 
 function App() {
   return (
@@ -55,56 +56,56 @@ function App() {
 };
 
 export const RibbonExample = (props: RibbonProps) => {
-  const className =
-    props.position === 'left' || props.position === 'top-left'
-      ? 'ml-auto'
-      : 'mr-auto';
+	const className =
+		props.position === 'left' || props.position === 'top-left'
+			? 'ml-auto'
+			: 'mr-auto';
 
-  return (
-    <Card size='base' withDivider={false}>
-      <Card.Header className='relative'>
-        <Ribbon {...props}>Free trial</Ribbon>
-        <div className={`${className} flex flex-col`}>
-          <span
-            className={`${className} text-lg font-semibold leading-8 text-gray-700`}
-          >
-            Create new account
-          </span>
-          <span className='font-normal text-gray-500'>
-            Start your 7-days trial period
-          </span>
-        </div>
-      </Card.Header>
-      <Card.Body className='min-w-[300px] md:min-w-[400px]'>
-        <div className='flex flex-col space-y-4'>
-          <FormControl>
-            <FormControl.Label className='text-gray-700'>
-              Full name
-            </FormControl.Label>
-            <FormControl.Input
-              shadow='sm'
-              tone='solid'
-              placeholder='Enter your full name...'
-            />
-          </FormControl>
+	return (
+		<Card size='base' withDivider={false}>
+			<Card.Header className='relative'>
+				<Ribbon {...props}>Free trial</Ribbon>
+				<div className={`${className} flex flex-col`}>
+					<span
+						className={`${className} text-lg font-semibold leading-8 text-gray-700`}
+					>
+						Create new account
+					</span>
+					<span className='font-normal text-gray-500'>
+						Start your 7-days trial period
+					</span>
+				</div>
+			</Card.Header>
+			<Card.Body className='min-w-[300px] md:min-w-[400px]'>
+				<div className='flex flex-col space-y-4'>
+					<FormControl>
+						<FormControl.Label className='text-gray-700'>
+							Full name
+						</FormControl.Label>
+						<FormControl.Input
+							shadow='sm'
+							tone='solid'
+							placeholder='Enter your full name...'
+						/>
+					</FormControl>
 
-          <FormControl>
-            <FormControl.Label className='text-gray-700'>
-              Email address
-            </FormControl.Label>
-            <FormControl.Input
-              shadow='sm'
-              tone='solid'
-              placeholder='Enter a valid email address...'
-            />
-          </FormControl>
-        </div>
-      </Card.Body>
-      <Card.Footer>
-        <Button color='black' className='w-full'>
-          Continue
-        </Button>
-      </Card.Footer>
-    </Card>
-  );
+					<FormControl>
+						<FormControl.Label className='text-gray-700'>
+							Email address
+						</FormControl.Label>
+						<FormControl.Input
+							shadow='sm'
+							tone='solid'
+							placeholder='Enter a valid email address...'
+						/>
+					</FormControl>
+				</div>
+			</Card.Body>
+			<Card.Footer>
+				<Button color='black' className='w-full'>
+					Continue
+				</Button>
+			</Card.Footer>
+		</Card>
+	);
 };

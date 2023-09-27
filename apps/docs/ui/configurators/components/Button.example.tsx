@@ -1,54 +1,55 @@
-import { Button, ButtonProps } from '@almond-ui/core';
 import * as React from 'react';
 
+import { Button, ButtonProps } from '@almond-ui/core';
+
 export const ButtonCode = (props: any) => {
-  const {
-    animation,
-    size,
-    color,
-    disabled,
-    tone,
-    shadow,
-    shadowColor,
-    radius,
-    loading,
-    withRing,
-  } = props;
+	const {
+		animation,
+		size,
+		color,
+		disabled,
+		tone,
+		shadow,
+		shadowColor,
+		radius,
+		loading,
+		withRing,
+	} = props;
 
-  const defaultProps = {
-    animation: 'none',
-    color: 'dark',
-    disabled: false,
-    icon: false,
-    loading: false,
-    radius: 'md',
-    shadow: 'none',
-    shadowColor: 'none',
-    size: 'md',
-    tone: 'solid',
-    withRing: true,
-  };
+	const defaultProps = {
+		animation: 'none',
+		color: 'dark',
+		disabled: false,
+		icon: false,
+		loading: false,
+		radius: 'md',
+		shadow: 'none',
+		shadowColor: 'none',
+		size: 'md',
+		tone: 'solid',
+		withRing: true,
+	};
 
-  const attributes = [
-    animation !== defaultProps.animation ? `animation="${animation}"` : null,
-    color !== defaultProps.color ? `color="${color}"` : null,
-    tone !== defaultProps.tone ? `tone="${tone}"` : null,
-    shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    shadowColor !== defaultProps.shadowColor
-      ? `shadowColor="${shadowColor}"`
-      : null,
-    radius !== defaultProps.radius ? `radius="${radius}"` : null,
-    size !== defaultProps.size ? `size="${size}"` : null,
-    disabled !== defaultProps.disabled ? `disabled={${disabled}}` : null,
-    loading !== defaultProps.loading ? `loading={${loading}}` : null,
-    withRing !== defaultProps.withRing ? `withRing={${withRing}}` : null,
-  ].filter(Boolean);
+	const attributes = [
+		animation !== defaultProps.animation ? `animation="${animation}"` : null,
+		color !== defaultProps.color ? `color="${color}"` : null,
+		tone !== defaultProps.tone ? `tone="${tone}"` : null,
+		shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
+		shadowColor !== defaultProps.shadowColor
+			? `shadowColor="${shadowColor}"`
+			: null,
+		radius !== defaultProps.radius ? `radius="${radius}"` : null,
+		size !== defaultProps.size ? `size="${size}"` : null,
+		disabled !== defaultProps.disabled ? `disabled={${disabled}}` : null,
+		loading !== defaultProps.loading ? `loading={${loading}}` : null,
+		withRing !== defaultProps.withRing ? `withRing={${withRing}}` : null,
+	].filter(Boolean);
 
-  if (attributes.length) {
-    attributes.unshift(null);
-  }
+	if (attributes.length) {
+		attributes.unshift(null);
+	}
 
-  return `import { Button } from '@almond-ui/core';
+	return `import { Button } from '@almond-ui/core';
 
 function App() {
   return (
@@ -61,5 +62,5 @@ function App() {
 };
 
 export const ButtonExample = (props: ButtonProps) => {
-  return <Button {...props}>Click me!</Button>;
+	return <Button {...props}>Click me!</Button>;
 };

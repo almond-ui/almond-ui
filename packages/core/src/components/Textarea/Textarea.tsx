@@ -1,89 +1,90 @@
 'use client';
 
+import { Ref, forwardRef, useMemo } from 'react';
+
 import { useFormControlContext } from '@components/FormControl/FormControl.context';
 import { useInputGroupContext } from '@components/InputGroup/InputGroup.context';
 import {
-  TextareaComponent,
-  TextareaProps,
+	TextareaComponent,
+	TextareaProps,
 } from '@components/Textarea/Textarea.types';
 import { useComponentTheme } from '@theme/theme.context';
 import { usePropId } from '@utils/usePropId';
-import { forwardRef, Ref, useMemo } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 const defaultProps: Partial<TextareaProps> = {
-  color: 'dark',
-  tone: 'light',
-  radius: 'md',
-  size: 'md',
-  validation: 'none',
-  shadow: 'none',
-  withRing: true,
-  disabled: false,
+	color: 'dark',
+	tone: 'light',
+	radius: 'md',
+	size: 'md',
+	validation: 'none',
+	shadow: 'none',
+	withRing: true,
+	disabled: false,
 };
 
 const Textarea: TextareaComponent = forwardRef(
-  (props: TextareaProps, ref?: Ref<HTMLTextAreaElement>) => {
-    const theme = useComponentTheme('Textarea');
-    const {
-      className = '',
-      color,
-      controlId,
-      disabled,
-      tone,
-      size,
-      radius,
-      validation,
-      shadow,
-      withRing,
-      type = 'text',
-      ...additionalProps
-    } = {
-      ...defaultProps,
-      ...useFormControlContext(),
-      ...useInputGroupContext(),
-      ...props,
-    };
-    const propId = usePropId(props.id);
-    const id = controlId || propId;
+	(props: TextareaProps, ref?: Ref<HTMLTextAreaElement>) => {
+		const theme = useComponentTheme('Textarea');
+		const {
+			className = '',
+			color,
+			controlId,
+			disabled,
+			tone,
+			size,
+			radius,
+			validation,
+			shadow,
+			withRing,
+			type = 'text',
+			...additionalProps
+		} = {
+			...defaultProps,
+			...useFormControlContext(),
+			...useInputGroupContext(),
+			...props,
+		};
+		const propId = usePropId(props.id);
+		const id = controlId || propId;
 
-    const classes = useMemo(() => {
-      return twMerge(
-        theme({
-          className,
-          color,
-          disabled,
-          radius,
-          shadow,
-          size,
-          tone,
-          validation,
-          withRing,
-        })
-      );
-    }, [
-      className,
-      color,
-      disabled,
-      radius,
-      shadow,
-      size,
-      theme,
-      tone,
-      validation,
-      withRing,
-    ]);
+		const classes = useMemo(() => {
+			return twMerge(
+				theme({
+					className,
+					color,
+					disabled,
+					radius,
+					shadow,
+					size,
+					tone,
+					validation,
+					withRing,
+				})
+			);
+		}, [
+			className,
+			color,
+			disabled,
+			radius,
+			shadow,
+			size,
+			theme,
+			tone,
+			validation,
+			withRing,
+		]);
 
-    return (
-      <textarea
-        id={id}
-        ref={ref}
-        className={classes}
-        {...additionalProps}
-        disabled={disabled}
-      />
-    );
-  }
+		return (
+			<textarea
+				id={id}
+				ref={ref}
+				className={classes}
+				{...additionalProps}
+				disabled={disabled}
+			/>
+		);
+	}
 );
 
 Textarea.displayName = 'Textarea';

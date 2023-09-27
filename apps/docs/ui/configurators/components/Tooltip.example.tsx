@@ -1,32 +1,33 @@
-import { Button, Tooltip, TooltipProps } from '@almond-ui/core';
 import * as React from 'react';
 
+import { Button, Tooltip, TooltipProps } from '@almond-ui/core';
+
 export const TooltipCode = (props: any) => {
-  const { color, placement, radius, shadow, size, tone } = props;
+	const { color, placement, radius, shadow, size, tone } = props;
 
-  const defaultProps = {
-    color: 'dark',
-    placement: 'top',
-    radius: 'md',
-    shadow: 'none',
-    size: 'sm',
-    tone: 'solid',
-  };
+	const defaultProps = {
+		color: 'dark',
+		placement: 'top',
+		radius: 'md',
+		shadow: 'none',
+		size: 'sm',
+		tone: 'solid',
+	};
 
-  const attributes = [
-    color !== defaultProps.color ? `color="${color}"` : null,
-    placement !== defaultProps.placement ? `placement="${placement}"` : null,
-    radius !== defaultProps.radius ? `radius="${radius}"` : null,
-    shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
-    size !== defaultProps.size ? `size="${size}"` : null,
-    tone !== defaultProps.tone ? `tone="${tone}"` : null,
-  ].filter(Boolean);
+	const attributes = [
+		color !== defaultProps.color ? `color="${color}"` : null,
+		placement !== defaultProps.placement ? `placement="${placement}"` : null,
+		radius !== defaultProps.radius ? `radius="${radius}"` : null,
+		shadow !== defaultProps.shadow ? `shadow="${shadow}"` : null,
+		size !== defaultProps.size ? `size="${size}"` : null,
+		tone !== defaultProps.tone ? `tone="${tone}"` : null,
+	].filter(Boolean);
 
-  if (attributes.length) {
-    attributes.unshift(null);
-  }
+	if (attributes.length) {
+		attributes.unshift(null);
+	}
 
-  return `import { Tooltip } from '@almond-ui/core';
+	return `import { Tooltip } from '@almond-ui/core';
 
 function App() {
   return (
@@ -39,9 +40,9 @@ function App() {
 };
 
 export const TooltipExample = (props: TooltipProps) => {
-  return (
-    <Tooltip label='This is a Tooltip' initiallyOpen={true} {...props}>
-      <Button>Hover over me!</Button>
-    </Tooltip>
-  );
+	return (
+		<Tooltip label='This is a Tooltip' initiallyOpen={true} {...props}>
+			<Button>Hover over me!</Button>
+		</Tooltip>
+	);
 };

@@ -1,62 +1,64 @@
 'use client';
 
+import { Provider, createContext, useContext } from 'react';
+
 import { accordionVariants } from '@theme/variants/Accordion.variants';
 import { alertVariants } from '@theme/variants/Alert.variants';
 import { buttonVariants } from '@theme/variants/Button.variants';
 import { toastVariants } from '@theme/variants/Toast.variants';
-import { createContext, Provider, useContext } from 'react';
+
 import { badgeVariants, ribbonVariants, textVariants } from './variants';
 
 export type Variant = {
-  components: VariantComponents;
+	components: VariantComponents;
 };
 
 type VariantComponents = {
-  Accordion: typeof accordionVariants;
-  Alert: typeof alertVariants;
-  Badge: typeof badgeVariants;
-  Button: typeof buttonVariants;
-  Text: typeof textVariants;
-  Toast: typeof toastVariants;
-  Ribbon: typeof ribbonVariants;
+	Accordion: typeof accordionVariants;
+	Alert: typeof alertVariants;
+	Badge: typeof badgeVariants;
+	Button: typeof buttonVariants;
+	Text: typeof textVariants;
+	Toast: typeof toastVariants;
+	Ribbon: typeof ribbonVariants;
 };
 
 const defaultVariant: Variant = {
-  components: {
-    Accordion: accordionVariants,
-    Alert: alertVariants,
-    Badge: badgeVariants,
-    Button: buttonVariants,
-    Text: textVariants,
-    Toast: toastVariants,
-    Ribbon: ribbonVariants,
-  },
+	components: {
+		Accordion: accordionVariants,
+		Alert: alertVariants,
+		Badge: badgeVariants,
+		Button: buttonVariants,
+		Text: textVariants,
+		Toast: toastVariants,
+		Ribbon: ribbonVariants,
+	},
 };
 
 export type VariantContextType = {
-  variant: Variant;
+	variant: Variant;
 };
 
 const VariantContext = createContext<VariantContextType>({
-  variant: defaultVariant,
+	variant: defaultVariant,
 });
 
 export const VariantProvider: Provider<VariantContextType> =
-  VariantContext.Provider;
+	VariantContext.Provider;
 
 export function useVariant(): Variant {
-  return useContext(VariantContext)?.variant || defaultVariant;
+	return useContext(VariantContext)?.variant || defaultVariant;
 }
 
 export function useComponentVariant<C extends keyof VariantComponents>(
-  component: C,
-  componentVariant?: keyof VariantComponents[C]
+	component: C,
+	componentVariant?: keyof VariantComponents[C]
 ) {
-  const variant = useVariant();
+	const variant = useVariant();
 
-  if (!componentVariant) {
-    return {};
-  }
+	if (!componentVariant) {
+		return {};
+	}
 
-  return variant.components[component][componentVariant];
+	return variant.components[component][componentVariant];
 }

@@ -1,14 +1,14 @@
 import {
-  ComponentPropsWithRef,
-  ForwardRefExoticComponent,
-  PropsWithoutRef,
-  RefAttributes,
+	ComponentPropsWithRef,
+	ForwardRefExoticComponent,
+	PropsWithoutRef,
+	RefAttributes,
 } from 'react';
 
 export interface CardBodyProps extends ComponentPropsWithRef<'div'> {}
 
 export type CardBodyComponent = ForwardRefExoticComponent<
-  PropsWithoutRef<CardBodyProps> & RefAttributes<HTMLDivElement>
+	PropsWithoutRef<CardBodyProps> & RefAttributes<HTMLDivElement>
 > & {
-  displayName?: string;
+	displayName?: string;
 };

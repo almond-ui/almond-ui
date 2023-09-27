@@ -1,27 +1,28 @@
-import { FormControl, FormControlProps } from '@almond-ui/core';
-import { At } from '@phosphor-icons/react';
 import * as React from 'react';
 
+import { FormControl, FormControlProps } from '@almond-ui/core';
+import { At } from '@phosphor-icons/react';
+
 export const FormControlCode = (props: any) => {
-  const { size, validation } = props;
+	const { size, validation } = props;
 
-  const defaultProps = {
-    size: 'md',
-    validation: 'none',
-  };
+	const defaultProps = {
+		size: 'md',
+		validation: 'none',
+	};
 
-  const attributes = [
-    validation !== defaultProps.validation
-      ? `validation="${validation}"`
-      : null,
-    size !== defaultProps.size ? `size="${size}"` : null,
-  ].filter(Boolean);
+	const attributes = [
+		validation !== defaultProps.validation
+			? `validation="${validation}"`
+			: null,
+		size !== defaultProps.size ? `size="${size}"` : null,
+	].filter(Boolean);
 
-  if (attributes.length) {
-    attributes.unshift(null);
-  }
+	if (attributes.length) {
+		attributes.unshift(null);
+	}
 
-  return `import { FormControl } from '@almond-ui/core';
+	return `import { FormControl } from '@almond-ui/core';
 import { At } from '@phosphor-icons/react';
 
 function App() {
@@ -42,14 +43,14 @@ function App() {
 };
 
 export const FormControlExample = (props: FormControlProps) => {
-  return (
-    <FormControl {...props}>
-      <FormControl.Label>Email address</FormControl.Label>
-      <FormControl.Input
-        leftIcon={<At className='text-gray-500' />}
-        type='email'
-        placeholder='An email address'
-      />
-    </FormControl>
-  );
+	return (
+		<FormControl {...props}>
+			<FormControl.Label>Email address</FormControl.Label>
+			<FormControl.Input
+				leftIcon={<At className='text-gray-500' />}
+				type='email'
+				placeholder='An email address'
+			/>
+		</FormControl>
+	);
 };
